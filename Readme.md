@@ -6,4 +6,5 @@
   ```python
   pip install usb-iss
   ```
-
+## 3. Convert xxx.ui to xxx.py 
+  - Use the command `C:\python3.7\Script\pyuic5 -x GBCR2_Test_GUI.ui -o GBCR2_Test_GUI.py`
