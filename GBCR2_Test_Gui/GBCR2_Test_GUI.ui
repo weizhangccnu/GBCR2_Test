@@ -1,0 +1,5707 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>GBCR2_Test_Gui</class>
+ <widget class="QMainWindow" name="GBCR2_Test_Gui">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>991</width>
+    <height>547</height>
+   </rect>
+  </property>
+  <property name="palette">
+   <palette>
+    <active>
+     <colorrole role="Button">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>85</green>
+        <blue>0</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="AlternateBase">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>194</red>
+        <green>188</green>
+        <blue>200</blue>
+       </color>
+      </brush>
+     </colorrole>
+    </active>
+    <inactive>
+     <colorrole role="Button">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>85</green>
+        <blue>0</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="AlternateBase">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>194</red>
+        <green>188</green>
+        <blue>200</blue>
+       </color>
+      </brush>
+     </colorrole>
+    </inactive>
+    <disabled>
+     <colorrole role="Button">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>85</green>
+        <blue>0</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="AlternateBase">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>194</red>
+        <green>188</green>
+        <blue>200</blue>
+       </color>
+      </brush>
+     </colorrole>
+    </disabled>
+   </palette>
+  </property>
+  <property name="focusPolicy">
+   <enum>Qt::StrongFocus</enum>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="whatsThis">
+   <string/>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">alternate-background-color: rgb(194, 188, 200);</string>
+  </property>
+  <property name="toolButtonStyle">
+   <enum>Qt::ToolButtonTextBesideIcon</enum>
+  </property>
+  <property name="animated">
+   <bool>true</bool>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="CH1_Rx_Control_Panel">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>111</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Rx Contorl Panel</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CH1_CML_AmplSel">
+    <property name="geometry">
+     <rect>
+      <x>153</x>
+      <y>40</y>
+      <width>81</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>CML_AmplSel</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="CH1_CML_AmpSel_Box">
+    <property name="geometry">
+     <rect>
+      <x>234</x>
+      <y>40</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="maximum">
+     <number>7</number>
+    </property>
+    <property name="value">
+     <number>7</number>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="CH1_EQ_ATT_Box">
+    <property name="geometry">
+     <rect>
+      <x>463</x>
+      <y>40</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="maximum">
+     <number>3</number>
+    </property>
+    <property name="value">
+     <number>3</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CH1_EQ_ATT">
+    <property name="geometry">
+     <rect>
+      <x>413</x>
+      <y>40</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>EQ_ATT</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CH1_Dis_EQ_LF">
+    <property name="geometry">
+     <rect>
+      <x>291</x>
+      <y>40</y>
+      <width>61</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Dis_EQ_LF</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="CH1_Dis_EQ_LF_Box">
+    <property name="geometry">
+     <rect>
+      <x>356</x>
+      <y>40</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="maximum">
+     <number>1</number>
+    </property>
+    <property name="value">
+     <number>1</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CH1_CTLE_HFSR">
+    <property name="geometry">
+     <rect>
+      <x>518</x>
+      <y>40</y>
+      <width>71</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>CTLE_HFSR</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="CH1_CTLE_HFSR_Box">
+    <property name="geometry">
+     <rect>
+      <x>590</x>
+      <y>40</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="maximum">
+     <number>15</number>
+    </property>
+    <property name="value">
+     <number>11</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CH1_CTLE_MFSR">
+    <property name="geometry">
+     <rect>
+      <x>648</x>
+      <y>40</y>
+      <width>71</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>CTLE_MFSR</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="CH1_CTLE_MFSR_Box">
+    <property name="geometry">
+     <rect>
+      <x>723</x>
+      <y>40</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="maximum">
+     <number>15</number>
+    </property>
+    <property name="value">
+     <number>11</number>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="CH1_Dis_Rx_Box">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>40</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="maximum">
+     <number>1</number>
+    </property>
+    <property name="value">
+     <number>0</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CH1_Dis_Rx">
+    <property name="geometry">
+     <rect>
+      <x>57</x>
+      <y>40</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Dis_Rx</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CH1_Dis_DFF">
+    <property name="geometry">
+     <rect>
+      <x>779</x>
+      <y>40</y>
+      <width>61</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Dis_DFF</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="CH1_Dis_DFF_Box">
+    <property name="geometry">
+     <rect>
+      <x>831</x>
+      <y>40</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="maximum">
+     <number>1</number>
+    </property>
+    <property name="value">
+     <number>1</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CH1_Dis_LPF">
+    <property name="geometry">
+     <rect>
+      <x>884</x>
+      <y>40</y>
+      <width>61</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Dis_LPF</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="CH1_Dis_LPF_Box">
+    <property name="geometry">
+     <rect>
+      <x>936</x>
+      <y>40</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="maximum">
+     <number>1</number>
+    </property>
+    <property name="value">
+     <number>0</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CH1">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>40</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <italic>true</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>CH1</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CH1_Dis_EQ_LF_2">
+    <property name="geometry">
+     <rect>
+      <x>291</x>
+      <y>70</y>
+      <width>61</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Dis_EQ_LF</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="CH1_CTLE_MFSR_Box_2">
+    <property name="geometry">
+     <rect>
+      <x>723</x>
+      <y>70</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="maximum">
+     <number>15</number>
+    </property>
+    <property name="value">
+     <number>11</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CH1_EQ_ATT_2">
+    <property name="geometry">
+     <rect>
+      <x>413</x>
+      <y>70</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>EQ_ATT</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CH1_CTLE_HFSR_2">
+    <property name="geometry">
+     <rect>
+      <x>518</x>
+      <y>70</y>
+      <width>71</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>CTLE_HFSR</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CH1_Dis_Rx_2">
+    <property name="geometry">
+     <rect>
+      <x>57</x>
+      <y>70</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Dis_Rx</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CH1_Dis_DFF_2">
+    <property name="geometry">
+     <rect>
+      <x>779</x>
+      <y>70</y>
+      <width>61</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Dis_DFF</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="CH1_Dis_DFF_Box_2">
+    <property name="geometry">
+     <rect>
+      <x>831</x>
+      <y>70</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="maximum">
+     <number>1</number>
+    </property>
+    <property name="value">
+     <number>1</number>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="CH1_EQ_ATT_Box_2">
+    <property name="geometry">
+     <rect>
+      <x>463</x>
+      <y>70</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="maximum">
+     <number>3</number>
+    </property>
+    <property name="value">
+     <number>3</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CH1_CTLE_MFSR_2">
+    <property name="geometry">
+     <rect>
+      <x>648</x>
+      <y>70</y>
+      <width>71</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>CTLE_MFSR</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="CH1_CTLE_HFSR_Box_2">
+    <property name="geometry">
+     <rect>
+      <x>590</x>
+      <y>70</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="maximum">
+     <number>15</number>
+    </property>
+    <property name="value">
+     <number>11</number>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="CH1_Dis_Rx_Box_2">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>70</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="maximum">
+     <number>1</number>
+    </property>
+    <property name="value">
+     <number>0</number>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="CH1_CML_AmpSel_Box_2">
+    <property name="geometry">
+     <rect>
+      <x>234</x>
+      <y>70</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="maximum">
+     <number>7</number>
+    </property>
+    <property name="value">
+     <number>7</number>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="CH1_Dis_EQ_LF_Box_2">
+    <property name="geometry">
+     <rect>
+      <x>356</x>
+      <y>70</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="maximum">
+     <number>1</number>
+    </property>
+    <property name="value">
+     <number>1</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CH1_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>70</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <italic>true</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>CH2</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CH1_CML_AmplSel_2">
+    <property name="geometry">
+     <rect>
+      <x>153</x>
+      <y>70</y>
+      <width>81</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>CML_AmplSel</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="CH1_Dis_LPF_Box_2">
+    <property name="geometry">
+     <rect>
+      <x>936</x>
+      <y>70</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="maximum">
+     <number>1</number>
+    </property>
+    <property name="value">
+     <number>0</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CH1_Dis_LPF_2">
+    <property name="geometry">
+     <rect>
+      <x>884</x>
+      <y>70</y>
+      <width>61</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Dis_LPF</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="CH1_Dis_DFF_Box_3">
+    <property name="geometry">
+     <rect>
+      <x>831</x>
+      <y>100</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="maximum">
+     <number>1</number>
+    </property>
+    <property name="value">
+     <number>1</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CH1_CTLE_HFSR_3">
+    <property name="geometry">
+     <rect>
+      <x>518</x>
+      <y>130</y>
+      <width>71</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>CTLE_HFSR</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="CH1_Dis_LPF_Box_3">
+    <property name="geometry">
+     <rect>
+      <x>936</x>
+      <y>100</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="maximum">
+     <number>1</number>
+    </property>
+    <property name="value">
+     <number>0</number>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="CH1_CTLE_MFSR_Box_3">
+    <property name="geometry">
+     <rect>
+      <x>723</x>
+      <y>130</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="maximum">
+     <number>15</number>
+    </property>
+    <property name="value">
+     <number>11</number>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="CH1_CTLE_MFSR_Box_4">
+    <property name="geometry">
+     <rect>
+      <x>723</x>
+      <y>100</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="maximum">
+     <number>15</number>
+    </property>
+    <property name="value">
+     <number>11</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CH1_CTLE_MFSR_3">
+    <property name="geometry">
+     <rect>
+      <x>648</x>
+      <y>130</y>
+      <width>71</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>CTLE_MFSR</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CH1_EQ_ATT_3">
+    <property name="geometry">
+     <rect>
+      <x>413</x>
+      <y>100</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>EQ_ATT</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CH1_Dis_Rx_3">
+    <property name="geometry">
+     <rect>
+      <x>57</x>
+      <y>130</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Dis_Rx</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="CH1_Dis_Rx_Box_3">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>130</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="maximum">
+     <number>1</number>
+    </property>
+    <property name="value">
+     <number>0</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CH1_Dis_DFF_3">
+    <property name="geometry">
+     <rect>
+      <x>779</x>
+      <y>130</y>
+      <width>61</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Dis_DFF</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CH1_Dis_LPF_3">
+    <property name="geometry">
+     <rect>
+      <x>884</x>
+      <y>130</y>
+      <width>61</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Dis_LPF</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="CH1_Dis_Rx_Box_4">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>100</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="maximum">
+     <number>1</number>
+    </property>
+    <property name="value">
+     <number>0</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CH1_CTLE_MFSR_4">
+    <property name="geometry">
+     <rect>
+      <x>648</x>
+      <y>100</y>
+      <width>71</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>CTLE_MFSR</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CH1_Dis_LPF_4">
+    <property name="geometry">
+     <rect>
+      <x>884</x>
+      <y>100</y>
+      <width>61</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Dis_LPF</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CH1_Dis_DFF_4">
+    <property name="geometry">
+     <rect>
+      <x>779</x>
+      <y>100</y>
+      <width>61</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Dis_DFF</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CH1_CTLE_HFSR_4">
+    <property name="geometry">
+     <rect>
+      <x>518</x>
+      <y>100</y>
+      <width>71</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>CTLE_HFSR</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CH1_CML_AmplSel_3">
+    <property name="geometry">
+     <rect>
+      <x>153</x>
+      <y>130</y>
+      <width>81</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>CML_AmplSel</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CH1_Dis_EQ_LF_3">
+    <property name="geometry">
+     <rect>
+      <x>291</x>
+      <y>100</y>
+      <width>61</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Dis_EQ_LF</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CH1_Dis_Rx_4">
+    <property name="geometry">
+     <rect>
+      <x>57</x>
+      <y>100</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Dis_Rx</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CH1_EQ_ATT_4">
+    <property name="geometry">
+     <rect>
+      <x>413</x>
+      <y>130</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>EQ_ATT</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="CH1_CML_AmpSel_Box_3">
+    <property name="geometry">
+     <rect>
+      <x>234</x>
+      <y>130</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="maximum">
+     <number>7</number>
+    </property>
+    <property name="value">
+     <number>7</number>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="CH1_Dis_DFF_Box_4">
+    <property name="geometry">
+     <rect>
+      <x>831</x>
+      <y>130</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="maximum">
+     <number>1</number>
+    </property>
+    <property name="value">
+     <number>1</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CH1_CML_AmplSel_4">
+    <property name="geometry">
+     <rect>
+      <x>153</x>
+      <y>100</y>
+      <width>81</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>CML_AmplSel</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CH1_Dis_EQ_LF_4">
+    <property name="geometry">
+     <rect>
+      <x>291</x>
+      <y>130</y>
+      <width>61</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Dis_EQ_LF</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="CH1_Dis_LPF_Box_4">
+    <property name="geometry">
+     <rect>
+      <x>936</x>
+      <y>130</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="maximum">
+     <number>1</number>
+    </property>
+    <property name="value">
+     <number>0</number>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="CH1_EQ_ATT_Box_3">
+    <property name="geometry">
+     <rect>
+      <x>463</x>
+      <y>100</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="maximum">
+     <number>3</number>
+    </property>
+    <property name="value">
+     <number>3</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CH1_3">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>130</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <italic>true</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>CH4</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="CH1_CML_AmpSel_Box_4">
+    <property name="geometry">
+     <rect>
+      <x>234</x>
+      <y>100</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="maximum">
+     <number>7</number>
+    </property>
+    <property name="value">
+     <number>7</number>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="CH1_EQ_ATT_Box_4">
+    <property name="geometry">
+     <rect>
+      <x>463</x>
+      <y>130</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="maximum">
+     <number>3</number>
+    </property>
+    <property name="value">
+     <number>3</number>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="CH1_Dis_EQ_LF_Box_3">
+    <property name="geometry">
+     <rect>
+      <x>356</x>
+      <y>130</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="maximum">
+     <number>1</number>
+    </property>
+    <property name="value">
+     <number>1</number>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="CH1_Dis_EQ_LF_Box_4">
+    <property name="geometry">
+     <rect>
+      <x>356</x>
+      <y>100</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="maximum">
+     <number>1</number>
+    </property>
+    <property name="value">
+     <number>1</number>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="CH1_CTLE_HFSR_Box_3">
+    <property name="geometry">
+     <rect>
+      <x>590</x>
+      <y>100</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="maximum">
+     <number>15</number>
+    </property>
+    <property name="value">
+     <number>11</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CH1_4">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>100</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <italic>true</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>CH3</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="CH1_CTLE_HFSR_Box_4">
+    <property name="geometry">
+     <rect>
+      <x>590</x>
+      <y>130</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="maximum">
+     <number>15</number>
+    </property>
+    <property name="value">
+     <number>11</number>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="CH1_CTLE_HFSR_Box_5">
+    <property name="geometry">
+     <rect>
+      <x>589</x>
+      <y>160</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="maximum">
+     <number>15</number>
+    </property>
+    <property name="value">
+     <number>11</number>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="CH1_Dis_DFF_Box_5">
+    <property name="geometry">
+     <rect>
+      <x>830</x>
+      <y>190</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="maximum">
+     <number>1</number>
+    </property>
+    <property name="value">
+     <number>1</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CH1_EQ_ATT_5">
+    <property name="geometry">
+     <rect>
+      <x>412</x>
+      <y>160</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>EQ_ATT</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="CH1_CML_AmpSel_Box_5">
+    <property name="geometry">
+     <rect>
+      <x>233</x>
+      <y>160</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="maximum">
+     <number>7</number>
+    </property>
+    <property name="value">
+     <number>7</number>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="CH1_CTLE_MFSR_Box_5">
+    <property name="geometry">
+     <rect>
+      <x>722</x>
+      <y>220</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="maximum">
+     <number>15</number>
+    </property>
+    <property name="value">
+     <number>11</number>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="CH1_CML_AmpSel_Box_6">
+    <property name="geometry">
+     <rect>
+      <x>233</x>
+      <y>220</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="maximum">
+     <number>7</number>
+    </property>
+    <property name="value">
+     <number>7</number>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="CH1_Dis_Rx_Box_5">
+    <property name="geometry">
+     <rect>
+      <x>99</x>
+      <y>190</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="maximum">
+     <number>1</number>
+    </property>
+    <property name="value">
+     <number>0</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CH1_Dis_EQ_LF_6">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>190</y>
+      <width>61</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Dis_EQ_LF</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CH1_Dis_DFF_6">
+    <property name="geometry">
+     <rect>
+      <x>778</x>
+      <y>220</y>
+      <width>61</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Dis_DFF</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CH1_5">
+    <property name="geometry">
+     <rect>
+      <x>9</x>
+      <y>160</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <italic>true</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>CH5</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="CH1_Dis_Rx_Box_6">
+    <property name="geometry">
+     <rect>
+      <x>99</x>
+      <y>160</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="maximum">
+     <number>1</number>
+    </property>
+    <property name="value">
+     <number>0</number>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="CH1_CTLE_HFSR_Box_7">
+    <property name="geometry">
+     <rect>
+      <x>589</x>
+      <y>220</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="maximum">
+     <number>15</number>
+    </property>
+    <property name="value">
+     <number>11</number>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="CH1_Dis_LPF_Box_5">
+    <property name="geometry">
+     <rect>
+      <x>935</x>
+      <y>220</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="maximum">
+     <number>1</number>
+    </property>
+    <property name="value">
+     <number>0</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CH1_CTLE_HFSR_5">
+    <property name="geometry">
+     <rect>
+      <x>517</x>
+      <y>220</y>
+      <width>71</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>CTLE_HFSR</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CH1_6">
+    <property name="geometry">
+     <rect>
+      <x>9</x>
+      <y>220</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <italic>true</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>CH7</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="CH1_Dis_DFF_Box_6">
+    <property name="geometry">
+     <rect>
+      <x>830</x>
+      <y>160</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="maximum">
+     <number>1</number>
+    </property>
+    <property name="value">
+     <number>1</number>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="CH1_EQ_ATT_Box_5">
+    <property name="geometry">
+     <rect>
+      <x>462</x>
+      <y>220</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="maximum">
+     <number>3</number>
+    </property>
+    <property name="value">
+     <number>3</number>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="CH1_Dis_LPF_Box_6">
+    <property name="geometry">
+     <rect>
+      <x>935</x>
+      <y>190</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="maximum">
+     <number>1</number>
+    </property>
+    <property name="value">
+     <number>0</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CH1_CTLE_MFSR_6">
+    <property name="geometry">
+     <rect>
+      <x>647</x>
+      <y>160</y>
+      <width>71</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>CTLE_MFSR</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CH1_CTLE_MFSR_7">
+    <property name="geometry">
+     <rect>
+      <x>647</x>
+      <y>190</y>
+      <width>71</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>CTLE_MFSR</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CH1_CML_AmplSel_5">
+    <property name="geometry">
+     <rect>
+      <x>152</x>
+      <y>190</y>
+      <width>81</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>CML_AmplSel</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="CH1_CML_AmpSel_Box_7">
+    <property name="geometry">
+     <rect>
+      <x>233</x>
+      <y>190</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="maximum">
+     <number>7</number>
+    </property>
+    <property name="value">
+     <number>7</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CH1_Dis_Rx_5">
+    <property name="geometry">
+     <rect>
+      <x>56</x>
+      <y>160</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Dis_Rx</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CH1_CML_AmplSel_6">
+    <property name="geometry">
+     <rect>
+      <x>152</x>
+      <y>220</y>
+      <width>81</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>CML_AmplSel</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CH1_CML_AmplSel_7">
+    <property name="geometry">
+     <rect>
+      <x>152</x>
+      <y>160</y>
+      <width>81</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>CML_AmplSel</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="CH1_Dis_EQ_LF_Box_5">
+    <property name="geometry">
+     <rect>
+      <x>355</x>
+      <y>220</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="maximum">
+     <number>1</number>
+    </property>
+    <property name="value">
+     <number>1</number>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="CH1_CTLE_MFSR_Box_6">
+    <property name="geometry">
+     <rect>
+      <x>722</x>
+      <y>190</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="maximum">
+     <number>15</number>
+    </property>
+    <property name="value">
+     <number>11</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CH1_EQ_ATT_6">
+    <property name="geometry">
+     <rect>
+      <x>412</x>
+      <y>190</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>EQ_ATT</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="CH1_CTLE_MFSR_Box_7">
+    <property name="geometry">
+     <rect>
+      <x>722</x>
+      <y>160</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="maximum">
+     <number>15</number>
+    </property>
+    <property name="value">
+     <number>11</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CH1_Dis_EQ_LF_7">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>160</y>
+      <width>61</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Dis_EQ_LF</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="CH1_EQ_ATT_Box_6">
+    <property name="geometry">
+     <rect>
+      <x>462</x>
+      <y>190</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="maximum">
+     <number>3</number>
+    </property>
+    <property name="value">
+     <number>3</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CH1_EQ_ATT_7">
+    <property name="geometry">
+     <rect>
+      <x>412</x>
+      <y>220</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>EQ_ATT</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CH1_Dis_LPF_6">
+    <property name="geometry">
+     <rect>
+      <x>883</x>
+      <y>160</y>
+      <width>61</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Dis_LPF</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CH1_Dis_LPF_7">
+    <property name="geometry">
+     <rect>
+      <x>883</x>
+      <y>220</y>
+      <width>61</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Dis_LPF</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CH1_8">
+    <property name="geometry">
+     <rect>
+      <x>9</x>
+      <y>190</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <italic>true</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>CH6</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CH1_Dis_LPF_8">
+    <property name="geometry">
+     <rect>
+      <x>883</x>
+      <y>190</y>
+      <width>61</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Dis_LPF</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CH1_Dis_DFF_7">
+    <property name="geometry">
+     <rect>
+      <x>778</x>
+      <y>160</y>
+      <width>61</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Dis_DFF</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CH1_Dis_DFF_8">
+    <property name="geometry">
+     <rect>
+      <x>778</x>
+      <y>190</y>
+      <width>61</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Dis_DFF</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="CH1_EQ_ATT_Box_8">
+    <property name="geometry">
+     <rect>
+      <x>462</x>
+      <y>160</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="maximum">
+     <number>3</number>
+    </property>
+    <property name="value">
+     <number>3</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CH1_Dis_Rx_6">
+    <property name="geometry">
+     <rect>
+      <x>56</x>
+      <y>220</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Dis_Rx</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CH1_CTLE_HFSR_7">
+    <property name="geometry">
+     <rect>
+      <x>517</x>
+      <y>160</y>
+      <width>71</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>CTLE_HFSR</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CH1_CTLE_HFSR_8">
+    <property name="geometry">
+     <rect>
+      <x>517</x>
+      <y>190</y>
+      <width>71</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>CTLE_HFSR</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="CH1_Dis_EQ_LF_Box_6">
+    <property name="geometry">
+     <rect>
+      <x>355</x>
+      <y>160</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="maximum">
+     <number>1</number>
+    </property>
+    <property name="value">
+     <number>1</number>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="CH1_Dis_LPF_Box_8">
+    <property name="geometry">
+     <rect>
+      <x>935</x>
+      <y>160</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="maximum">
+     <number>1</number>
+    </property>
+    <property name="value">
+     <number>0</number>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="CH1_Dis_Rx_Box_8">
+    <property name="geometry">
+     <rect>
+      <x>99</x>
+      <y>220</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="maximum">
+     <number>1</number>
+    </property>
+    <property name="value">
+     <number>0</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CH1_Dis_EQ_LF_8">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>220</y>
+      <width>61</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Dis_EQ_LF</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CH1_CTLE_MFSR_8">
+    <property name="geometry">
+     <rect>
+      <x>647</x>
+      <y>220</y>
+      <width>71</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>CTLE_MFSR</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="CH1_CTLE_HFSR_Box_8">
+    <property name="geometry">
+     <rect>
+      <x>589</x>
+      <y>190</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="maximum">
+     <number>15</number>
+    </property>
+    <property name="value">
+     <number>11</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CH1_Dis_Rx_8">
+    <property name="geometry">
+     <rect>
+      <x>56</x>
+      <y>190</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Dis_Rx</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="CH1_Dis_DFF_Box_7">
+    <property name="geometry">
+     <rect>
+      <x>830</x>
+      <y>220</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="maximum">
+     <number>1</number>
+    </property>
+    <property name="value">
+     <number>1</number>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="CH1_Dis_EQ_LF_Box_8">
+    <property name="geometry">
+     <rect>
+      <x>355</x>
+      <y>190</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="maximum">
+     <number>1</number>
+    </property>
+    <property name="value">
+     <number>1</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CH1_Rx_Control_Panel_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>260</y>
+      <width>111</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Tx Contorl Panel</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CH1_Dis_EQ_LF_5">
+    <property name="geometry">
+     <rect>
+      <x>165</x>
+      <y>285</y>
+      <width>71</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Dis_DL_Emp</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="CH1_CTLE_MFSR_Box_8">
+    <property name="geometry">
+     <rect>
+      <x>636</x>
+      <y>285</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="maximum">
+     <number>1</number>
+    </property>
+    <property name="value">
+     <number>0</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CH1_EQ_ATT_8">
+    <property name="geometry">
+     <rect>
+      <x>296</x>
+      <y>285</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>DL_SR</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CH1_CTLE_HFSR_6">
+    <property name="geometry">
+     <rect>
+      <x>395</x>
+      <y>285</y>
+      <width>81</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Dis_DL_BIAS</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CH1_Dis_Rx_7">
+    <property name="geometry">
+     <rect>
+      <x>56</x>
+      <y>285</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>DLL_ATT</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="CH1_EQ_ATT_Box_7">
+    <property name="geometry">
+     <rect>
+      <x>339</x>
+      <y>285</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="maximum">
+     <number>7</number>
+    </property>
+    <property name="value">
+     <number>3</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CH1_CTLE_MFSR_5">
+    <property name="geometry">
+     <rect>
+      <x>531</x>
+      <y>285</y>
+      <width>101</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Dis_DL_LPF_BIAS</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="CH1_CTLE_HFSR_Box_6">
+    <property name="geometry">
+     <rect>
+      <x>474</x>
+      <y>285</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="maximum">
+     <number>1</number>
+    </property>
+    <property name="value">
+     <number>1</number>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="CH1_Dis_Rx_Box_7">
+    <property name="geometry">
+     <rect>
+      <x>112</x>
+      <y>285</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="maximum">
+     <number>3</number>
+    </property>
+    <property name="value">
+     <number>0</number>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="CH1_Dis_EQ_LF_Box_7">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>285</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="maximum">
+     <number>1</number>
+    </property>
+    <property name="value">
+     <number>0</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CH1_7">
+    <property name="geometry">
+     <rect>
+      <x>9</x>
+      <y>285</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <italic>true</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>CH1</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CH1_CTLE_MFSR_9">
+    <property name="geometry">
+     <rect>
+      <x>531</x>
+      <y>318</y>
+      <width>101</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Dis_DL_LPF_BIAS</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="CH1_CTLE_HFSR_Box_9">
+    <property name="geometry">
+     <rect>
+      <x>474</x>
+      <y>318</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="maximum">
+     <number>1</number>
+    </property>
+    <property name="value">
+     <number>1</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CH1_Dis_EQ_LF_9">
+    <property name="geometry">
+     <rect>
+      <x>165</x>
+      <y>318</y>
+      <width>71</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Dis_DL_Emp</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="CH1_EQ_ATT_Box_9">
+    <property name="geometry">
+     <rect>
+      <x>339</x>
+      <y>318</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="maximum">
+     <number>7</number>
+    </property>
+    <property name="value">
+     <number>3</number>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="CH1_Dis_EQ_LF_Box_9">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>318</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="maximum">
+     <number>1</number>
+    </property>
+    <property name="value">
+     <number>0</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CH1_Dis_Rx_9">
+    <property name="geometry">
+     <rect>
+      <x>56</x>
+      <y>318</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>DLL_ATT</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="CH1_Dis_Rx_Box_9">
+    <property name="geometry">
+     <rect>
+      <x>112</x>
+      <y>318</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="maximum">
+     <number>3</number>
+    </property>
+    <property name="value">
+     <number>0</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CH1_9">
+    <property name="geometry">
+     <rect>
+      <x>9</x>
+      <y>318</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <italic>true</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>CH2</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CH1_EQ_ATT_9">
+    <property name="geometry">
+     <rect>
+      <x>296</x>
+      <y>318</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>DL_SR</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="CH1_CTLE_MFSR_Box_9">
+    <property name="geometry">
+     <rect>
+      <x>636</x>
+      <y>318</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="maximum">
+     <number>1</number>
+    </property>
+    <property name="value">
+     <number>0</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CH1_CTLE_HFSR_9">
+    <property name="geometry">
+     <rect>
+      <x>395</x>
+      <y>318</y>
+      <width>81</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Dis_DL_BIAS</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CH1_Rx_Control_Panel_3">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>350</y>
+      <width>171</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Phase Shifter Control Panel</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="CH1_CTLE_HFSR_Box_10">
+    <property name="geometry">
+     <rect>
+      <x>467</x>
+      <y>380</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="maximum">
+     <number>1</number>
+    </property>
+    <property name="value">
+     <number>0</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CH1_Dis_EQ_LF_10">
+    <property name="geometry">
+     <rect>
+      <x>125</x>
+      <y>380</y>
+      <width>61</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Rx_setCM</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="CH1_EQ_ATT_Box_10">
+    <property name="geometry">
+     <rect>
+      <x>343</x>
+      <y>380</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="maximum">
+     <number>1</number>
+    </property>
+    <property name="value">
+     <number>0</number>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="CH1_Dis_EQ_LF_Box_10">
+    <property name="geometry">
+     <rect>
+      <x>183</x>
+      <y>380</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="maximum">
+     <number>1</number>
+    </property>
+    <property name="value">
+     <number>0</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CH1_Dis_Rx_10">
+    <property name="geometry">
+     <rect>
+      <x>13</x>
+      <y>380</y>
+      <width>61</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Rx_Enable</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="CH1_Dis_Rx_Box_10">
+    <property name="geometry">
+     <rect>
+      <x>73</x>
+      <y>380</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="maximum">
+     <number>1</number>
+    </property>
+    <property name="value">
+     <number>0</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CH1_EQ_ATT_10">
+    <property name="geometry">
+     <rect>
+      <x>245</x>
+      <y>380</y>
+      <width>91</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Rx_enTermination</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CH1_CTLE_HFSR_10">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>380</y>
+      <width>61</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Rx_invData</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CH1_CTLE_HFSR_11">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>414</y>
+      <width>121</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>dllChargePumpCurrent</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CH1_EQ_ATT_11">
+    <property name="geometry">
+     <rect>
+      <x>247</x>
+      <y>414</y>
+      <width>71</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>dllForceDown</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CH1_Dis_EQ_LF_11">
+    <property name="geometry">
+     <rect>
+      <x>125</x>
+      <y>414</y>
+      <width>61</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>dllCapReset</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="CH1_Dis_EQ_LF_Box_11">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>414</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="maximum">
+     <number>1</number>
+    </property>
+    <property name="value">
+     <number>0</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CH1_Dis_Rx_11">
+    <property name="geometry">
+     <rect>
+      <x>21</x>
+      <y>414</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>dllEnable</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="CH1_CTLE_HFSR_Box_11">
+    <property name="geometry">
+     <rect>
+      <x>499</x>
+      <y>414</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="maximum">
+     <number>15</number>
+    </property>
+    <property name="value">
+     <number>15</number>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="CH1_EQ_ATT_Box_11">
+    <property name="geometry">
+     <rect>
+      <x>323</x>
+      <y>414</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="maximum">
+     <number>1</number>
+    </property>
+    <property name="value">
+     <number>1</number>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="CH1_Dis_Rx_Box_11">
+    <property name="geometry">
+     <rect>
+      <x>73</x>
+      <y>414</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="maximum">
+     <number>1</number>
+    </property>
+    <property name="value">
+     <number>0</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CH1_CTLE_HFSR_12">
+    <property name="geometry">
+     <rect>
+      <x>527</x>
+      <y>380</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Rx_Equa</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="CH1_CTLE_HFSR_Box_12">
+    <property name="geometry">
+     <rect>
+      <x>581</x>
+      <y>380</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="maximum">
+     <number>3</number>
+    </property>
+    <property name="value">
+     <number>1</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CH1_CTLE_HFSR_13">
+    <property name="geometry">
+     <rect>
+      <x>641</x>
+      <y>380</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Dis_Tx</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="CH1_CTLE_HFSR_Box_13">
+    <property name="geometry">
+     <rect>
+      <x>686</x>
+      <y>380</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="maximum">
+     <number>1</number>
+    </property>
+    <property name="value">
+     <number>0</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CH1_Dis_Rx_12">
+    <property name="geometry">
+     <rect>
+      <x>21</x>
+      <y>448</y>
+      <width>101</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>dllClockDelay_CH8</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="CH1_Dis_Rx_Box_12">
+    <property name="geometry">
+     <rect>
+      <x>126</x>
+      <y>448</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="maximum">
+     <number>15</number>
+    </property>
+    <property name="value">
+     <number>3</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CH1_Dis_Rx_13">
+    <property name="geometry">
+     <rect>
+      <x>185</x>
+      <y>450</y>
+      <width>101</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>dllClockDelay_CH7</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="CH1_Dis_Rx_Box_13">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>450</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="maximum">
+     <number>15</number>
+    </property>
+    <property name="value">
+     <number>3</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CH1_Dis_Rx_14">
+    <property name="geometry">
+     <rect>
+      <x>351</x>
+      <y>450</y>
+      <width>101</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>dllClockDelay_CH6</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="CH1_Dis_Rx_Box_14">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>450</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="maximum">
+     <number>15</number>
+    </property>
+    <property name="value">
+     <number>3</number>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="CH1_Dis_Rx_Box_15">
+    <property name="geometry">
+     <rect>
+      <x>456</x>
+      <y>450</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="maximum">
+     <number>15</number>
+    </property>
+    <property name="value">
+     <number>3</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CH1_Dis_Rx_15">
+    <property name="geometry">
+     <rect>
+      <x>515</x>
+      <y>450</y>
+      <width>101</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>dllClockDelay_CH5</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CH1_Dis_Rx_16">
+    <property name="geometry">
+     <rect>
+      <x>21</x>
+      <y>483</y>
+      <width>101</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>dllClockDelay_CH4</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CH1_Dis_Rx_17">
+    <property name="geometry">
+     <rect>
+      <x>351</x>
+      <y>485</y>
+      <width>101</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>dllClockDelay_CH2</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="CH1_Dis_Rx_Box_16">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>485</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="maximum">
+     <number>15</number>
+    </property>
+    <property name="value">
+     <number>3</number>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="CH1_Dis_Rx_Box_17">
+    <property name="geometry">
+     <rect>
+      <x>126</x>
+      <y>483</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="maximum">
+     <number>15</number>
+    </property>
+    <property name="value">
+     <number>3</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CH1_Dis_Rx_18">
+    <property name="geometry">
+     <rect>
+      <x>185</x>
+      <y>485</y>
+      <width>101</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>dllClockDelay_CH3</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="CH1_Dis_Rx_Box_18">
+    <property name="geometry">
+     <rect>
+      <x>456</x>
+      <y>485</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="maximum">
+     <number>15</number>
+    </property>
+    <property name="value">
+     <number>3</number>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="CH1_Dis_Rx_Box_19">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>485</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="maximum">
+     <number>15</number>
+    </property>
+    <property name="value">
+     <number>3</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CH1_Dis_Rx_19">
+    <property name="geometry">
+     <rect>
+      <x>515</x>
+      <y>485</y>
+      <width>101</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>dllClockDelay_CH1</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CH1_Rx_Control_Panel_4">
+    <property name="geometry">
+     <rect>
+      <x>818</x>
+      <y>260</y>
+      <width>121</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>I2C Control Panel</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="comboBox">
+    <property name="geometry">
+     <rect>
+      <x>876</x>
+      <y>290</y>
+      <width>53</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <item>
+     <property name="text">
+      <string>COM3</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>COM1</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>COM2</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>COM4</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>COM5</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>COM6</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>COM7</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>COM8</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>COM9</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QLabel" name="CH1_Dis_Rx_20">
+    <property name="geometry">
+     <rect>
+      <x>820</x>
+      <y>290</y>
+      <width>61</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>COM Port</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CH1_Dis_Rx_21">
+    <property name="geometry">
+     <rect>
+      <x>821</x>
+      <y>327</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>I2C Addr</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>875</x>
+      <y>369</y>
+      <width>56</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>11</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="mouseTracking">
+     <bool>false</bool>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::WheelFocus</enum>
+    </property>
+    <property name="acceptDrops">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(192, 193, 200);</string>
+    </property>
+    <property name="text">
+     <string>I2C Write</string>
+    </property>
+    <property name="shortcut">
+     <string>Ctrl+Return</string>
+    </property>
+    <property name="autoDefault">
+     <bool>true</bool>
+    </property>
+    <property name="default">
+     <bool>false</bool>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="comboBox_2">
+    <property name="geometry">
+     <rect>
+      <x>876</x>
+      <y>327</y>
+      <width>53</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <item>
+     <property name="text">
+      <string>0x23</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x20</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x21</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x22</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QLabel" name="CH1_Rx_Control_Panel_5">
+    <property name="geometry">
+     <rect>
+      <x>740</x>
+      <y>450</y>
+      <width>221</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="palette">
+     <palette>
+      <active>
+       <colorrole role="Base">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>255</red>
+          <green>255</green>
+          <blue>255</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Window">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>255</red>
+          <green>170</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="AlternateBase">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>194</red>
+          <green>188</green>
+          <blue>200</blue>
+         </color>
+        </brush>
+       </colorrole>
+      </active>
+      <inactive>
+       <colorrole role="Base">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>255</red>
+          <green>255</green>
+          <blue>255</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Window">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>255</red>
+          <green>170</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="AlternateBase">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>194</red>
+          <green>188</green>
+          <blue>200</blue>
+         </color>
+        </brush>
+       </colorrole>
+      </inactive>
+      <disabled>
+       <colorrole role="Base">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>255</red>
+          <green>170</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Window">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>255</red>
+          <green>170</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="AlternateBase">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>194</red>
+          <green>188</green>
+          <blue>200</blue>
+         </color>
+        </brush>
+       </colorrole>
+      </disabled>
+     </palette>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+      <weight>50</weight>
+      <italic>true</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>GBCR2 Test Gui       Designed By: WZ</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CH1_Rx_Control_Panel_6">
+    <property name="geometry">
+     <rect>
+      <x>740</x>
+      <y>480</y>
+      <width>221</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+      <weight>50</weight>
+      <italic>true</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">gridline-color: rgb(85, 170, 255);</string>
+    </property>
+    <property name="text">
+     <string>Version: 1.0      March 6th, 2020</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>991</width>
+     <height>18</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>CH1_Dis_Rx_Box</sender>
+   <signal>valueChanged(QString)</signal>
+   <receiver>GBCR2_Test_Gui</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>133</x>
+     <y>68</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>152</x>
+     <y>63</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CH1_CML_AmpSel_Box</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>GBCR2_Test_Gui</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>255</x>
+     <y>68</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>287</x>
+     <y>65</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CH1_Dis_EQ_LF_Box</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>GBCR2_Test_Gui</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>374</x>
+     <y>67</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>408</x>
+     <y>61</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CH1_EQ_ATT_Box</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>GBCR2_Test_Gui</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>494</x>
+     <y>64</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>513</x>
+     <y>60</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CH1_CTLE_HFSR_Box</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>GBCR2_Test_Gui</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>606</x>
+     <y>65</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>642</x>
+     <y>60</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CH1_CTLE_MFSR_Box</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>GBCR2_Test_Gui</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>740</x>
+     <y>68</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>775</x>
+     <y>61</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CH1_Dis_DFF_Box</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>GBCR2_Test_Gui</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>846</x>
+     <y>62</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>881</x>
+     <y>62</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CH1_Dis_LPF_Box</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>GBCR2_Test_Gui</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>958</x>
+     <y>67</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>987</x>
+     <y>61</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CH1_Dis_Rx_Box_2</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>GBCR2_Test_Gui</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>122</x>
+     <y>92</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>151</x>
+     <y>89</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CH1_CML_AmpSel_Box_2</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>GBCR2_Test_Gui</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>250</x>
+     <y>94</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>283</x>
+     <y>90</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CH1_Dis_EQ_LF_Box_2</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>GBCR2_Test_Gui</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>374</x>
+     <y>93</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>407</x>
+     <y>91</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CH1_EQ_ATT_Box_2</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>GBCR2_Test_Gui</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>489</x>
+     <y>95</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>513</x>
+     <y>88</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CH1_CTLE_HFSR_Box_2</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>GBCR2_Test_Gui</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>611</x>
+     <y>93</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>643</x>
+     <y>88</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CH1_CTLE_MFSR_Box_2</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>GBCR2_Test_Gui</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>743</x>
+     <y>94</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>774</x>
+     <y>89</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CH1_Dis_DFF_Box_2</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>GBCR2_Test_Gui</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>863</x>
+     <y>93</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>882</x>
+     <y>90</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CH1_Dis_LPF_Box_2</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>GBCR2_Test_Gui</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>957</x>
+     <y>94</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>986</x>
+     <y>88</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CH1_Dis_Rx_Box_4</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>GBCR2_Test_Gui</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>118</x>
+     <y>125</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>150</x>
+     <y>118</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CH1_CML_AmpSel_Box_4</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>GBCR2_Test_Gui</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>251</x>
+     <y>122</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>285</x>
+     <y>119</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CH1_Dis_EQ_LF_Box_4</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>GBCR2_Test_Gui</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>381</x>
+     <y>124</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>407</x>
+     <y>120</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CH1_EQ_ATT_Box_3</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>GBCR2_Test_Gui</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>480</x>
+     <y>124</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>514</x>
+     <y>119</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CH1_CTLE_HFSR_Box_3</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>GBCR2_Test_Gui</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>613</x>
+     <y>123</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>641</x>
+     <y>119</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CH1_CTLE_MFSR_Box_4</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>GBCR2_Test_Gui</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>757</x>
+     <y>124</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>773</x>
+     <y>119</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CH1_Dis_DFF_Box_3</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>GBCR2_Test_Gui</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>846</x>
+     <y>123</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>882</x>
+     <y>120</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CH1_Dis_LPF_Box_3</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>GBCR2_Test_Gui</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>963</x>
+     <y>127</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>985</x>
+     <y>119</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CH1_Dis_Rx_Box_3</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>GBCR2_Test_Gui</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>110</x>
+     <y>153</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>152</x>
+     <y>149</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CH1_CML_AmpSel_Box_3</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>GBCR2_Test_Gui</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>250</x>
+     <y>154</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>285</x>
+     <y>150</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CH1_Dis_EQ_LF_Box_3</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>GBCR2_Test_Gui</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>390</x>
+     <y>151</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>407</x>
+     <y>149</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CH1_EQ_ATT_Box_4</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>GBCR2_Test_Gui</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>479</x>
+     <y>151</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>515</x>
+     <y>148</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CH1_CTLE_HFSR_Box_4</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>GBCR2_Test_Gui</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>610</x>
+     <y>151</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>642</x>
+     <y>149</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CH1_CTLE_MFSR_Box_3</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>GBCR2_Test_Gui</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>749</x>
+     <y>152</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>773</x>
+     <y>150</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CH1_Dis_DFF_Box_4</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>GBCR2_Test_Gui</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>864</x>
+     <y>154</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>880</x>
+     <y>148</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CH1_Dis_LPF_Box_4</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>GBCR2_Test_Gui</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>961</x>
+     <y>155</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>988</x>
+     <y>149</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CH1_Dis_Rx_Box_6</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>GBCR2_Test_Gui</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>128</x>
+     <y>185</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>149</x>
+     <y>180</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CH1_CML_AmpSel_Box_5</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>GBCR2_Test_Gui</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>258</x>
+     <y>182</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>284</x>
+     <y>179</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CH1_Dis_EQ_LF_Box_6</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>GBCR2_Test_Gui</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>378</x>
+     <y>182</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>406</x>
+     <y>180</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CH1_EQ_ATT_Box_8</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>GBCR2_Test_Gui</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>492</x>
+     <y>185</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>514</x>
+     <y>179</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CH1_CTLE_HFSR_Box_5</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>GBCR2_Test_Gui</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>613</x>
+     <y>182</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>641</x>
+     <y>179</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CH1_CTLE_MFSR_Box_7</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>GBCR2_Test_Gui</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>746</x>
+     <y>185</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>773</x>
+     <y>179</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CH1_Dis_DFF_Box_6</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>GBCR2_Test_Gui</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>851</x>
+     <y>185</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>881</x>
+     <y>179</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CH1_Dis_LPF_Box_8</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>GBCR2_Test_Gui</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>962</x>
+     <y>181</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>987</x>
+     <y>178</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CH1_Dis_Rx_Box_5</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>GBCR2_Test_Gui</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>121</x>
+     <y>213</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>150</x>
+     <y>209</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CH1_CML_AmpSel_Box_7</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>GBCR2_Test_Gui</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>258</x>
+     <y>214</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>284</x>
+     <y>210</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CH1_Dis_EQ_LF_Box_8</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>GBCR2_Test_Gui</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>384</x>
+     <y>213</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>404</x>
+     <y>209</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CH1_EQ_ATT_Box_6</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>GBCR2_Test_Gui</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>481</x>
+     <y>209</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>513</x>
+     <y>209</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CH1_CTLE_HFSR_Box_8</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>GBCR2_Test_Gui</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>625</x>
+     <y>210</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>640</x>
+     <y>209</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CH1_CTLE_MFSR_Box_6</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>GBCR2_Test_Gui</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>748</x>
+     <y>210</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>772</x>
+     <y>210</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CH1_Dis_DFF_Box_5</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>GBCR2_Test_Gui</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>862</x>
+     <y>212</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>880</x>
+     <y>208</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CH1_Dis_LPF_Box_6</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>GBCR2_Test_Gui</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>961</x>
+     <y>215</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>987</x>
+     <y>208</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CH1_Dis_Rx_Box_8</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>GBCR2_Test_Gui</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>125</x>
+     <y>243</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>148</x>
+     <y>239</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CH1_CML_AmpSel_Box_6</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>GBCR2_Test_Gui</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>261</x>
+     <y>243</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>285</x>
+     <y>239</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CH1_Dis_EQ_LF_Box_5</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>GBCR2_Test_Gui</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>384</x>
+     <y>244</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>403</x>
+     <y>239</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CH1_EQ_ATT_Box_5</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>GBCR2_Test_Gui</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>484</x>
+     <y>240</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>512</x>
+     <y>239</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CH1_CTLE_HFSR_Box_7</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>GBCR2_Test_Gui</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>618</x>
+     <y>242</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>639</x>
+     <y>238</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CH1_CTLE_MFSR_Box_5</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>GBCR2_Test_Gui</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>753</x>
+     <y>240</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>772</x>
+     <y>239</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CH1_Dis_DFF_Box_7</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>GBCR2_Test_Gui</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>865</x>
+     <y>243</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>880</x>
+     <y>238</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CH1_Dis_LPF_Box_5</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>GBCR2_Test_Gui</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>967</x>
+     <y>243</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>985</x>
+     <y>239</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>comboBox</sender>
+   <signal>activated(QString)</signal>
+   <receiver>GBCR2_Test_Gui</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>911</x>
+     <y>314</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>942</x>
+     <y>310</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>comboBox_2</sender>
+   <signal>activated(QString)</signal>
+   <receiver>GBCR2_Test_Gui</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>917</x>
+     <y>349</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>944</x>
+     <y>347</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CH1_Dis_Rx_Box_7</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>GBCR2_Test_Gui</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>132</x>
+     <y>310</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>161</x>
+     <y>303</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CH1_Dis_EQ_LF_Box_7</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>GBCR2_Test_Gui</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>259</x>
+     <y>308</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>289</x>
+     <y>305</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CH1_EQ_ATT_Box_7</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>GBCR2_Test_Gui</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>375</x>
+     <y>307</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>387</x>
+     <y>304</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CH1_CTLE_HFSR_Box_6</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>GBCR2_Test_Gui</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>504</x>
+     <y>311</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>523</x>
+     <y>305</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CH1_CTLE_MFSR_Box_8</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>GBCR2_Test_Gui</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>656</x>
+     <y>308</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>688</x>
+     <y>304</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CH1_Dis_Rx_Box_9</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>GBCR2_Test_Gui</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>145</x>
+     <y>342</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>161</x>
+     <y>337</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CH1_Dis_EQ_LF_Box_9</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>GBCR2_Test_Gui</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>272</x>
+     <y>338</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>289</x>
+     <y>336</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CH1_EQ_ATT_Box_9</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>GBCR2_Test_Gui</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>365</x>
+     <y>339</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>387</x>
+     <y>337</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CH1_CTLE_HFSR_Box_9</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>GBCR2_Test_Gui</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>490</x>
+     <y>345</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>524</x>
+     <y>337</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CH1_CTLE_MFSR_Box_9</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>GBCR2_Test_Gui</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>665</x>
+     <y>339</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>688</x>
+     <y>337</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CH1_Dis_Rx_Box_10</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>GBCR2_Test_Gui</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>99</x>
+     <y>400</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>121</x>
+     <y>400</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CH1_Dis_EQ_LF_Box_10</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>GBCR2_Test_Gui</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>214</x>
+     <y>400</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>236</x>
+     <y>399</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CH1_EQ_ATT_Box_10</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>GBCR2_Test_Gui</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>374</x>
+     <y>401</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>389</x>
+     <y>401</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CH1_CTLE_HFSR_Box_10</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>GBCR2_Test_Gui</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>504</x>
+     <y>401</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>519</x>
+     <y>400</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CH1_CTLE_HFSR_Box_12</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>GBCR2_Test_Gui</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>616</x>
+     <y>403</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>631</x>
+     <y>399</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CH1_CTLE_HFSR_Box_13</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>GBCR2_Test_Gui</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>703</x>
+     <y>402</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>740</x>
+     <y>400</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CH1_Dis_Rx_Box_11</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>GBCR2_Test_Gui</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>99</x>
+     <y>436</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>121</x>
+     <y>434</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CH1_Dis_EQ_LF_Box_11</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>GBCR2_Test_Gui</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>220</x>
+     <y>436</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>239</x>
+     <y>434</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CH1_EQ_ATT_Box_11</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>GBCR2_Test_Gui</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>344</x>
+     <y>437</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>373</x>
+     <y>434</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CH1_CTLE_HFSR_Box_11</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>GBCR2_Test_Gui</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>522</x>
+     <y>437</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>552</x>
+     <y>433</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CH1_Dis_Rx_Box_12</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>GBCR2_Test_Gui</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>158</x>
+     <y>470</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>175</x>
+     <y>467</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CH1_Dis_Rx_Box_13</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>GBCR2_Test_Gui</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>322</x>
+     <y>472</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>341</x>
+     <y>468</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CH1_Dis_Rx_Box_15</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>GBCR2_Test_Gui</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>483</x>
+     <y>475</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>508</x>
+     <y>469</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CH1_Dis_Rx_Box_14</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>GBCR2_Test_Gui</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>647</x>
+     <y>473</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>668</x>
+     <y>470</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CH1_Dis_Rx_Box_19</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>GBCR2_Test_Gui</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>654</x>
+     <y>509</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>668</x>
+     <y>505</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CH1_Dis_Rx_Box_18</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>GBCR2_Test_Gui</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>491</x>
+     <y>506</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>508</x>
+     <y>505</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CH1_Dis_Rx_Box_16</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>GBCR2_Test_Gui</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>319</x>
+     <y>509</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>341</x>
+     <y>503</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CH1_Dis_Rx_Box_17</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>GBCR2_Test_Gui</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>151</x>
+     <y>504</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>176</x>
+     <y>501</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
