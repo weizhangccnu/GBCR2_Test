@@ -1801,7 +1801,7 @@ class Ui_GBCR2_Test_Gui(object):
         GBCR2_Test_Gui.setStatusBar(self.statusbar)
 
         self.retranslateUi(GBCR2_Test_Gui)
-        self.CH1_Dis_Rx_Box.valueChanged['QString'].connect(GBCR2_Test_Gui.update)
+        self.CH1_Dis_Rx_Box.valueChanged['int'].connect(GBCR2_Test_Gui.update)
         self.CH1_CML_AmplSel_Box.valueChanged['int'].connect(GBCR2_Test_Gui.update)
         self.CH1_Dis_EQ_LF_Box.valueChanged['int'].connect(GBCR2_Test_Gui.update)
         self.CH1_EQ_ATT_Box.valueChanged['int'].connect(GBCR2_Test_Gui.update)
