@@ -6,6 +6,9 @@
   ```python
   pip install usb-iss
   ```
-## 3. Convert xxx.ui to xxx.py 
-  - Use the command `C:\python3.7\Script\pyuic5 -x GBCR2_Test_GUI.ui -o GBCR2_Test_GUI.py` convert .ui file to .py file.
-## 4. Using pyinstaller geneates executable file from .py file 
+## 3. Convert xxx.ui to xxx.py
+  - Use the command `C:\Users\47859153\AppData\Local\Programs\Python\Python37\Scripts\pyuic5 -x GBCR2_Test_GUI.ui -o GBCR2_Test_GUI.py` convert .ui file to .py file.
+## 4. Using pyinstaller geneates executable file from .py file
+```
+pyinstaller -Fw GBCR2_Test_GUI.py         # F: one File     w: without console
+```
