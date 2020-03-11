@@ -109,6 +109,175 @@ class GBCR2_Reg(object):
     def __init__(self):
         self._regMap = copy.deepcopy(self._defaultRegMap)
 
+    def set_CH1_CML_AmplSel(self, val):
+        self._regMap['CH1_CML_AmplSel'] = val & 0x7
+
+    def set_CH1_EQ_ATT(self, val):
+        self._regMap['CH1_EQ_ATT'] = val & 0x3
+
+    def set_CH1_Dis_EQ_LF(self, val):
+        self._regMap['CH1_Dis_EQ_LF'] = val & 0x1
+
+    def set_CH1_CTLE_MFSR(self, val):
+        self._regMap['CH1_CTLE_MFSR'] = val & 0xf
+
+    def set_CH1_CTLE_HFSR(self, val):
+        self._regMap['CH1_CTLE_HFSR'] = val & 0xf
+
+    def set_CH1_Dis_LPF(self, val):
+        self._regMap['CH1_Dis_LPF'] = val & 0x1
+
+    def set_CH1_Dis_DFF(self, val):
+        self._regMap['CH1_Dis_DFF'] = val & 0x1
+
+    def set_CH1_Disable(self, val):
+        self._regMap['CH1_Disable'] = val & 0x1
+
+    def set_CH2_CML_AmplSel(self, val):
+        self._regMap['CH2_CML_AmplSel'] = val & 0x7
+
+    def set_CH2_EQ_ATT(self, val):
+        self._regMap['CH2_EQ_ATT'] = val & 0x3
+
+    def set_CH2_Dis_EQ_LF(self, val):
+        self._regMap['CH2_Dis_EQ_LF'] = val & 0x1
+
+    def set_CH2_CTLE_MFSR(self, val):
+        self._regMap['CH2_CTLE_MFSR'] = val & 0xf
+
+    def set_CH2_CTLE_HFSR(self, val):
+        self._regMap['CH2_CTLE_HFSR'] = val & 0xf
+
+    def set_CH2_Dis_LPF(self, val):
+        self._regMap['CH2_Dis_LPF'] = val & 0x1
+
+    def set_CH2_Dis_DFF(self, val):
+        self._regMap['CH2_Dis_DFF'] = val & 0x1
+
+    def set_CH2_Disable(self, val):
+        self._regMap['CH2_Disable'] = val & 0x1
+
+    def set_CH3_CML_AmplSel(self, val):
+        self._regMap['CH3_CML_AmplSel'] = val & 0x7
+
+    def set_CH3_EQ_ATT(self, val):
+        self._regMap['CH3_EQ_ATT'] = val & 0x3
+
+    def set_CH3_Dis_EQ_LF(self, val):
+        self._regMap['CH3_Dis_EQ_LF'] = val & 0x1
+
+    def set_CH3_CTLE_MFSR(self, val):
+        self._regMap['CH3_CTLE_MFSR'] = val & 0xf
+
+    def set_CH3_CTLE_HFSR(self, val):
+        self._regMap['CH3_CTLE_HFSR'] = val & 0xf
+
+    def set_CH3_Dis_LPF(self, val):
+        self._regMap['CH3_Dis_LPF'] = val & 0x1
+
+    def set_CH3_Dis_DFF(self, val):
+        self._regMap['CH3_Dis_DFF'] = val & 0x1
+
+    def set_CH3_Disable(self, val):
+        self._regMap['CH3_Disable'] = val & 0x1
+
+    def set_CH4_CML_AmplSel(self, val):
+        self._regMap['CH4_CML_AmplSel'] = val & 0x7
+
+    def set_CH4_EQ_ATT(self, val):
+        self._regMap['CH4_EQ_ATT'] = val & 0x3
+
+    def set_CH4_Dis_EQ_LF(self, val):
+        self._regMap['CH4_Dis_EQ_LF'] = val & 0x1
+
+    def set_CH4_CTLE_MFSR(self, val):
+        self._regMap['CH4_CTLE_MFSR'] = val & 0xf
+
+    def set_CH4_CTLE_HFSR(self, val):
+        self._regMap['CH4_CTLE_HFSR'] = val & 0xf
+
+    def set_CH4_Dis_LPF(self, val):
+        self._regMap['CH4_Dis_LPF'] = val & 0x1
+
+    def set_CH4_Dis_DFF(self, val):
+        self._regMap['CH4_Dis_DFF'] = val & 0x1
+
+    def set_CH4_Disable(self, val):
+        self._regMap['CH4_Disable'] = val & 0x1
+
+    def set_CH5_CML_AmplSel(self, val):
+        self._regMap['CH5_CML_AmplSel'] = val & 0x7
+
+    def set_CH5_EQ_ATT(self, val):
+        self._regMap['CH5_EQ_ATT'] = val & 0x3
+
+    def set_CH5_Dis_EQ_LF(self, val):
+        self._regMap['CH5_Dis_EQ_LF'] = val & 0x1
+
+    def set_CH5_CTLE_MFSR(self, val):
+        self._regMap['CH5_CTLE_MFSR'] = val & 0xf
+
+    def set_CH5_CTLE_HFSR(self, val):
+        self._regMap['CH5_CTLE_HFSR'] = val & 0xf
+
+    def set_CH5_Dis_LPF(self, val):
+        self._regMap['CH5_Dis_LPF'] = val & 0x1
+
+    def set_CH5_Dis_DFF(self, val):
+        self._regMap['CH5_Dis_DFF'] = val & 0x1
+
+    def set_CH5_Disable(self, val):
+        self._regMap['CH5_Disable'] = val & 0x1
+
+    def set_CH6_CML_AmplSel(self, val):
+        self._regMap['CH6_CML_AmplSel'] = val & 0x7
+
+    def set_CH6_EQ_ATT(self, val):
+        self._regMap['CH6_EQ_ATT'] = val & 0x3
+
+    def set_CH6_Dis_EQ_LF(self, val):
+        self._regMap['CH6_Dis_EQ_LF'] = val & 0x1
+
+    def set_CH6_CTLE_MFSR(self, val):
+        self._regMap['CH6_CTLE_MFSR'] = val & 0xf
+
+    def set_CH6_CTLE_HFSR(self, val):
+        self._regMap['CH6_CTLE_HFSR'] = val & 0xf
+
+    def set_CH6_Dis_LPF(self, val):
+        self._regMap['CH6_Dis_LPF'] = val & 0x1
+
+    def set_CH6_Dis_DFF(self, val):
+        self._regMap['CH6_Dis_DFF'] = val & 0x1
+
+    def set_CH6_Disable(self, val):
+        self._regMap['CH6_Disable'] = val & 0x1
+
+    def set_CH7_CML_AmplSel(self, val):
+        self._regMap['CH7_CML_AmplSel'] = val & 0x7
+
+    def set_CH7_EQ_ATT(self, val):
+        self._regMap['CH7_EQ_ATT'] = val & 0x3
+
+    def set_CH7_Dis_EQ_LF(self, val):
+        self._regMap['CH7_Dis_EQ_LF'] = val & 0x1
+
+    def set_CH7_CTLE_MFSR(self, val):
+        self._regMap['CH7_CTLE_MFSR'] = val & 0xf
+
+    def set_CH7_CTLE_HFSR(self, val):
+        self._regMap['CH7_CTLE_HFSR'] = val & 0xf
+
+    def set_CH7_Dis_LPF(self, val):
+        self._regMap['CH7_Dis_LPF'] = val & 0x1
+
+    def set_CH7_Dis_DFF(self, val):
+        self._regMap['CH7_Dis_DFF'] = val & 0x1
+
+    def set_CH7_Disable(self, val):
+        self._regMap['CH7_Disable'] = val & 0x1
+
+
     ## get I2C register value
     def get_config_vector(self):
         reg_value = []
@@ -145,3 +314,21 @@ class GBCR2_Reg(object):
         reg_value += [hex(self._regMap['Tx2_DL_ATT'] << 4 | self._regMap['Tx2_Dis_DL_Emp'] << 3 | self._regMap['Tx2_DL_SR'])]
         reg_value += [hex(self._regMap['Tx2_Dis_DL_BIAS'] << 1 | self._regMap['Tx2_Dis_DL_LPF_BIAS'])]
         return reg_value
+#========================================================================#
+def main():
+    GBCR2_Reg1 = GBCR2_Reg()
+    GBCR2_Reg1.set_CH1_CML_AmplSel(1)
+    GBCR2_Reg1.set_CH1_EQ_ATT(3)
+    GBCR2_Reg1.set_CH1_Dis_EQ_LF(1)
+    GBCR2_Reg1.set_CH1_CTLE_MFSR(1)
+    GBCR2_Reg1.set_CH1_CTLE_HFSR(1)
+    GBCR2_Reg1.set_CH1_Dis_LPF(1)
+    GBCR2_Reg1.set_CH1_Dis_DFF(1)
+    GBCR2_Reg1.set_CH1_Disable(1)
+
+    print(GBCR2_Reg1.get_config_vector())
+
+    print("Ok!")
+#========================================================================#
+if __name__ == "__main__":
+    main()
