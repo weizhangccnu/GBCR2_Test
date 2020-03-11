@@ -144,16 +144,4 @@ class GBCR2_Reg(object):
         reg_value += [hex(self._regMap['Tx1_Dis_DL_BIAS'] << 1 | self._regMap['Tx1_Dis_DL_LPF_BIAS'])]
         reg_value += [hex(self._regMap['Tx2_DL_ATT'] << 4 | self._regMap['Tx2_Dis_DL_Emp'] << 3 | self._regMap['Tx2_DL_SR'])]
         reg_value += [hex(self._regMap['Tx2_Dis_DL_BIAS'] << 1 | self._regMap['Tx2_Dis_DL_LPF_BIAS'])]
-
-
-
         return reg_value
-#========================================================================#
-def main():
-    GBCR2_Reg1 = GBCR2_Reg()
-    print(GBCR2_Reg1.get_config_vector())
-
-    print("Ok!")
-#========================================================================#
-if __name__ == "__main__":
-    main()
