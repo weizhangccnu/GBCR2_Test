@@ -277,6 +277,54 @@ class GBCR2_Reg(object):
     def set_CH7_Disable(self, val):
         self._regMap['CH7_Disable'] = val & 0x1
 
+    def set_dllCapReset(self, val):
+        self._regMap['dllCapReset'] = val & 0x1
+
+    def set_dllEnable(self, val):
+        self._regMap['dllEnable'] = val & 0x1
+
+    def set_dllChargePumpCurrent(self, val):
+        self._regMap['dllChargePumpCurrent'] = val & 0xf
+
+    def set_dllForceDown(self, val):
+        self._regMap['dllForceDown'] = val & 0x1
+
+    def set_dllClockDelay_CH7(self, val):
+        self._regMap['dllClockDelay_CH7'] = val & 0xf
+
+    def set_dllClockDelay_CH6(self, val):
+        self._regMap['dllClockDelay_CH6'] = val & 0xf
+
+    def set_dllClockDelay_CH5(self, val):
+        self._regMap['dllClockDelay_CH5'] = val & 0xf
+
+    def set_dllClockDelay_CH4(self, val):
+        self._regMap['dllClockDelay_CH4'] = val & 0xf
+
+    def set_dllClockDelay_CH3(self, val):
+        self._regMap['dllClockDelay_CH3'] = val & 0xf
+
+    def set_dllClockDelay_CH2(self, val):
+        self._regMap['dllClockDelay_CH3'] = val & 0xf
+
+    def set_dllClockDelay_CH1(self, val):
+        self._regMap['dllClockDelay_CH1'] = val & 0xf
+
+    def set_dllClockDelay_CH0(self, val):
+        self._regMap['dllClockDelay_CH0'] = val & 0xf
+
+    def set_Dis_Tx(self, val):
+        self._regMap['Dis_Tx'] = val & 0x1
+
+    def set_Rx_Equa(self, val):
+        self._regMap['Rx_Equa'] = val & 0x3
+
+    def set_Rx_invData(self, val):
+        self._regMap['Rx_invData'] = val & 0x1
+
+    def set_Rx_enTermination(self, val):
+        self._regMap['Rx_enTermination'] = val & 0x1
+
 
     ## get I2C register value
     def get_config_vector(self):
