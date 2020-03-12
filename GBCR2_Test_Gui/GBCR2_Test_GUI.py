@@ -6,14 +6,29 @@
 #
 # WARNING! All changes made in this file will be lost!
 
-
+import time
+import winsound
+from GBCR2_Reg import *
+from usb_iss import UsbIss, defs
 from PyQt5 import QtCore, QtGui, QtWidgets
+
+#========================================================================================#
+freqency = 1000
+duration = 200
+
+#========================================================================================#
 
 
 class Ui_GBCR2_Test_Gui(object):
+    I2C_Addr = 0x23                     # default I2C address
+    COM_Port = "COM3"                   # default COM Port
+    # def __init__(self, I2C_Addr=None, COM_Port=None):
+    #     self.I2C_Addr = 0x23
+    #     self.COM_Port = "COM3"
+
     def setupUi(self, GBCR2_Test_Gui):
         GBCR2_Test_Gui.setObjectName("GBCR2_Test_Gui")
-        GBCR2_Test_Gui.resize(1334, 709)
+        GBCR2_Test_Gui.resize(1334, 706)
         palette = QtGui.QPalette()
         brush = QtGui.QBrush(QtGui.QColor(255, 85, 0))
         brush.setStyle(QtCore.Qt.SolidPattern)
@@ -35,6 +50,10 @@ class Ui_GBCR2_Test_Gui(object):
         palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.AlternateBase, brush)
         GBCR2_Test_Gui.setPalette(palette)
         GBCR2_Test_Gui.setFocusPolicy(QtCore.Qt.StrongFocus)
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap("Southern_Methodist_University_Logo.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        GBCR2_Test_Gui.setWindowIcon(icon)
+        GBCR2_Test_Gui.setWindowOpacity(1.0)
         GBCR2_Test_Gui.setWhatsThis("")
         GBCR2_Test_Gui.setStyleSheet("alternate-background-color: rgb(194, 188, 200);")
         GBCR2_Test_Gui.setToolButtonStyle(QtCore.Qt.ToolButtonTextBesideIcon)
@@ -1989,7 +2008,7 @@ class Ui_GBCR2_Test_Gui(object):
         GBCR2_Test_Gui.setStatusBar(self.statusbar)
 
         self.retranslateUi(GBCR2_Test_Gui)
-        self.CH1_Dis_Rx_Box.valueChanged['QString'].connect(GBCR2_Test_Gui.update)
+        self.CH1_Dis_Rx_Box.valueChanged['QString'].connect(self.CH1_Dis_Rx_Box_valueChanged)
         self.CH1_CML_AmpSel_Box.valueChanged['int'].connect(GBCR2_Test_Gui.update)
         self.CH1_Dis_EQ_LF_Box.valueChanged['int'].connect(GBCR2_Test_Gui.update)
         self.CH1_EQ_ATT_Box.valueChanged['int'].connect(GBCR2_Test_Gui.update)
@@ -2045,8 +2064,8 @@ class Ui_GBCR2_Test_Gui(object):
         self.CH7_CTLE_MFSR_Box.valueChanged['int'].connect(GBCR2_Test_Gui.update)
         self.CH7_Dis_DFF_Box.valueChanged['int'].connect(GBCR2_Test_Gui.update)
         self.CH7_Dis_LPF_Box.valueChanged['int'].connect(GBCR2_Test_Gui.update)
-        self.COM_Port_Box.activated['QString'].connect(GBCR2_Test_Gui.update)
-        self.I2C_Addr_Box.activated['QString'].connect(GBCR2_Test_Gui.update)
+        self.COM_Port_Box.activated['QString'].connect(self.COM_Port_Box_activated)
+        self.I2C_Addr_Box.activated['QString'].connect(self.I2C_Addr_Box_activated)
         self.CH1_DLL_ATT_Box.valueChanged['int'].connect(GBCR2_Test_Gui.update)
         self.CH1_Dis_DL_Emp_Box.valueChanged['int'].connect(GBCR2_Test_Gui.update)
         self.CH1_DL_SR_Box.valueChanged['int'].connect(GBCR2_Test_Gui.update)
@@ -2075,6 +2094,7 @@ class Ui_GBCR2_Test_Gui(object):
         self.dllClockDelay_CH1_Box.valueChanged['int'].connect(GBCR2_Test_Gui.update)
         self.dllClockDelay_CH2_Box.valueChanged['int'].connect(GBCR2_Test_Gui.update)
         self.dllClockDelay_CH3_Box.valueChanged['int'].connect(GBCR2_Test_Gui.update)
+        self.pushButton.clicked['bool'].connect(self.pushButton_clicked)
         QtCore.QMetaObject.connectSlotsByName(GBCR2_Test_Gui)
 
     def retranslateUi(self, GBCR2_Test_Gui):
@@ -2095,7 +2115,7 @@ class Ui_GBCR2_Test_Gui(object):
         self.COM_Port_Box.setItemText(8, _translate("GBCR2_Test_Gui", "COM9"))
         self.I2C_Addr.setText(_translate("GBCR2_Test_Gui", "I2C Addr"))
         self.pushButton.setText(_translate("GBCR2_Test_Gui", "I2C Write"))
-        self.pushButton.setShortcut(_translate("GBCR2_Test_Gui", "Ctrl+Return"))
+        self.pushButton.setShortcut(_translate("GBCR2_Test_Gui", "Return"))
         self.I2C_Addr_Box.setItemText(0, _translate("GBCR2_Test_Gui", "0x23"))
         self.I2C_Addr_Box.setItemText(1, _translate("GBCR2_Test_Gui", "0x20"))
         self.I2C_Addr_Box.setItemText(2, _translate("GBCR2_Test_Gui", "0x21"))
@@ -2198,9 +2218,77 @@ class Ui_GBCR2_Test_Gui(object):
         self.CH2_DLL_ATT.setText(_translate("GBCR2_Test_Gui", "DLL_ATT"))
         self.COM_Port.setText(_translate("GBCR2_Test_Gui", "COM Port"))
 
+    def I2C_Addr_Box_activated(self):                                 # select I2C slave address
+        winsound.Beep(freqency, duration)
+        if self.I2C_Addr_Box.currentText() == "0x23":
+            I2C_Addr = 0x23
+            print("I2C Slave address: 0x23")
+        elif self.I2C_Addr_Box.currentText() == "0x22":
+            I2C_Addr = 0x22
+            print("I2C Slave address: 0x22")
+        elif self.I2C_Addr_Box.currentText() == "0x21":
+            I2C_Addr = 0x21
+            print("I2C Slave address: 0x21")
+        else:
+            I2C_Addr = 0x20
+            print("I2C Slave address: 0x20")
+
+    def COM_Port_Box_activated(self):                                 # COM Ports select
+        winsound.Beep(freqency, duration)
+        if self.COM_Port_Box.currentText() == "COM0":
+            COM_Port = 'COM0'
+            print("COM Port is: %s"%(COM_Port))
+        elif self.COM_Port_Box.currentText() == "COM1":
+            COM_Port = 'COM1'
+            print("COM Port is: %s"%(COM_Port))
+        elif self.COM_Port_Box.currentText() == "COM2":
+            COM_Port = 'COM2'
+            print("COM Port is: %s"%(COM_Port))
+        elif self.COM_Port_Box.currentText() == "COM3":
+            COM_Port = 'COM3'
+            print("COM Port is: %s"%(COM_Port))
+        elif self.COM_Port_Box.currentText() == "COM4":
+            COM_Port = 'COM4'
+            print("COM Port is: %s"%(COM_Port))
+        elif self.COM_Port_Box.currentText() == "COM5":
+            COM_Port = 'COM5'
+            print("COM Port is: %s"%(COM_Port))
+        elif self.COM_Port_Box.currentText() == "COM6":
+            COM_Port = 'COM6'
+            print("COM Port is: %s"%(COM_Port))
+        elif self.COM_Port_Box.currentText() == "COM7":
+            COM_Port = 'COM7'
+            print("COM Port is: %s"%(COM_Port))
+        elif self.COM_Port_Box.currentText() == "COM8":
+            COM_Port = 'COM8'
+            print("COM Port is: %s"%(COM_Port))
+        else:
+            COM_Port = 'COM9'
+            print("COM Port is: %s"%(COM_Port))
+
+    def pushButton_clicked(self):
+        winsound.Beep(2000, 500)
+        iss = UsbIss()
+        iss.open(COM_Port)
+        iss.setup_i2c()
+        print(I2C_Addr)
+        Reg_Write_val = GBCR2_Reg1.get_config_vector()
+        print("GBCR2 I2C Write in data:")
+        print(Reg_Write_val)
+        iss.i2c.write(I2C_Addr, 0, Reg_Write_val)
+        Reg_Read_val = []
+        Reg_Read_val = iss.i2c.read(I2C_Addr, 0, 0x20)
+        print("GBCR2 I2C Read Back data:")
+        print(Reg_Read_val)
+
+    def CH1_Dis_Rx_Box_valueChanged(self):
+        winsound.Beep(freqency, duration)
+        GBCR2_Reg1.set_CH1_Disable(self.CH1_Dis_Rx_Box.value())
 
 if __name__ == "__main__":
     import sys
+
+    GBCR2_Reg1 = GBCR2_Reg()
     app = QtWidgets.QApplication(sys.argv)
     GBCR2_Test_Gui = QtWidgets.QMainWindow()
     ui = Ui_GBCR2_Test_Gui()
