@@ -324,7 +324,42 @@ class GBCR2_Reg(object):
     def set_Rx_enTermination(self, val):
         self._regMap['Rx_enTermination'] = val & 0x1
 
+    def set_Rx_setCM(self, val):
+        self._regMap['Rx_setCM'] = val & 0x1
 
+    def set_Rx_Enable(self, val):
+        self._regMap['Rx_Enable'] = val & 0x1
+
+    def set_Tx1_DL_SR(self, val):
+        self._regMap['Tx1_DL_SR'] = val & 0x7
+
+    def set_Tx1_Dis_DL_Emp(self, val):
+        self._regMap['Tx1_Dis_DL_Emp'] = val & 0x1
+
+    def set_Tx1_DL_ATT(self, val):
+        self._regMap['Tx1_DL_ATT'] = val & 0x3
+
+    def set_Tx1_Dis_DL_LPF_BIAS(self, val):
+        self._regMap['Tx1_Dis_DL_LPF_BIAS'] = val & 0x1
+
+    def set_Tx1_Dis_DL_BIAS(self, val):
+        self._regMap['Tx1_Dis_DL_BIAS'] = val & 0x1
+
+    def set_Tx2_DL_SR(self, val):
+        self._regMap['Tx2_DL_SR'] = val & 0x7
+
+    def set_Tx2_Dis_DL_Emp(self, val):
+        self._regMap['Tx2_Dis_DL_Emp'] = val & 0x1
+
+    def set_Tx2_DL_ATT(self, val):
+        self._regMap['Tx2_DL_ATT'] = val & 0x3
+
+    def set_Tx2_Dis_DL_LPF_BIAS(self, val):
+        self._regMap['Tx2_Dis_DL_LPF_BIAS'] = val & 0x1
+
+    def set_Tx2_Dis_DL_BIAS(self, val):
+        self._regMap['Tx2_Dis_DL_BIAS'] = val & 0x1
+        
     ## get I2C register value
     def get_config_vector(self):
         reg_value = []
