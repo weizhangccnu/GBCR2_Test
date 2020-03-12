@@ -359,7 +359,7 @@ class GBCR2_Reg(object):
 
     def set_Tx2_Dis_DL_BIAS(self, val):
         self._regMap['Tx2_Dis_DL_BIAS'] = val & 0x1
-        
+
     ## get I2C register value
     def get_config_vector(self):
         reg_value = []
@@ -396,21 +396,3 @@ class GBCR2_Reg(object):
         reg_value += [hex(self._regMap['Tx2_DL_ATT'] << 4 | self._regMap['Tx2_Dis_DL_Emp'] << 3 | self._regMap['Tx2_DL_SR'])]
         reg_value += [hex(self._regMap['Tx2_Dis_DL_BIAS'] << 1 | self._regMap['Tx2_Dis_DL_LPF_BIAS'])]
         return reg_value
-#========================================================================#
-def main():
-    GBCR2_Reg1 = GBCR2_Reg()
-    # GBCR2_Reg1.set_CH1_CML_AmplSel(1)
-    # GBCR2_Reg1.set_CH1_EQ_ATT(3)
-    # GBCR2_Reg1.set_CH1_Dis_EQ_LF(1)
-    # GBCR2_Reg1.set_CH1_CTLE_MFSR(1)
-    # GBCR2_Reg1.set_CH1_CTLE_HFSR(1)
-    # GBCR2_Reg1.set_CH1_Dis_LPF(1)
-    # GBCR2_Reg1.set_CH1_Dis_DFF(1)
-    # GBCR2_Reg1.set_CH1_Disable(1)
-
-    print(GBCR2_Reg1.get_config_vector())
-
-    print("Ok!")
-#========================================================================#
-if __name__ == "__main__":
-    main()
