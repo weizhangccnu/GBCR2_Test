@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
+ <author>Wei Zhang</author>
  <class>GBCR2_Test_Gui</class>
  <widget class="QMainWindow" name="GBCR2_Test_Gui">
   <property name="geometry">
@@ -7,7 +8,7 @@
     <x>0</x>
     <y>0</y>
     <width>1334</width>
-    <height>709</height>
+    <height>706</height>
    </rect>
   </property>
   <property name="palette">
@@ -79,6 +80,13 @@
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>Southern_Methodist_University_Logo.png</normaloff>Southern_Methodist_University_Logo.png</iconset>
+  </property>
+  <property name="windowOpacity">
+   <double>1.000000000000000</double>
   </property>
   <property name="whatsThis">
    <string/>
@@ -161,7 +169,7 @@
      <rect>
       <x>1090</x>
       <y>318</y>
-      <width>181</width>
+      <width>191</width>
       <height>21</height>
      </rect>
     </property>
@@ -2957,37 +2965,6 @@
       <number>15</number>
      </property>
      <item row="0" column="0">
-      <widget class="QLabel" name="dllClockDelay_CH8">
-       <property name="font">
-        <font>
-         <family>Times New Roman</family>
-         <pointsize>12</pointsize>
-         <weight>50</weight>
-         <bold>false</bold>
-        </font>
-       </property>
-       <property name="text">
-        <string>dllClockDelay_CH8</string>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="1">
-      <widget class="QSpinBox" name="dllClockDelay_CH8_Box">
-       <property name="font">
-        <font>
-         <family>Times New Roman</family>
-         <pointsize>14</pointsize>
-        </font>
-       </property>
-       <property name="maximum">
-        <number>15</number>
-       </property>
-       <property name="value">
-        <number>3</number>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="2">
       <widget class="QLabel" name="dllClockDelay_CH7">
        <property name="font">
         <font>
@@ -3002,7 +2979,7 @@
        </property>
       </widget>
      </item>
-     <item row="0" column="3">
+     <item row="0" column="1">
       <widget class="QSpinBox" name="dllClockDelay_CH7_Box">
        <property name="font">
         <font>
@@ -3018,7 +2995,7 @@
        </property>
       </widget>
      </item>
-     <item row="0" column="4">
+     <item row="0" column="2">
       <widget class="QLabel" name="dllClockDelay_CH6">
        <property name="font">
         <font>
@@ -3033,7 +3010,7 @@
        </property>
       </widget>
      </item>
-     <item row="0" column="5">
+     <item row="0" column="3">
       <widget class="QSpinBox" name="dllClockDelay_CH6_Box">
        <property name="font">
         <font>
@@ -3049,7 +3026,7 @@
        </property>
       </widget>
      </item>
-     <item row="0" column="6">
+     <item row="0" column="4">
       <widget class="QLabel" name="dllClockDelay_CH5">
        <property name="font">
         <font>
@@ -3064,7 +3041,7 @@
        </property>
       </widget>
      </item>
-     <item row="0" column="7">
+     <item row="0" column="5">
       <widget class="QSpinBox" name="dllClockDelay_CH5_Box">
        <property name="font">
         <font>
@@ -3080,7 +3057,7 @@
        </property>
       </widget>
      </item>
-     <item row="1" column="0">
+     <item row="0" column="6">
       <widget class="QLabel" name="dllClockDelay_CH4">
        <property name="font">
         <font>
@@ -3095,7 +3072,7 @@
        </property>
       </widget>
      </item>
-     <item row="1" column="1">
+     <item row="0" column="7">
       <widget class="QSpinBox" name="dllClockDelay_CH4_Box">
        <property name="font">
         <font>
@@ -3111,7 +3088,7 @@
        </property>
       </widget>
      </item>
-     <item row="1" column="2">
+     <item row="1" column="0">
       <widget class="QLabel" name="dllClockDelay_CH3">
        <property name="font">
         <font>
@@ -3126,7 +3103,7 @@
        </property>
       </widget>
      </item>
-     <item row="1" column="3">
+     <item row="1" column="1">
       <widget class="QSpinBox" name="dllClockDelay_CH3_Box">
        <property name="font">
         <font>
@@ -3142,7 +3119,7 @@
        </property>
       </widget>
      </item>
-     <item row="1" column="4">
+     <item row="1" column="2">
       <widget class="QLabel" name="dllClockDelay_CH2">
        <property name="font">
         <font>
@@ -3157,7 +3134,7 @@
        </property>
       </widget>
      </item>
-     <item row="1" column="5">
+     <item row="1" column="3">
       <widget class="QSpinBox" name="dllClockDelay_CH2_Box">
        <property name="font">
         <font>
@@ -3173,7 +3150,7 @@
        </property>
       </widget>
      </item>
-     <item row="1" column="6">
+     <item row="1" column="4">
       <widget class="QLabel" name="dllClockDelay_CH1">
        <property name="font">
         <font>
@@ -3188,8 +3165,39 @@
        </property>
       </widget>
      </item>
-     <item row="1" column="7">
+     <item row="1" column="5">
       <widget class="QSpinBox" name="dllClockDelay_CH1_Box">
+       <property name="font">
+        <font>
+         <family>Times New Roman</family>
+         <pointsize>14</pointsize>
+        </font>
+       </property>
+       <property name="maximum">
+        <number>15</number>
+       </property>
+       <property name="value">
+        <number>3</number>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="6">
+      <widget class="QLabel" name="dllClockDelay_CH0">
+       <property name="font">
+        <font>
+         <family>Times New Roman</family>
+         <pointsize>12</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>dllClockDelay_CH0</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="7">
+      <widget class="QSpinBox" name="dllClockDelay_CH0_Box">
        <property name="font">
         <font>
          <family>Times New Roman</family>
@@ -4936,7 +4944,7 @@
    </hints>
   </connection>
   <connection>
-   <sender>dllClockDelay_CH8_Box</sender>
+   <sender>dllClockDelay_CH7_Box</sender>
    <signal>valueChanged(int)</signal>
    <receiver>GBCR2_Test_Gui</receiver>
    <slot>update()</slot>
@@ -4952,7 +4960,7 @@
    </hints>
   </connection>
   <connection>
-   <sender>dllClockDelay_CH7_Box</sender>
+   <sender>dllClockDelay_CH6_Box</sender>
    <signal>valueChanged(int)</signal>
    <receiver>GBCR2_Test_Gui</receiver>
    <slot>update()</slot>
@@ -4968,7 +4976,7 @@
    </hints>
   </connection>
   <connection>
-   <sender>dllClockDelay_CH6_Box</sender>
+   <sender>dllClockDelay_CH5_Box</sender>
    <signal>valueChanged(int)</signal>
    <receiver>GBCR2_Test_Gui</receiver>
    <slot>update()</slot>
@@ -4984,7 +4992,7 @@
    </hints>
   </connection>
   <connection>
-   <sender>dllClockDelay_CH5_Box</sender>
+   <sender>dllClockDelay_CH4_Box</sender>
    <signal>valueChanged(int)</signal>
    <receiver>GBCR2_Test_Gui</receiver>
    <slot>update()</slot>
@@ -5000,7 +5008,7 @@
    </hints>
   </connection>
   <connection>
-   <sender>dllClockDelay_CH1_Box</sender>
+   <sender>dllClockDelay_CH0_Box</sender>
    <signal>valueChanged(int)</signal>
    <receiver>GBCR2_Test_Gui</receiver>
    <slot>update()</slot>
@@ -5016,7 +5024,7 @@
    </hints>
   </connection>
   <connection>
-   <sender>dllClockDelay_CH2_Box</sender>
+   <sender>dllClockDelay_CH1_Box</sender>
    <signal>valueChanged(int)</signal>
    <receiver>GBCR2_Test_Gui</receiver>
    <slot>update()</slot>
@@ -5032,7 +5040,7 @@
    </hints>
   </connection>
   <connection>
-   <sender>dllClockDelay_CH3_Box</sender>
+   <sender>dllClockDelay_CH2_Box</sender>
    <signal>valueChanged(int)</signal>
    <receiver>GBCR2_Test_Gui</receiver>
    <slot>update()</slot>
@@ -5048,7 +5056,7 @@
    </hints>
   </connection>
   <connection>
-   <sender>dllClockDelay_CH4_Box</sender>
+   <sender>dllClockDelay_CH3_Box</sender>
    <signal>valueChanged(int)</signal>
    <receiver>GBCR2_Test_Gui</receiver>
    <slot>update()</slot>
