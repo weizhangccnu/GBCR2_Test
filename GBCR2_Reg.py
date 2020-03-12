@@ -73,7 +73,7 @@ class GBCR2_Reg(object):
         'dllEnable'             :   1,
         'dllChargePumpCurrent'  :   0xf,
         'dllForceDown'          :   0,
-        
+
         'dllClockDelay_CH7'     :   0x5,
         'dllClockDelay_CH6'     :   0x5,
         'dllClockDelay_CH5'     :   0x5,
@@ -84,24 +84,23 @@ class GBCR2_Reg(object):
         'dllClockDelay_CH0'     :   0x5,
 
         'Dis_Tx'                :   0,
-        'Rx_Equa'               :   0x1,
+        'Rx_Equa'               :   0x0,
         'Rx_invData'            :   0,
-        'Rx_enTermination'      :   0,
-        'Rx_enTermination'      :   0,
-        'Rx_setCM'              :   0,
-        'Rx_Enable'             :   0,
+        'Rx_enTermination'      :   1,
+        'Rx_setCM'              :   1,
+        'Rx_Enable'             :   1,
 
         'Tx1_DL_SR'             :   0x5,
         'Tx1_Dis_DL_Emp'        :   0,
         'Tx1_DL_ATT'            :   0x0,
-        'Tx1_Dis_DL_LPF_BIAS'   :   0,
-        'Tx1_Dis_DL_BIAS'       :   1,
+        'Tx1_Dis_DL_LPF_BIAS'   :   1,
+        'Tx1_Dis_DL_BIAS'       :   0,
 
         'Tx2_DL_SR'             :   0x5,
         'Tx2_Dis_DL_Emp'        :   0,
         'Tx2_DL_ATT'            :   0x0,
-        'Tx2_Dis_DL_LPF_BIAS'   :   0,
-        'Tx2_Dis_DL_BIAS'       :   1,
+        'Tx2_Dis_DL_LPF_BIAS'   :   1,
+        'Tx2_Dis_DL_BIAS'       :   0,
         }
     ## @var register map local to the class
     _regMap = {}
@@ -365,14 +364,14 @@ class GBCR2_Reg(object):
 #========================================================================#
 def main():
     GBCR2_Reg1 = GBCR2_Reg()
-    GBCR2_Reg1.set_CH1_CML_AmplSel(1)
-    GBCR2_Reg1.set_CH1_EQ_ATT(3)
-    GBCR2_Reg1.set_CH1_Dis_EQ_LF(1)
-    GBCR2_Reg1.set_CH1_CTLE_MFSR(1)
-    GBCR2_Reg1.set_CH1_CTLE_HFSR(1)
-    GBCR2_Reg1.set_CH1_Dis_LPF(1)
-    GBCR2_Reg1.set_CH1_Dis_DFF(1)
-    GBCR2_Reg1.set_CH1_Disable(1)
+    # GBCR2_Reg1.set_CH1_CML_AmplSel(1)
+    # GBCR2_Reg1.set_CH1_EQ_ATT(3)
+    # GBCR2_Reg1.set_CH1_Dis_EQ_LF(1)
+    # GBCR2_Reg1.set_CH1_CTLE_MFSR(1)
+    # GBCR2_Reg1.set_CH1_CTLE_HFSR(1)
+    # GBCR2_Reg1.set_CH1_Dis_LPF(1)
+    # GBCR2_Reg1.set_CH1_Dis_DFF(1)
+    # GBCR2_Reg1.set_CH1_Disable(1)
 
     print(GBCR2_Reg1.get_config_vector())
 
