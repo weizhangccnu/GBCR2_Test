@@ -300,7 +300,7 @@
      <string>I2C Write</string>
     </property>
     <property name="shortcut">
-     <string>Ctrl+Return</string>
+     <string>Return</string>
     </property>
     <property name="autoDefault">
      <bool>true</bool>
@@ -1442,7 +1442,7 @@
       </widget>
      </item>
      <item row="0" column="1">
-      <widget class="QSpinBox" name="CH1_CML_AmpSel_Box">
+      <widget class="QSpinBox" name="CH1_CML_AmplSel_Box">
        <property name="font">
         <font>
          <family>Times New Roman</family>
@@ -1473,7 +1473,7 @@
       </widget>
      </item>
      <item row="1" column="1">
-      <widget class="QSpinBox" name="CH2_CML_AmpSel_Box">
+      <widget class="QSpinBox" name="CH2_CML_AmplSel_Box">
        <property name="font">
         <font>
          <family>Times New Roman</family>
@@ -1504,7 +1504,7 @@
       </widget>
      </item>
      <item row="2" column="1">
-      <widget class="QSpinBox" name="CH3_CML_AmpSel_Box">
+      <widget class="QSpinBox" name="CH3_CML_AmplSel_Box">
        <property name="font">
         <font>
          <family>Times New Roman</family>
@@ -1535,7 +1535,7 @@
       </widget>
      </item>
      <item row="3" column="1">
-      <widget class="QSpinBox" name="CH4_CML_AmpSel_Box">
+      <widget class="QSpinBox" name="CH4_CML_AmplSel_Box">
        <property name="font">
         <font>
          <family>Times New Roman</family>
@@ -1566,7 +1566,7 @@
       </widget>
      </item>
      <item row="4" column="1">
-      <widget class="QSpinBox" name="CH5_CML_AmpSel_Box">
+      <widget class="QSpinBox" name="CH5_CML_AmplSel_Box">
        <property name="font">
         <font>
          <family>Times New Roman</family>
@@ -1597,7 +1597,7 @@
       </widget>
      </item>
      <item row="5" column="1">
-      <widget class="QSpinBox" name="CH6_CML_AmpSel_Box">
+      <widget class="QSpinBox" name="CH6_CML_AmplSel_Box">
        <property name="font">
         <font>
          <family>Times New Roman</family>
@@ -1628,7 +1628,7 @@
       </widget>
      </item>
      <item row="6" column="1">
-      <widget class="QSpinBox" name="CH7_CML_AmpSel_Box">
+      <widget class="QSpinBox" name="CH7_CML_AmplSel_Box">
        <property name="font">
         <font>
          <family>Times New Roman</family>
@@ -1682,7 +1682,7 @@
         <number>1</number>
        </property>
        <property name="value">
-        <number>1</number>
+        <number>0</number>
        </property>
       </widget>
      </item>
@@ -1713,7 +1713,7 @@
         <number>1</number>
        </property>
        <property name="value">
-        <number>1</number>
+        <number>0</number>
        </property>
       </widget>
      </item>
@@ -1744,7 +1744,7 @@
         <number>1</number>
        </property>
        <property name="value">
-        <number>1</number>
+        <number>0</number>
        </property>
       </widget>
      </item>
@@ -1775,7 +1775,7 @@
         <number>1</number>
        </property>
        <property name="value">
-        <number>1</number>
+        <number>0</number>
        </property>
       </widget>
      </item>
@@ -1806,7 +1806,7 @@
         <number>1</number>
        </property>
        <property name="value">
-        <number>1</number>
+        <number>0</number>
        </property>
       </widget>
      </item>
@@ -1837,7 +1837,7 @@
         <number>1</number>
        </property>
        <property name="value">
-        <number>1</number>
+        <number>0</number>
        </property>
       </widget>
      </item>
@@ -1868,7 +1868,7 @@
         <number>1</number>
        </property>
        <property name="value">
-        <number>1</number>
+        <number>0</number>
        </property>
       </widget>
      </item>
@@ -3414,7 +3414,7 @@
         <number>7</number>
        </property>
        <property name="value">
-        <number>3</number>
+        <number>5</number>
        </property>
       </widget>
      </item>
@@ -3430,7 +3430,7 @@
         <number>7</number>
        </property>
        <property name="value">
-        <number>3</number>
+        <number>5</number>
        </property>
       </widget>
      </item>
@@ -3702,8 +3702,8 @@
    <slot>update()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>133</x>
-     <y>68</y>
+     <x>188</x>
+     <y>95</y>
     </hint>
     <hint type="destinationlabel">
      <x>152</x>
@@ -3712,14 +3712,14 @@
    </hints>
   </connection>
   <connection>
-   <sender>CH1_CML_AmpSel_Box</sender>
+   <sender>CH1_CML_AmplSel_Box</sender>
    <signal>valueChanged(int)</signal>
    <receiver>GBCR2_Test_Gui</receiver>
    <slot>update()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>255</x>
-     <y>68</y>
+     <x>373</x>
+     <y>95</y>
     </hint>
     <hint type="destinationlabel">
      <x>287</x>
@@ -3734,8 +3734,8 @@
    <slot>update()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>374</x>
-     <y>67</y>
+     <x>497</x>
+     <y>94</y>
     </hint>
     <hint type="destinationlabel">
      <x>408</x>
@@ -3750,8 +3750,8 @@
    <slot>update()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>494</x>
-     <y>64</y>
+     <x>633</x>
+     <y>91</y>
     </hint>
     <hint type="destinationlabel">
      <x>513</x>
@@ -3766,8 +3766,8 @@
    <slot>update()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>606</x>
-     <y>65</y>
+     <x>804</x>
+     <y>92</y>
     </hint>
     <hint type="destinationlabel">
      <x>642</x>
@@ -3782,8 +3782,8 @@
    <slot>update()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>740</x>
-     <y>68</y>
+     <x>989</x>
+     <y>95</y>
     </hint>
     <hint type="destinationlabel">
      <x>775</x>
@@ -3798,8 +3798,8 @@
    <slot>update()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>846</x>
-     <y>62</y>
+     <x>1138</x>
+     <y>89</y>
     </hint>
     <hint type="destinationlabel">
      <x>881</x>
@@ -3814,8 +3814,8 @@
    <slot>update()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>958</x>
-     <y>67</y>
+     <x>1273</x>
+     <y>94</y>
     </hint>
     <hint type="destinationlabel">
      <x>987</x>
@@ -3830,8 +3830,8 @@
    <slot>update()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>122</x>
-     <y>92</y>
+     <x>188</x>
+     <y>134</y>
     </hint>
     <hint type="destinationlabel">
      <x>151</x>
@@ -3840,14 +3840,14 @@
    </hints>
   </connection>
   <connection>
-   <sender>CH2_CML_AmpSel_Box</sender>
+   <sender>CH2_CML_AmplSel_Box</sender>
    <signal>valueChanged(int)</signal>
    <receiver>GBCR2_Test_Gui</receiver>
    <slot>update()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>250</x>
-     <y>94</y>
+     <x>373</x>
+     <y>134</y>
     </hint>
     <hint type="destinationlabel">
      <x>283</x>
@@ -3862,8 +3862,8 @@
    <slot>update()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>374</x>
-     <y>93</y>
+     <x>497</x>
+     <y>134</y>
     </hint>
     <hint type="destinationlabel">
      <x>407</x>
@@ -3878,8 +3878,8 @@
    <slot>update()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>489</x>
-     <y>95</y>
+     <x>633</x>
+     <y>134</y>
     </hint>
     <hint type="destinationlabel">
      <x>513</x>
@@ -3894,8 +3894,8 @@
    <slot>update()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>611</x>
-     <y>93</y>
+     <x>804</x>
+     <y>134</y>
     </hint>
     <hint type="destinationlabel">
      <x>643</x>
@@ -3910,8 +3910,8 @@
    <slot>update()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>743</x>
-     <y>94</y>
+     <x>989</x>
+     <y>134</y>
     </hint>
     <hint type="destinationlabel">
      <x>774</x>
@@ -3926,8 +3926,8 @@
    <slot>update()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>863</x>
-     <y>93</y>
+     <x>1138</x>
+     <y>134</y>
     </hint>
     <hint type="destinationlabel">
      <x>882</x>
@@ -3942,8 +3942,8 @@
    <slot>update()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>957</x>
-     <y>94</y>
+     <x>1273</x>
+     <y>134</y>
     </hint>
     <hint type="destinationlabel">
      <x>986</x>
@@ -3958,8 +3958,8 @@
    <slot>update()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>118</x>
-     <y>125</y>
+     <x>186</x>
+     <y>171</y>
     </hint>
     <hint type="destinationlabel">
      <x>150</x>
@@ -3968,14 +3968,14 @@
    </hints>
   </connection>
   <connection>
-   <sender>CH3_CML_AmpSel_Box</sender>
+   <sender>CH3_CML_AmplSel_Box</sender>
    <signal>valueChanged(int)</signal>
    <receiver>GBCR2_Test_Gui</receiver>
    <slot>update()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>251</x>
-     <y>122</y>
+     <x>373</x>
+     <y>171</y>
     </hint>
     <hint type="destinationlabel">
      <x>285</x>
@@ -3990,8 +3990,8 @@
    <slot>update()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>381</x>
-     <y>124</y>
+     <x>497</x>
+     <y>171</y>
     </hint>
     <hint type="destinationlabel">
      <x>407</x>
@@ -4006,8 +4006,8 @@
    <slot>update()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>480</x>
-     <y>124</y>
+     <x>633</x>
+     <y>171</y>
     </hint>
     <hint type="destinationlabel">
      <x>514</x>
@@ -4022,8 +4022,8 @@
    <slot>update()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>613</x>
-     <y>123</y>
+     <x>804</x>
+     <y>171</y>
     </hint>
     <hint type="destinationlabel">
      <x>641</x>
@@ -4038,8 +4038,8 @@
    <slot>update()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>757</x>
-     <y>124</y>
+     <x>989</x>
+     <y>171</y>
     </hint>
     <hint type="destinationlabel">
      <x>773</x>
@@ -4054,8 +4054,8 @@
    <slot>update()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>846</x>
-     <y>123</y>
+     <x>1138</x>
+     <y>171</y>
     </hint>
     <hint type="destinationlabel">
      <x>882</x>
@@ -4070,8 +4070,8 @@
    <slot>update()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>963</x>
-     <y>127</y>
+     <x>1273</x>
+     <y>171</y>
     </hint>
     <hint type="destinationlabel">
      <x>985</x>
@@ -4086,8 +4086,8 @@
    <slot>update()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>110</x>
-     <y>153</y>
+     <x>178</x>
+     <y>208</y>
     </hint>
     <hint type="destinationlabel">
      <x>152</x>
@@ -4096,14 +4096,14 @@
    </hints>
   </connection>
   <connection>
-   <sender>CH4_CML_AmpSel_Box</sender>
+   <sender>CH4_CML_AmplSel_Box</sender>
    <signal>valueChanged(int)</signal>
    <receiver>GBCR2_Test_Gui</receiver>
    <slot>update()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>250</x>
-     <y>154</y>
+     <x>373</x>
+     <y>208</y>
     </hint>
     <hint type="destinationlabel">
      <x>285</x>
@@ -4118,8 +4118,8 @@
    <slot>update()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>390</x>
-     <y>151</y>
+     <x>497</x>
+     <y>208</y>
     </hint>
     <hint type="destinationlabel">
      <x>407</x>
@@ -4134,8 +4134,8 @@
    <slot>update()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>479</x>
-     <y>151</y>
+     <x>633</x>
+     <y>208</y>
     </hint>
     <hint type="destinationlabel">
      <x>515</x>
@@ -4150,8 +4150,8 @@
    <slot>update()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>610</x>
-     <y>151</y>
+     <x>804</x>
+     <y>208</y>
     </hint>
     <hint type="destinationlabel">
      <x>642</x>
@@ -4166,8 +4166,8 @@
    <slot>update()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>749</x>
-     <y>152</y>
+     <x>989</x>
+     <y>208</y>
     </hint>
     <hint type="destinationlabel">
      <x>773</x>
@@ -4182,8 +4182,8 @@
    <slot>update()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>864</x>
-     <y>154</y>
+     <x>1138</x>
+     <y>208</y>
     </hint>
     <hint type="destinationlabel">
      <x>880</x>
@@ -4198,8 +4198,8 @@
    <slot>update()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>961</x>
-     <y>155</y>
+     <x>1273</x>
+     <y>208</y>
     </hint>
     <hint type="destinationlabel">
      <x>988</x>
@@ -4214,8 +4214,8 @@
    <slot>update()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>128</x>
-     <y>185</y>
+     <x>188</x>
+     <y>245</y>
     </hint>
     <hint type="destinationlabel">
      <x>149</x>
@@ -4224,14 +4224,14 @@
    </hints>
   </connection>
   <connection>
-   <sender>CH5_CML_AmpSel_Box</sender>
+   <sender>CH5_CML_AmplSel_Box</sender>
    <signal>valueChanged(int)</signal>
    <receiver>GBCR2_Test_Gui</receiver>
    <slot>update()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>258</x>
-     <y>182</y>
+     <x>373</x>
+     <y>245</y>
     </hint>
     <hint type="destinationlabel">
      <x>284</x>
@@ -4246,8 +4246,8 @@
    <slot>update()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>378</x>
-     <y>182</y>
+     <x>497</x>
+     <y>245</y>
     </hint>
     <hint type="destinationlabel">
      <x>406</x>
@@ -4262,8 +4262,8 @@
    <slot>update()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>492</x>
-     <y>185</y>
+     <x>633</x>
+     <y>245</y>
     </hint>
     <hint type="destinationlabel">
      <x>514</x>
@@ -4278,8 +4278,8 @@
    <slot>update()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>613</x>
-     <y>182</y>
+     <x>804</x>
+     <y>245</y>
     </hint>
     <hint type="destinationlabel">
      <x>641</x>
@@ -4294,8 +4294,8 @@
    <slot>update()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>746</x>
-     <y>185</y>
+     <x>989</x>
+     <y>245</y>
     </hint>
     <hint type="destinationlabel">
      <x>773</x>
@@ -4310,8 +4310,8 @@
    <slot>update()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>851</x>
-     <y>185</y>
+     <x>1138</x>
+     <y>245</y>
     </hint>
     <hint type="destinationlabel">
      <x>881</x>
@@ -4326,8 +4326,8 @@
    <slot>update()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>962</x>
-     <y>181</y>
+     <x>1273</x>
+     <y>245</y>
     </hint>
     <hint type="destinationlabel">
      <x>987</x>
@@ -4342,8 +4342,8 @@
    <slot>update()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>121</x>
-     <y>213</y>
+     <x>188</x>
+     <y>282</y>
     </hint>
     <hint type="destinationlabel">
      <x>150</x>
@@ -4352,14 +4352,14 @@
    </hints>
   </connection>
   <connection>
-   <sender>CH6_CML_AmpSel_Box</sender>
+   <sender>CH6_CML_AmplSel_Box</sender>
    <signal>valueChanged(int)</signal>
    <receiver>GBCR2_Test_Gui</receiver>
    <slot>update()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>258</x>
-     <y>214</y>
+     <x>373</x>
+     <y>282</y>
     </hint>
     <hint type="destinationlabel">
      <x>284</x>
@@ -4374,8 +4374,8 @@
    <slot>update()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>384</x>
-     <y>213</y>
+     <x>497</x>
+     <y>282</y>
     </hint>
     <hint type="destinationlabel">
      <x>404</x>
@@ -4390,8 +4390,8 @@
    <slot>update()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>481</x>
-     <y>209</y>
+     <x>633</x>
+     <y>282</y>
     </hint>
     <hint type="destinationlabel">
      <x>513</x>
@@ -4406,8 +4406,8 @@
    <slot>update()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>625</x>
-     <y>210</y>
+     <x>804</x>
+     <y>282</y>
     </hint>
     <hint type="destinationlabel">
      <x>640</x>
@@ -4422,8 +4422,8 @@
    <slot>update()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>748</x>
-     <y>210</y>
+     <x>989</x>
+     <y>282</y>
     </hint>
     <hint type="destinationlabel">
      <x>772</x>
@@ -4438,8 +4438,8 @@
    <slot>update()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>862</x>
-     <y>212</y>
+     <x>1138</x>
+     <y>282</y>
     </hint>
     <hint type="destinationlabel">
      <x>880</x>
@@ -4454,8 +4454,8 @@
    <slot>update()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>961</x>
-     <y>215</y>
+     <x>1273</x>
+     <y>282</y>
     </hint>
     <hint type="destinationlabel">
      <x>987</x>
@@ -4470,8 +4470,8 @@
    <slot>update()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>125</x>
-     <y>243</y>
+     <x>188</x>
+     <y>319</y>
     </hint>
     <hint type="destinationlabel">
      <x>148</x>
@@ -4480,14 +4480,14 @@
    </hints>
   </connection>
   <connection>
-   <sender>CH7_CML_AmpSel_Box</sender>
+   <sender>CH7_CML_AmplSel_Box</sender>
    <signal>valueChanged(int)</signal>
    <receiver>GBCR2_Test_Gui</receiver>
    <slot>update()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>261</x>
-     <y>243</y>
+     <x>373</x>
+     <y>319</y>
     </hint>
     <hint type="destinationlabel">
      <x>285</x>
@@ -4502,8 +4502,8 @@
    <slot>update()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>384</x>
-     <y>244</y>
+     <x>497</x>
+     <y>319</y>
     </hint>
     <hint type="destinationlabel">
      <x>403</x>
@@ -4518,8 +4518,8 @@
    <slot>update()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>484</x>
-     <y>240</y>
+     <x>633</x>
+     <y>319</y>
     </hint>
     <hint type="destinationlabel">
      <x>512</x>
@@ -4534,8 +4534,8 @@
    <slot>update()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>618</x>
-     <y>242</y>
+     <x>804</x>
+     <y>319</y>
     </hint>
     <hint type="destinationlabel">
      <x>639</x>
@@ -4550,8 +4550,8 @@
    <slot>update()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>753</x>
-     <y>240</y>
+     <x>989</x>
+     <y>319</y>
     </hint>
     <hint type="destinationlabel">
      <x>772</x>
@@ -4566,8 +4566,8 @@
    <slot>update()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>865</x>
-     <y>243</y>
+     <x>1138</x>
+     <y>319</y>
     </hint>
     <hint type="destinationlabel">
      <x>880</x>
@@ -4582,8 +4582,8 @@
    <slot>update()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>967</x>
-     <y>243</y>
+     <x>1273</x>
+     <y>319</y>
     </hint>
     <hint type="destinationlabel">
      <x>985</x>
@@ -4598,8 +4598,8 @@
    <slot>update()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>911</x>
-     <y>314</y>
+     <x>1190</x>
+     <y>384</y>
     </hint>
     <hint type="destinationlabel">
      <x>942</x>
@@ -4614,8 +4614,8 @@
    <slot>update()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>917</x>
-     <y>349</y>
+     <x>1190</x>
+     <y>434</y>
     </hint>
     <hint type="destinationlabel">
      <x>944</x>
@@ -4630,8 +4630,8 @@
    <slot>update()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>132</x>
-     <y>310</y>
+     <x>176</x>
+     <y>377</y>
     </hint>
     <hint type="destinationlabel">
      <x>161</x>
@@ -4646,8 +4646,8 @@
    <slot>update()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>259</x>
-     <y>308</y>
+     <x>355</x>
+     <y>377</y>
     </hint>
     <hint type="destinationlabel">
      <x>289</x>
@@ -4662,8 +4662,8 @@
    <slot>update()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>375</x>
-     <y>307</y>
+     <x>484</x>
+     <y>377</y>
     </hint>
     <hint type="destinationlabel">
      <x>387</x>
@@ -4678,8 +4678,8 @@
    <slot>update()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>504</x>
-     <y>311</y>
+     <x>671</x>
+     <y>377</y>
     </hint>
     <hint type="destinationlabel">
      <x>523</x>
@@ -4694,8 +4694,8 @@
    <slot>update()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>656</x>
-     <y>308</y>
+     <x>902</x>
+     <y>378</y>
     </hint>
     <hint type="destinationlabel">
      <x>688</x>
@@ -4710,8 +4710,8 @@
    <slot>update()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>145</x>
-     <y>342</y>
+     <x>176</x>
+     <y>414</y>
     </hint>
     <hint type="destinationlabel">
      <x>161</x>
@@ -4726,8 +4726,8 @@
    <slot>update()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>272</x>
-     <y>338</y>
+     <x>355</x>
+     <y>414</y>
     </hint>
     <hint type="destinationlabel">
      <x>289</x>
@@ -4742,8 +4742,8 @@
    <slot>update()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>365</x>
-     <y>339</y>
+     <x>484</x>
+     <y>414</y>
     </hint>
     <hint type="destinationlabel">
      <x>387</x>
@@ -4758,8 +4758,8 @@
    <slot>update()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>490</x>
-     <y>345</y>
+     <x>671</x>
+     <y>414</y>
     </hint>
     <hint type="destinationlabel">
      <x>524</x>
@@ -4774,8 +4774,8 @@
    <slot>update()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>665</x>
-     <y>339</y>
+     <x>902</x>
+     <y>415</y>
     </hint>
     <hint type="destinationlabel">
      <x>688</x>
@@ -4790,8 +4790,8 @@
    <slot>update()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>99</x>
-     <y>400</y>
+     <x>151</x>
+     <y>505</y>
     </hint>
     <hint type="destinationlabel">
      <x>121</x>
@@ -4806,8 +4806,8 @@
    <slot>update()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>214</x>
-     <y>400</y>
+     <x>302</x>
+     <y>505</y>
     </hint>
     <hint type="destinationlabel">
      <x>236</x>
@@ -4822,8 +4822,8 @@
    <slot>update()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>374</x>
-     <y>401</y>
+     <x>513</x>
+     <y>505</y>
     </hint>
     <hint type="destinationlabel">
      <x>389</x>
@@ -4838,8 +4838,8 @@
    <slot>update()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>504</x>
-     <y>401</y>
+     <x>674</x>
+     <y>505</y>
     </hint>
     <hint type="destinationlabel">
      <x>519</x>
@@ -4854,8 +4854,8 @@
    <slot>update()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>616</x>
-     <y>403</y>
+     <x>814</x>
+     <y>505</y>
     </hint>
     <hint type="destinationlabel">
      <x>631</x>
@@ -4870,8 +4870,8 @@
    <slot>update()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>703</x>
-     <y>402</y>
+     <x>939</x>
+     <y>505</y>
     </hint>
     <hint type="destinationlabel">
      <x>740</x>
@@ -4886,8 +4886,8 @@
    <slot>update()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>99</x>
-     <y>436</y>
+     <x>140</x>
+     <y>555</y>
     </hint>
     <hint type="destinationlabel">
      <x>121</x>
@@ -4902,8 +4902,8 @@
    <slot>update()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>220</x>
-     <y>436</y>
+     <x>307</x>
+     <y>555</y>
     </hint>
     <hint type="destinationlabel">
      <x>239</x>
@@ -4918,8 +4918,8 @@
    <slot>update()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>344</x>
-     <y>437</y>
+     <x>492</x>
+     <y>555</y>
     </hint>
     <hint type="destinationlabel">
      <x>373</x>
@@ -4934,8 +4934,8 @@
    <slot>update()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>522</x>
-     <y>437</y>
+     <x>753</x>
+     <y>555</y>
     </hint>
     <hint type="destinationlabel">
      <x>552</x>
@@ -4950,8 +4950,8 @@
    <slot>update()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>158</x>
-     <y>470</y>
+     <x>234</x>
+     <y>605</y>
     </hint>
     <hint type="destinationlabel">
      <x>175</x>
@@ -4966,8 +4966,8 @@
    <slot>update()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>322</x>
-     <y>472</y>
+     <x>471</x>
+     <y>605</y>
     </hint>
     <hint type="destinationlabel">
      <x>341</x>
@@ -4982,8 +4982,8 @@
    <slot>update()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>483</x>
-     <y>475</y>
+     <x>708</x>
+     <y>605</y>
     </hint>
     <hint type="destinationlabel">
      <x>508</x>
@@ -4998,8 +4998,8 @@
    <slot>update()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>647</x>
-     <y>473</y>
+     <x>945</x>
+     <y>605</y>
     </hint>
     <hint type="destinationlabel">
      <x>668</x>
@@ -5014,8 +5014,8 @@
    <slot>update()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>654</x>
-     <y>509</y>
+     <x>945</x>
+     <y>650</y>
     </hint>
     <hint type="destinationlabel">
      <x>668</x>
@@ -5030,8 +5030,8 @@
    <slot>update()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>491</x>
-     <y>506</y>
+     <x>708</x>
+     <y>650</y>
     </hint>
     <hint type="destinationlabel">
      <x>508</x>
@@ -5046,8 +5046,8 @@
    <slot>update()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>319</x>
-     <y>509</y>
+     <x>471</x>
+     <y>650</y>
     </hint>
     <hint type="destinationlabel">
      <x>341</x>
@@ -5062,12 +5062,28 @@
    <slot>update()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>151</x>
-     <y>504</y>
+     <x>234</x>
+     <y>650</y>
     </hint>
     <hint type="destinationlabel">
      <x>176</x>
      <y>501</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>GBCR2_Test_Gui</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1247</x>
+     <y>503</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1301</x>
+     <y>486</y>
     </hint>
    </hints>
   </connection>
