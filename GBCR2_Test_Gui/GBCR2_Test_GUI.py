@@ -1420,7 +1420,7 @@ class Ui_GBCR2_Test_Gui(object):
         font.setPointSize(14)
         self.Rx_Enable_Box.setFont(font)
         self.Rx_Enable_Box.setMaximum(1)
-        self.Rx_Enable_Box.setProperty("value", 0)
+        self.Rx_Enable_Box.setProperty("value", 1)
         self.Rx_Enable_Box.setObjectName("Rx_Enable_Box")
         self.horizontalLayout.addWidget(self.Rx_Enable_Box)
         self.Rx_setCM = QtWidgets.QLabel(self.layoutWidget10)
@@ -1438,7 +1438,7 @@ class Ui_GBCR2_Test_Gui(object):
         font.setPointSize(14)
         self.Rx_setCM_Box.setFont(font)
         self.Rx_setCM_Box.setMaximum(1)
-        self.Rx_setCM_Box.setProperty("value", 0)
+        self.Rx_setCM_Box.setProperty("value", 1)
         self.Rx_setCM_Box.setObjectName("Rx_setCM_Box")
         self.horizontalLayout.addWidget(self.Rx_setCM_Box)
         self.Rx_enTermination = QtWidgets.QLabel(self.layoutWidget10)
@@ -1456,7 +1456,7 @@ class Ui_GBCR2_Test_Gui(object):
         font.setPointSize(14)
         self.Rx_enTermination_Box.setFont(font)
         self.Rx_enTermination_Box.setMaximum(1)
-        self.Rx_enTermination_Box.setProperty("value", 0)
+        self.Rx_enTermination_Box.setProperty("value", 1)
         self.Rx_enTermination_Box.setObjectName("Rx_enTermination_Box")
         self.horizontalLayout.addWidget(self.Rx_enTermination_Box)
         self.Rx_invData = QtWidgets.QLabel(self.layoutWidget10)
@@ -1492,7 +1492,7 @@ class Ui_GBCR2_Test_Gui(object):
         font.setPointSize(14)
         self.Rx_Equa_Box.setFont(font)
         self.Rx_Equa_Box.setMaximum(3)
-        self.Rx_Equa_Box.setProperty("value", 1)
+        self.Rx_Equa_Box.setProperty("value", 0)
         self.Rx_Equa_Box.setObjectName("Rx_Equa_Box")
         self.horizontalLayout.addWidget(self.Rx_Equa_Box)
         self.Dis_Tx = QtWidgets.QLabel(self.layoutWidget10)
@@ -1535,7 +1535,7 @@ class Ui_GBCR2_Test_Gui(object):
         font.setPointSize(14)
         self.dllEnable_Box.setFont(font)
         self.dllEnable_Box.setMaximum(1)
-        self.dllEnable_Box.setProperty("value", 0)
+        self.dllEnable_Box.setProperty("value", 1)
         self.dllEnable_Box.setObjectName("dllEnable_Box")
         self.horizontalLayout_2.addWidget(self.dllEnable_Box)
         self.dllCapReset = QtWidgets.QLabel(self.layoutWidget11)
@@ -1571,27 +1571,27 @@ class Ui_GBCR2_Test_Gui(object):
         font.setPointSize(14)
         self.dllForceDown_Box.setFont(font)
         self.dllForceDown_Box.setMaximum(1)
-        self.dllForceDown_Box.setProperty("value", 1)
+        self.dllForceDown_Box.setProperty("value", 0)
         self.dllForceDown_Box.setObjectName("dllForceDown_Box")
         self.horizontalLayout_2.addWidget(self.dllForceDown_Box)
-        self.dllChargePumpCharge = QtWidgets.QLabel(self.layoutWidget11)
+        self.dllChargePumpCurrent = QtWidgets.QLabel(self.layoutWidget11)
         font = QtGui.QFont()
         font.setFamily("Times New Roman")
         font.setPointSize(12)
         font.setBold(False)
         font.setWeight(50)
-        self.dllChargePumpCharge.setFont(font)
-        self.dllChargePumpCharge.setObjectName("dllChargePumpCharge")
-        self.horizontalLayout_2.addWidget(self.dllChargePumpCharge)
-        self.dllChargePumpCharge_Box = QtWidgets.QSpinBox(self.layoutWidget11)
+        self.dllChargePumpCurrent.setFont(font)
+        self.dllChargePumpCurrent.setObjectName("dllChargePumpCurrent")
+        self.horizontalLayout_2.addWidget(self.dllChargePumpCurrent)
+        self.dllChargePumpCurrent_Box = QtWidgets.QSpinBox(self.layoutWidget11)
         font = QtGui.QFont()
         font.setFamily("Times New Roman")
         font.setPointSize(14)
-        self.dllChargePumpCharge_Box.setFont(font)
-        self.dllChargePumpCharge_Box.setMaximum(15)
-        self.dllChargePumpCharge_Box.setProperty("value", 15)
-        self.dllChargePumpCharge_Box.setObjectName("dllChargePumpCharge_Box")
-        self.horizontalLayout_2.addWidget(self.dllChargePumpCharge_Box)
+        self.dllChargePumpCurrent_Box.setFont(font)
+        self.dllChargePumpCurrent_Box.setMaximum(15)
+        self.dllChargePumpCurrent_Box.setProperty("value", 15)
+        self.dllChargePumpCurrent_Box.setObjectName("dllChargePumpCurrent_Box")
+        self.horizontalLayout_2.addWidget(self.dllChargePumpCurrent_Box)
         self.layoutWidget12 = QtWidgets.QWidget(self.centralwidget)
         self.layoutWidget12.setGeometry(QtCore.QRect(10, 578, 937, 77))
         self.layoutWidget12.setObjectName("layoutWidget12")
@@ -1615,7 +1615,7 @@ class Ui_GBCR2_Test_Gui(object):
         font.setPointSize(14)
         self.dllClockDelay_CH7_Box.setFont(font)
         self.dllClockDelay_CH7_Box.setMaximum(15)
-        self.dllClockDelay_CH7_Box.setProperty("value", 3)
+        self.dllClockDelay_CH7_Box.setProperty("value", 5)
         self.dllClockDelay_CH7_Box.setObjectName("dllClockDelay_CH7_Box")
         self.gridLayout.addWidget(self.dllClockDelay_CH7_Box, 0, 1, 1, 1)
         self.dllClockDelay_CH6 = QtWidgets.QLabel(self.layoutWidget12)
@@ -1633,7 +1633,7 @@ class Ui_GBCR2_Test_Gui(object):
         font.setPointSize(14)
         self.dllClockDelay_CH6_Box.setFont(font)
         self.dllClockDelay_CH6_Box.setMaximum(15)
-        self.dllClockDelay_CH6_Box.setProperty("value", 3)
+        self.dllClockDelay_CH6_Box.setProperty("value", 5)
         self.dllClockDelay_CH6_Box.setObjectName("dllClockDelay_CH6_Box")
         self.gridLayout.addWidget(self.dllClockDelay_CH6_Box, 0, 3, 1, 1)
         self.dllClockDelay_CH5 = QtWidgets.QLabel(self.layoutWidget12)
@@ -1651,7 +1651,7 @@ class Ui_GBCR2_Test_Gui(object):
         font.setPointSize(14)
         self.dllClockDelay_CH5_Box.setFont(font)
         self.dllClockDelay_CH5_Box.setMaximum(15)
-        self.dllClockDelay_CH5_Box.setProperty("value", 3)
+        self.dllClockDelay_CH5_Box.setProperty("value", 5)
         self.dllClockDelay_CH5_Box.setObjectName("dllClockDelay_CH5_Box")
         self.gridLayout.addWidget(self.dllClockDelay_CH5_Box, 0, 5, 1, 1)
         self.dllClockDelay_CH4 = QtWidgets.QLabel(self.layoutWidget12)
@@ -1669,7 +1669,7 @@ class Ui_GBCR2_Test_Gui(object):
         font.setPointSize(14)
         self.dllClockDelay_CH4_Box.setFont(font)
         self.dllClockDelay_CH4_Box.setMaximum(15)
-        self.dllClockDelay_CH4_Box.setProperty("value", 3)
+        self.dllClockDelay_CH4_Box.setProperty("value", 5)
         self.dllClockDelay_CH4_Box.setObjectName("dllClockDelay_CH4_Box")
         self.gridLayout.addWidget(self.dllClockDelay_CH4_Box, 0, 7, 1, 1)
         self.dllClockDelay_CH3 = QtWidgets.QLabel(self.layoutWidget12)
@@ -1687,7 +1687,7 @@ class Ui_GBCR2_Test_Gui(object):
         font.setPointSize(14)
         self.dllClockDelay_CH3_Box.setFont(font)
         self.dllClockDelay_CH3_Box.setMaximum(15)
-        self.dllClockDelay_CH3_Box.setProperty("value", 3)
+        self.dllClockDelay_CH3_Box.setProperty("value", 5)
         self.dllClockDelay_CH3_Box.setObjectName("dllClockDelay_CH3_Box")
         self.gridLayout.addWidget(self.dllClockDelay_CH3_Box, 1, 1, 1, 1)
         self.dllClockDelay_CH2 = QtWidgets.QLabel(self.layoutWidget12)
@@ -1705,7 +1705,7 @@ class Ui_GBCR2_Test_Gui(object):
         font.setPointSize(14)
         self.dllClockDelay_CH2_Box.setFont(font)
         self.dllClockDelay_CH2_Box.setMaximum(15)
-        self.dllClockDelay_CH2_Box.setProperty("value", 3)
+        self.dllClockDelay_CH2_Box.setProperty("value", 5)
         self.dllClockDelay_CH2_Box.setObjectName("dllClockDelay_CH2_Box")
         self.gridLayout.addWidget(self.dllClockDelay_CH2_Box, 1, 3, 1, 1)
         self.dllClockDelay_CH1 = QtWidgets.QLabel(self.layoutWidget12)
@@ -1723,7 +1723,7 @@ class Ui_GBCR2_Test_Gui(object):
         font.setPointSize(14)
         self.dllClockDelay_CH1_Box.setFont(font)
         self.dllClockDelay_CH1_Box.setMaximum(15)
-        self.dllClockDelay_CH1_Box.setProperty("value", 3)
+        self.dllClockDelay_CH1_Box.setProperty("value", 5)
         self.dllClockDelay_CH1_Box.setObjectName("dllClockDelay_CH1_Box")
         self.gridLayout.addWidget(self.dllClockDelay_CH1_Box, 1, 5, 1, 1)
         self.dllClockDelay_CH0 = QtWidgets.QLabel(self.layoutWidget12)
@@ -1741,7 +1741,7 @@ class Ui_GBCR2_Test_Gui(object):
         font.setPointSize(14)
         self.dllClockDelay_CH0_Box.setFont(font)
         self.dllClockDelay_CH0_Box.setMaximum(15)
-        self.dllClockDelay_CH0_Box.setProperty("value", 3)
+        self.dllClockDelay_CH0_Box.setProperty("value", 5)
         self.dllClockDelay_CH0_Box.setObjectName("dllClockDelay_CH0_Box")
         self.gridLayout.addWidget(self.dllClockDelay_CH0_Box, 1, 7, 1, 1)
         self.layoutWidget13 = QtWidgets.QWidget(self.centralwidget)
@@ -1854,7 +1854,7 @@ class Ui_GBCR2_Test_Gui(object):
         font.setPointSize(14)
         self.CH1_DL_SR_Box.setFont(font)
         self.CH1_DL_SR_Box.setMaximum(7)
-        self.CH1_DL_SR_Box.setProperty("value", 3)
+        self.CH1_DL_SR_Box.setProperty("value", 5)
         self.CH1_DL_SR_Box.setObjectName("CH1_DL_SR_Box")
         self.verticalLayout_5.addWidget(self.CH1_DL_SR_Box)
         self.CH2_DL_SR_Box = QtWidgets.QSpinBox(self.layoutWidget17)
@@ -1863,7 +1863,7 @@ class Ui_GBCR2_Test_Gui(object):
         font.setPointSize(14)
         self.CH2_DL_SR_Box.setFont(font)
         self.CH2_DL_SR_Box.setMaximum(7)
-        self.CH2_DL_SR_Box.setProperty("value", 3)
+        self.CH2_DL_SR_Box.setProperty("value", 5)
         self.CH2_DL_SR_Box.setObjectName("CH2_DL_SR_Box")
         self.verticalLayout_5.addWidget(self.CH2_DL_SR_Box)
         self.layoutWidget18 = QtWidgets.QWidget(self.centralwidget)
@@ -2066,34 +2066,34 @@ class Ui_GBCR2_Test_Gui(object):
         self.CH7_Dis_LPF_Box.valueChanged['int'].connect(self.CH7_Dis_LPF_Box_valueChanged)
         self.COM_Port_Box.activated['QString'].connect(self.COM_Port_Box_activated)
         self.I2C_Addr_Box.activated['QString'].connect(self.I2C_Addr_Box_activated)
-        self.CH1_DLL_ATT_Box.valueChanged['int'].connect(GBCR2_Test_Gui.update)
-        self.CH1_Dis_DL_Emp_Box.valueChanged['int'].connect(GBCR2_Test_Gui.update)
-        self.CH1_DL_SR_Box.valueChanged['int'].connect(GBCR2_Test_Gui.update)
-        self.CH1_Dis_DL_BIAS_Box.valueChanged['int'].connect(GBCR2_Test_Gui.update)
-        self.CH1_Dis_DL_LPF_BIAS_Box.valueChanged['int'].connect(GBCR2_Test_Gui.update)
-        self.CH2_DLL_ATT_Box.valueChanged['int'].connect(GBCR2_Test_Gui.update)
-        self.CH2_Dis_DL_Emp_Box.valueChanged['int'].connect(GBCR2_Test_Gui.update)
-        self.CH2_DL_SR_Box.valueChanged['int'].connect(GBCR2_Test_Gui.update)
-        self.CH2_Dis_DL_BIAS_Box.valueChanged['int'].connect(GBCR2_Test_Gui.update)
-        self.CH2_Dis_DL_LPF_BIAS_Box.valueChanged['int'].connect(GBCR2_Test_Gui.update)
-        self.Rx_Enable_Box.valueChanged['int'].connect(GBCR2_Test_Gui.update)
-        self.Rx_setCM_Box.valueChanged['int'].connect(GBCR2_Test_Gui.update)
-        self.Rx_enTermination_Box.valueChanged['int'].connect(GBCR2_Test_Gui.update)
-        self.Rx_invData_Box.valueChanged['int'].connect(GBCR2_Test_Gui.update)
-        self.Rx_Equa_Box.valueChanged['int'].connect(GBCR2_Test_Gui.update)
-        self.Dis_Tx_Box.valueChanged['int'].connect(GBCR2_Test_Gui.update)
-        self.dllEnable_Box.valueChanged['int'].connect(GBCR2_Test_Gui.update)
-        self.dllCapReset_Box.valueChanged['int'].connect(GBCR2_Test_Gui.update)
-        self.dllForceDown_Box.valueChanged['int'].connect(GBCR2_Test_Gui.update)
-        self.dllChargePumpCharge_Box.valueChanged['int'].connect(GBCR2_Test_Gui.update)
-        self.dllClockDelay_CH7_Box.valueChanged['int'].connect(GBCR2_Test_Gui.update)
-        self.dllClockDelay_CH6_Box.valueChanged['int'].connect(GBCR2_Test_Gui.update)
-        self.dllClockDelay_CH5_Box.valueChanged['int'].connect(GBCR2_Test_Gui.update)
-        self.dllClockDelay_CH4_Box.valueChanged['int'].connect(GBCR2_Test_Gui.update)
-        self.dllClockDelay_CH0_Box.valueChanged['int'].connect(GBCR2_Test_Gui.update)
-        self.dllClockDelay_CH1_Box.valueChanged['int'].connect(GBCR2_Test_Gui.update)
-        self.dllClockDelay_CH2_Box.valueChanged['int'].connect(GBCR2_Test_Gui.update)
-        self.dllClockDelay_CH3_Box.valueChanged['int'].connect(GBCR2_Test_Gui.update)
+        self.CH1_DLL_ATT_Box.valueChanged['int'].connect(self.CH1_DLL_ATT_Box_valueChanged)
+        self.CH1_Dis_DL_Emp_Box.valueChanged['int'].connect(self.CH1_Dis_DL_Emp_Box_valueChanged)
+        self.CH1_DL_SR_Box.valueChanged['int'].connect(self.CH1_DL_SR_Box_valueChanged)
+        self.CH1_Dis_DL_BIAS_Box.valueChanged['int'].connect(self.CH1_Dis_DL_BIAS_Box_valueChanged)
+        self.CH1_Dis_DL_LPF_BIAS_Box.valueChanged['int'].connect(self.CH1_Dis_DL_LPF_BIAS_Box_valueChanged)
+        self.CH2_DLL_ATT_Box.valueChanged['int'].connect(self.CH2_DLL_ATT_Box_valueChanged)
+        self.CH2_Dis_DL_Emp_Box.valueChanged['int'].connect(self.CH2_Dis_DL_Emp_Box_valueChanged)
+        self.CH2_DL_SR_Box.valueChanged['int'].connect(self.CH2_DL_SR_Box_valueChanged)
+        self.CH2_Dis_DL_BIAS_Box.valueChanged['int'].connect(self.CH2_Dis_DL_BIAS_Box_valueChanged)
+        self.CH2_Dis_DL_LPF_BIAS_Box.valueChanged['int'].connect(self.CH2_Dis_DL_LPF_BIAS_Box_valueChanged)
+        self.Rx_Enable_Box.valueChanged['int'].connect(self.Rx_Enable_Box_valueChanged)
+        self.Rx_setCM_Box.valueChanged['int'].connect(self.Rx_setCM_Box_valueChanged)
+        self.Rx_enTermination_Box.valueChanged['int'].connect(self.Rx_enTermination_Box_valueChanged)
+        self.Rx_invData_Box.valueChanged['int'].connect(self.Rx_invData_Box_valueChanged)
+        self.Rx_Equa_Box.valueChanged['int'].connect(self.Rx_Equa_Box_valueChanged)
+        self.Dis_Tx_Box.valueChanged['int'].connect(self.Dis_Tx_Box_valueChanged)
+        self.dllEnable_Box.valueChanged['int'].connect(self.dllEnable_Box_valueChanged)
+        self.dllCapReset_Box.valueChanged['int'].connect(self.dllCapReset_Box_valueChanged)
+        self.dllForceDown_Box.valueChanged['int'].connect(self.dllForceDown_Box_valueChanged)
+        self.dllChargePumpCurrent_Box.valueChanged['int'].connect(self.dllChargePumpCurrent_Box_valueChanged)
+        self.dllClockDelay_CH7_Box.valueChanged['int'].connect(self.dllClockDelay_CH7_Box_valueChanged)
+        self.dllClockDelay_CH6_Box.valueChanged['int'].connect(self.dllClockDelay_CH6_Box_valueChanged)
+        self.dllClockDelay_CH5_Box.valueChanged['int'].connect(self.dllClockDelay_CH5_Box_valueChanged)
+        self.dllClockDelay_CH4_Box.valueChanged['int'].connect(self.dllClockDelay_CH4_Box_valueChanged)
+        self.dllClockDelay_CH0_Box.valueChanged['int'].connect(self.dllClockDelay_CH3_Box_valueChanged)
+        self.dllClockDelay_CH1_Box.valueChanged['int'].connect(self.dllClockDelay_CH2_Box_valueChanged)
+        self.dllClockDelay_CH2_Box.valueChanged['int'].connect(self.dllClockDelay_CH1_Box_valueChanged)
+        self.dllClockDelay_CH3_Box.valueChanged['int'].connect(self.dllClockDelay_CH0_Box_valueChanged)
         self.pushButton.clicked['bool'].connect(self.pushButton_clicked)
         QtCore.QMetaObject.connectSlotsByName(GBCR2_Test_Gui)
 
@@ -2197,7 +2197,7 @@ class Ui_GBCR2_Test_Gui(object):
         self.dllEnable.setText(_translate("GBCR2_Test_Gui", "dllEnable"))
         self.dllCapReset.setText(_translate("GBCR2_Test_Gui", "dllCapReset"))
         self.dllForceDown.setText(_translate("GBCR2_Test_Gui", "dllForceDown"))
-        self.dllChargePumpCharge.setText(_translate("GBCR2_Test_Gui", "dllChargePumpCurrent"))
+        self.dllChargePumpCurrent.setText(_translate("GBCR2_Test_Gui", "dllChargePumpCurrent"))
         self.dllClockDelay_CH7.setText(_translate("GBCR2_Test_Gui", "dllClockDelay_CH7"))
         self.dllClockDelay_CH6.setText(_translate("GBCR2_Test_Gui", "dllClockDelay_CH6"))
         self.dllClockDelay_CH5.setText(_translate("GBCR2_Test_Gui", "dllClockDelay_CH5"))
@@ -2268,7 +2268,7 @@ class Ui_GBCR2_Test_Gui(object):
             print("COM Port is: %s"%(self.COM_Port))
 
     def pushButton_clicked(self):
-        winsound.Beep(2000, 500)
+        winsound.Beep(freqency, duration)
         print(hex(self.I2C_Addr))
         print(self.COM_Port)
         iss = UsbIss()
@@ -2283,6 +2283,11 @@ class Ui_GBCR2_Test_Gui(object):
         Reg_Read_val = iss.i2c.read(self.I2C_Addr, 0, 0x20)
         print("GBCR2 I2C Read Back data:")
         print(Reg_Read_val)
+
+        if Reg_Read_val == Reg_Write_val:
+            for i in range(3):
+                winsound.Beep(2000, 200)
+                time.sleep(0.01)
 
     def CH1_Dis_Rx_Box_valueChanged(self):
         winsound.Beep(freqency, duration)
@@ -2507,9 +2512,123 @@ class Ui_GBCR2_Test_Gui(object):
     def CH7_CML_AmplSel_Box_valueChanged(self):
         winsound.Beep(freqency, duration)
         GBCR2_Reg1.set_CH7_CML_AmplSel(self.CH7_CML_AmplSel_Box.value())
+
+    def CH1_DLL_ATT_Box_valueChanged(self):
+        winsound.Beep(freqency, duration)
+        GBCR2_Reg1.set_Tx1_DL_ATT(self.CH1_DLL_ATT_Box.value())
+
+    def CH1_Dis_DL_Emp_Box_valueChanged(self):
+        winsound.Beep(freqency, duration)
+        GBCR2_Reg1.set_Tx1_Dis_DL_Emp(self.CH1_Dis_DL_Emp_Box.value())
+
+    def CH1_DL_SR_Box_valueChanged(self):
+        winsound.Beep(freqency, duration)
+        GBCR2_Reg1.set_Tx1_DL_SR(self.CH1_DL_SR_Box.value())
+
+    def CH1_Dis_DL_LPF_BIAS_Box_valueChanged(self):
+        winsound.Beep(freqency, duration)
+        GBCR2_Reg1.set_Tx1_Dis_DL_LPF_BIAS(self.CH1_Dis_DL_LPF_BIAS_Box.value())
+
+    def CH1_Dis_DL_BIAS_Box_valueChanged(self):
+        winsound.Beep(freqency, duration)
+        GBCR2_Reg1.set_Tx1_Dis_DL_BIAS(self.CH1_Dis_DL_BIAS_Box.value())
+
+    def CH2_DLL_ATT_Box_valueChanged(self):
+        winsound.Beep(freqency, duration)
+        GBCR2_Reg1.set_Tx2_DL_ATT(self.CH2_DLL_ATT_Box.value())
+
+    def CH2_Dis_DL_Emp_Box_valueChanged(self):
+        winsound.Beep(freqency, duration)
+        GBCR2_Reg1.set_Tx2_Dis_DL_Emp(self.CH2_Dis_DL_Emp_Box.value())
+
+    def CH2_DL_SR_Box_valueChanged(self):
+        winsound.Beep(freqency, duration)
+        GBCR2_Reg1.set_Tx2_DL_SR(self.CH2_DL_SR_Box.value())
+
+    def CH2_Dis_DL_LPF_BIAS_Box_valueChanged(self):
+        winsound.Beep(freqency, duration)
+        GBCR2_Reg1.set_Tx2_Dis_DL_LPF_BIAS(self.CH2_Dis_DL_LPF_BIAS_Box.value())
+
+    def CH2_Dis_DL_BIAS_Box_valueChanged(self):
+        winsound.Beep(freqency, duration)
+        GBCR2_Reg1.set_Tx2_Dis_DL_BIAS(self.CH2_Dis_DL_BIAS_Box.value())
+
+    def Dis_Tx_Box_valueChanged(self):
+        winsound.Beep(freqency, duration)
+        GBCR2_Reg1.set_Dis_Tx(self.Dis_Tx_Box.value())
+
+    def Rx_Equa_Box_valueChanged(self):
+        winsound.Beep(freqency, duration)
+        GBCR2_Reg1.set_Rx_Equa(self.Rx_Equa_Box.value())
+
+    def Rx_invData_Box_valueChanged(self):
+        winsound.Beep(freqency, duration)
+        GBCR2_Reg1.set_Rx_invData(self.Rx_invData_Box.value())
+
+    def Rx_enTermination_Box_valueChanged(self):
+        winsound.Beep(freqency, duration)
+        GBCR2_Reg1.set_Rx_enTermination(self.Rx_enTermination_Box.value())
+
+    def Rx_setCM_Box_valueChanged(self):
+        winsound.Beep(freqency, duration)
+        GBCR2_Reg1.set_Rx_setCM(self.Rx_setCM_Box.value())
+
+    def Rx_Enable_Box_valueChanged(self):
+        winsound.Beep(freqency, duration)
+        GBCR2_Reg1.set_Rx_Enable(self.Rx_Enable_Box.value())
+
+    def dllClockDelay_CH7_Box_valueChanged(self):
+        winsound.Beep(freqency, duration)
+        GBCR2_Reg1.set_dllClockDelay_CH7(self.dllClockDelay_CH7_Box.value())
+
+    def dllClockDelay_CH6_Box_valueChanged(self):
+        winsound.Beep(freqency, duration)
+        GBCR2_Reg1.set_dllClockDelay_CH6(self.dllClockDelay_CH6_Box.value())
+
+    def dllClockDelay_CH5_Box_valueChanged(self):
+        winsound.Beep(freqency, duration)
+        GBCR2_Reg1.set_dllClockDelay_CH5(self.dllClockDelay_CH5_Box.value())
+
+    def dllClockDelay_CH4_Box_valueChanged(self):
+        winsound.Beep(freqency, duration)
+        GBCR2_Reg1.set_dllClockDelay_CH4(self.dllClockDelay_CH4_Box.value())
+
+
+    def dllClockDelay_CH3_Box_valueChanged(self):
+        winsound.Beep(freqency, duration)
+        GBCR2_Reg1.set_dllClockDelay_CH3(self.dllClockDelay_CH3_Box.value())
+
+    def dllClockDelay_CH2_Box_valueChanged(self):
+        winsound.Beep(freqency, duration)
+        GBCR2_Reg1.set_dllClockDelay_CH2(self.dllClockDelay_CH2_Box.value())
+
+    def dllClockDelay_CH1_Box_valueChanged(self):
+        winsound.Beep(freqency, duration)
+        GBCR2_Reg1.set_dllClockDelay_CH1(self.dllClockDelay_CH1_Box.value())
+
+    def dllClockDelay_CH0_Box_valueChanged(self):
+        winsound.Beep(freqency, duration)
+        GBCR2_Reg1.set_dllClockDelay_CH0(self.dllClockDelay_CH0_Box.value())
+
+    def dllCapReset_Box_valueChanged(self):
+        winsound.Beep(freqency, duration)
+        GBCR2_Reg1.set_dllCapReset(self.dllCapReset_Box.value())
+
+    def dllEnable_Box_valueChanged(self):
+        winsound.Beep(freqency, duration)
+        GBCR2_Reg1.set_dllEnable(self.dllEnable_Box.value())
+
+    def dllChargePumpCurrent_Box_valueChanged(self):
+        winsound.Beep(freqency, duration)
+        GBCR2_Reg1.set_dllChargePumpCurrent(self.dllChargePumpCurrent_Box.value())
+
+    def dllForceDown_Box_valueChanged(self):
+        winsound.Beep(freqency, duration)
+        GBCR2_Reg1.set_dllForceDown(self.dllForceDown_Box.value())
+
+#===================================================================================#
 if __name__ == "__main__":
     import sys
-
     GBCR2_Reg1 = GBCR2_Reg()
     app = QtWidgets.QApplication(sys.argv)
     GBCR2_Test_Gui = QtWidgets.QMainWindow()
