@@ -20,11 +20,10 @@ duration = 200
 
 
 class Ui_GBCR2_Test_Gui(object):
-    I2C_Addr = 0x23                     # default I2C address
-    COM_Port = "COM3"                   # default COM Port
-    # def __init__(self, I2C_Addr=None, COM_Port=None):
-    #     self.I2C_Addr = 0x23
-    #     self.COM_Port = "COM3"
+    ## inital 
+    def __init__(self, I2C_Addr=0x23, COM_Port="COM3"):
+        self.I2C_Addr = I2C_Addr 
+        self.COM_Port = COM_Port 
 
     def setupUi(self, GBCR2_Test_Gui):
         GBCR2_Test_Gui.setObjectName("GBCR2_Test_Gui")
@@ -2221,63 +2220,63 @@ class Ui_GBCR2_Test_Gui(object):
     def I2C_Addr_Box_activated(self):                                 # select I2C slave address
         winsound.Beep(freqency, duration)
         if self.I2C_Addr_Box.currentText() == "0x23":
-            I2C_Addr = 0x23
+            self.I2C_Addr = 0x23
             print("I2C Slave address: 0x23")
         elif self.I2C_Addr_Box.currentText() == "0x22":
-            I2C_Addr = 0x22
+            self.I2C_Addr = 0x22
             print("I2C Slave address: 0x22")
         elif self.I2C_Addr_Box.currentText() == "0x21":
-            I2C_Addr = 0x21
+            self.I2C_Addr = 0x21
             print("I2C Slave address: 0x21")
         else:
-            I2C_Addr = 0x20
+            self.I2C_Addr = 0x20
             print("I2C Slave address: 0x20")
 
     def COM_Port_Box_activated(self):                                 # COM Ports select
         winsound.Beep(freqency, duration)
         if self.COM_Port_Box.currentText() == "COM0":
-            COM_Port = 'COM0'
-            print("COM Port is: %s"%(COM_Port))
+            self.COM_Port = 'COM0'
+            print("COM Port is: %s"%(self.COM_Port))
         elif self.COM_Port_Box.currentText() == "COM1":
-            COM_Port = 'COM1'
-            print("COM Port is: %s"%(COM_Port))
+            self.COM_Port = 'COM1'
+            print("COM Port is: %s"%(self.COM_Port))
         elif self.COM_Port_Box.currentText() == "COM2":
-            COM_Port = 'COM2'
-            print("COM Port is: %s"%(COM_Port))
+            self.COM_Port = 'COM2'
+            print("COM Port is: %s"%(self.COM_Port))
         elif self.COM_Port_Box.currentText() == "COM3":
-            COM_Port = 'COM3'
-            print("COM Port is: %s"%(COM_Port))
+            self.COM_Port = 'COM3'
+            print("COM Port is: %s"%(self.COM_Port))
         elif self.COM_Port_Box.currentText() == "COM4":
-            COM_Port = 'COM4'
-            print("COM Port is: %s"%(COM_Port))
+            self.COM_Port = 'COM4'
+            print("COM Port is: %s"%(self.COM_Port))
         elif self.COM_Port_Box.currentText() == "COM5":
-            COM_Port = 'COM5'
-            print("COM Port is: %s"%(COM_Port))
+            self.COM_Port = 'COM5'
+            print("COM Port is: %s"%(self.COM_Port))
         elif self.COM_Port_Box.currentText() == "COM6":
-            COM_Port = 'COM6'
-            print("COM Port is: %s"%(COM_Port))
+            self.COM_Port = 'COM6'
+            print("COM Port is: %s"%(self.COM_Port))
         elif self.COM_Port_Box.currentText() == "COM7":
-            COM_Port = 'COM7'
-            print("COM Port is: %s"%(COM_Port))
+            self.COM_Port = 'COM7'
+            print("COM Port is: %s"%(self.COM_Port))
         elif self.COM_Port_Box.currentText() == "COM8":
-            COM_Port = 'COM8'
-            print("COM Port is: %s"%(COM_Port))
+            self.COM_Port = 'COM8'
+            print("COM Port is: %s"%(self.COM_Port))
         else:
-            COM_Port = 'COM9'
-            print("COM Port is: %s"%(COM_Port))
+            self.COM_Port = 'COM9'
+            print("COM Port is: %s"%(self.COM_Port))
 
     def pushButton_clicked(self):
         winsound.Beep(2000, 500)
         iss = UsbIss()
-        iss.open(COM_Port)
+        iss.open(self.COM_Port)
         iss.setup_i2c()
-        print(I2C_Addr)
+        print(self.I2C_Addr)
         Reg_Write_val = GBCR2_Reg1.get_config_vector()
         print("GBCR2 I2C Write in data:")
         print(Reg_Write_val)
-        iss.i2c.write(I2C_Addr, 0, Reg_Write_val)
+        iss.i2c.write(self.I2C_Addr, 0, Reg_Write_val)
         Reg_Read_val = []
-        Reg_Read_val = iss.i2c.read(I2C_Addr, 0, 0x20)
+        Reg_Read_val = iss.i2c.read(self.I2C_Addr, 0, 0x20)
         print("GBCR2 I2C Read Back data:")
         print(Reg_Read_val)
 
