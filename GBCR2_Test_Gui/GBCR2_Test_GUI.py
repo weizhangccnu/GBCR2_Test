@@ -6,6 +6,7 @@
 #
 # WARNING! All changes made in this file will be lost!
 
+
 import time
 import winsound
 from GBCR2_Reg import *
@@ -20,10 +21,10 @@ duration = 200
 
 
 class Ui_GBCR2_Test_Gui(object):
-    ## inital 
-    def __init__(self, I2C_Addr=0x23, COM_Port="COM3"):
-        self.I2C_Addr = I2C_Addr 
-        self.COM_Port = COM_Port 
+    ## inital
+    def __init__(self, I2C_Addr=0x23, COM_Port='COM3'):
+        self.I2C_Addr = I2C_Addr
+        self.COM_Port = COM_Port
 
     def setupUi(self, GBCR2_Test_Gui):
         GBCR2_Test_Gui.setObjectName("GBCR2_Test_Gui")
@@ -725,15 +726,15 @@ class Ui_GBCR2_Test_Gui(object):
         self.CH1_CML_AmplSel.setFont(font)
         self.CH1_CML_AmplSel.setObjectName("CH1_CML_AmplSel")
         self.formLayout_2.setWidget(0, QtWidgets.QFormLayout.LabelRole, self.CH1_CML_AmplSel)
-        self.CH1_CML_AmpSel_Box = QtWidgets.QSpinBox(self.layoutWidget4)
+        self.CH1_CML_AmplSel_Box = QtWidgets.QSpinBox(self.layoutWidget4)
         font = QtGui.QFont()
         font.setFamily("Times New Roman")
         font.setPointSize(14)
-        self.CH1_CML_AmpSel_Box.setFont(font)
-        self.CH1_CML_AmpSel_Box.setMaximum(7)
-        self.CH1_CML_AmpSel_Box.setProperty("value", 7)
-        self.CH1_CML_AmpSel_Box.setObjectName("CH1_CML_AmpSel_Box")
-        self.formLayout_2.setWidget(0, QtWidgets.QFormLayout.FieldRole, self.CH1_CML_AmpSel_Box)
+        self.CH1_CML_AmplSel_Box.setFont(font)
+        self.CH1_CML_AmplSel_Box.setMaximum(7)
+        self.CH1_CML_AmplSel_Box.setProperty("value", 7)
+        self.CH1_CML_AmplSel_Box.setObjectName("CH1_CML_AmplSel_Box")
+        self.formLayout_2.setWidget(0, QtWidgets.QFormLayout.FieldRole, self.CH1_CML_AmplSel_Box)
         self.CH2_CML_AmplSel = QtWidgets.QLabel(self.layoutWidget4)
         font = QtGui.QFont()
         font.setFamily("Times New Roman")
@@ -743,15 +744,15 @@ class Ui_GBCR2_Test_Gui(object):
         self.CH2_CML_AmplSel.setFont(font)
         self.CH2_CML_AmplSel.setObjectName("CH2_CML_AmplSel")
         self.formLayout_2.setWidget(1, QtWidgets.QFormLayout.LabelRole, self.CH2_CML_AmplSel)
-        self.CH2_CML_AmpSel_Box = QtWidgets.QSpinBox(self.layoutWidget4)
+        self.CH2_CML_AmplSel_Box = QtWidgets.QSpinBox(self.layoutWidget4)
         font = QtGui.QFont()
         font.setFamily("Times New Roman")
         font.setPointSize(14)
-        self.CH2_CML_AmpSel_Box.setFont(font)
-        self.CH2_CML_AmpSel_Box.setMaximum(7)
-        self.CH2_CML_AmpSel_Box.setProperty("value", 7)
-        self.CH2_CML_AmpSel_Box.setObjectName("CH2_CML_AmpSel_Box")
-        self.formLayout_2.setWidget(1, QtWidgets.QFormLayout.FieldRole, self.CH2_CML_AmpSel_Box)
+        self.CH2_CML_AmplSel_Box.setFont(font)
+        self.CH2_CML_AmplSel_Box.setMaximum(7)
+        self.CH2_CML_AmplSel_Box.setProperty("value", 7)
+        self.CH2_CML_AmplSel_Box.setObjectName("CH2_CML_AmplSel_Box")
+        self.formLayout_2.setWidget(1, QtWidgets.QFormLayout.FieldRole, self.CH2_CML_AmplSel_Box)
         self.CH3_CML_AmplSel = QtWidgets.QLabel(self.layoutWidget4)
         font = QtGui.QFont()
         font.setFamily("Times New Roman")
@@ -761,15 +762,15 @@ class Ui_GBCR2_Test_Gui(object):
         self.CH3_CML_AmplSel.setFont(font)
         self.CH3_CML_AmplSel.setObjectName("CH3_CML_AmplSel")
         self.formLayout_2.setWidget(2, QtWidgets.QFormLayout.LabelRole, self.CH3_CML_AmplSel)
-        self.CH3_CML_AmpSel_Box = QtWidgets.QSpinBox(self.layoutWidget4)
+        self.CH3_CML_AmplSel_Box = QtWidgets.QSpinBox(self.layoutWidget4)
         font = QtGui.QFont()
         font.setFamily("Times New Roman")
         font.setPointSize(14)
-        self.CH3_CML_AmpSel_Box.setFont(font)
-        self.CH3_CML_AmpSel_Box.setMaximum(7)
-        self.CH3_CML_AmpSel_Box.setProperty("value", 7)
-        self.CH3_CML_AmpSel_Box.setObjectName("CH3_CML_AmpSel_Box")
-        self.formLayout_2.setWidget(2, QtWidgets.QFormLayout.FieldRole, self.CH3_CML_AmpSel_Box)
+        self.CH3_CML_AmplSel_Box.setFont(font)
+        self.CH3_CML_AmplSel_Box.setMaximum(7)
+        self.CH3_CML_AmplSel_Box.setProperty("value", 7)
+        self.CH3_CML_AmplSel_Box.setObjectName("CH3_CML_AmplSel_Box")
+        self.formLayout_2.setWidget(2, QtWidgets.QFormLayout.FieldRole, self.CH3_CML_AmplSel_Box)
         self.CH4_CML_AmplSel = QtWidgets.QLabel(self.layoutWidget4)
         font = QtGui.QFont()
         font.setFamily("Times New Roman")
@@ -779,15 +780,15 @@ class Ui_GBCR2_Test_Gui(object):
         self.CH4_CML_AmplSel.setFont(font)
         self.CH4_CML_AmplSel.setObjectName("CH4_CML_AmplSel")
         self.formLayout_2.setWidget(3, QtWidgets.QFormLayout.LabelRole, self.CH4_CML_AmplSel)
-        self.CH4_CML_AmpSel_Box = QtWidgets.QSpinBox(self.layoutWidget4)
+        self.CH4_CML_AmplSel_Box = QtWidgets.QSpinBox(self.layoutWidget4)
         font = QtGui.QFont()
         font.setFamily("Times New Roman")
         font.setPointSize(14)
-        self.CH4_CML_AmpSel_Box.setFont(font)
-        self.CH4_CML_AmpSel_Box.setMaximum(7)
-        self.CH4_CML_AmpSel_Box.setProperty("value", 7)
-        self.CH4_CML_AmpSel_Box.setObjectName("CH4_CML_AmpSel_Box")
-        self.formLayout_2.setWidget(3, QtWidgets.QFormLayout.FieldRole, self.CH4_CML_AmpSel_Box)
+        self.CH4_CML_AmplSel_Box.setFont(font)
+        self.CH4_CML_AmplSel_Box.setMaximum(7)
+        self.CH4_CML_AmplSel_Box.setProperty("value", 7)
+        self.CH4_CML_AmplSel_Box.setObjectName("CH4_CML_AmplSel_Box")
+        self.formLayout_2.setWidget(3, QtWidgets.QFormLayout.FieldRole, self.CH4_CML_AmplSel_Box)
         self.CH5_CML_AmplSel = QtWidgets.QLabel(self.layoutWidget4)
         font = QtGui.QFont()
         font.setFamily("Times New Roman")
@@ -797,15 +798,15 @@ class Ui_GBCR2_Test_Gui(object):
         self.CH5_CML_AmplSel.setFont(font)
         self.CH5_CML_AmplSel.setObjectName("CH5_CML_AmplSel")
         self.formLayout_2.setWidget(4, QtWidgets.QFormLayout.LabelRole, self.CH5_CML_AmplSel)
-        self.CH5_CML_AmpSel_Box = QtWidgets.QSpinBox(self.layoutWidget4)
+        self.CH5_CML_AmplSel_Box = QtWidgets.QSpinBox(self.layoutWidget4)
         font = QtGui.QFont()
         font.setFamily("Times New Roman")
         font.setPointSize(14)
-        self.CH5_CML_AmpSel_Box.setFont(font)
-        self.CH5_CML_AmpSel_Box.setMaximum(7)
-        self.CH5_CML_AmpSel_Box.setProperty("value", 7)
-        self.CH5_CML_AmpSel_Box.setObjectName("CH5_CML_AmpSel_Box")
-        self.formLayout_2.setWidget(4, QtWidgets.QFormLayout.FieldRole, self.CH5_CML_AmpSel_Box)
+        self.CH5_CML_AmplSel_Box.setFont(font)
+        self.CH5_CML_AmplSel_Box.setMaximum(7)
+        self.CH5_CML_AmplSel_Box.setProperty("value", 7)
+        self.CH5_CML_AmplSel_Box.setObjectName("CH5_CML_AmplSel_Box")
+        self.formLayout_2.setWidget(4, QtWidgets.QFormLayout.FieldRole, self.CH5_CML_AmplSel_Box)
         self.CH6_CML_AmplSel = QtWidgets.QLabel(self.layoutWidget4)
         font = QtGui.QFont()
         font.setFamily("Times New Roman")
@@ -815,15 +816,15 @@ class Ui_GBCR2_Test_Gui(object):
         self.CH6_CML_AmplSel.setFont(font)
         self.CH6_CML_AmplSel.setObjectName("CH6_CML_AmplSel")
         self.formLayout_2.setWidget(5, QtWidgets.QFormLayout.LabelRole, self.CH6_CML_AmplSel)
-        self.CH6_CML_AmpSel_Box = QtWidgets.QSpinBox(self.layoutWidget4)
+        self.CH6_CML_AmplSel_Box = QtWidgets.QSpinBox(self.layoutWidget4)
         font = QtGui.QFont()
         font.setFamily("Times New Roman")
         font.setPointSize(14)
-        self.CH6_CML_AmpSel_Box.setFont(font)
-        self.CH6_CML_AmpSel_Box.setMaximum(7)
-        self.CH6_CML_AmpSel_Box.setProperty("value", 7)
-        self.CH6_CML_AmpSel_Box.setObjectName("CH6_CML_AmpSel_Box")
-        self.formLayout_2.setWidget(5, QtWidgets.QFormLayout.FieldRole, self.CH6_CML_AmpSel_Box)
+        self.CH6_CML_AmplSel_Box.setFont(font)
+        self.CH6_CML_AmplSel_Box.setMaximum(7)
+        self.CH6_CML_AmplSel_Box.setProperty("value", 7)
+        self.CH6_CML_AmplSel_Box.setObjectName("CH6_CML_AmplSel_Box")
+        self.formLayout_2.setWidget(5, QtWidgets.QFormLayout.FieldRole, self.CH6_CML_AmplSel_Box)
         self.CH7_CML_AmplSel = QtWidgets.QLabel(self.layoutWidget4)
         font = QtGui.QFont()
         font.setFamily("Times New Roman")
@@ -833,15 +834,15 @@ class Ui_GBCR2_Test_Gui(object):
         self.CH7_CML_AmplSel.setFont(font)
         self.CH7_CML_AmplSel.setObjectName("CH7_CML_AmplSel")
         self.formLayout_2.setWidget(6, QtWidgets.QFormLayout.LabelRole, self.CH7_CML_AmplSel)
-        self.CH7_CML_AmpSel_Box = QtWidgets.QSpinBox(self.layoutWidget4)
+        self.CH7_CML_AmplSel_Box = QtWidgets.QSpinBox(self.layoutWidget4)
         font = QtGui.QFont()
         font.setFamily("Times New Roman")
         font.setPointSize(14)
-        self.CH7_CML_AmpSel_Box.setFont(font)
-        self.CH7_CML_AmpSel_Box.setMaximum(7)
-        self.CH7_CML_AmpSel_Box.setProperty("value", 7)
-        self.CH7_CML_AmpSel_Box.setObjectName("CH7_CML_AmpSel_Box")
-        self.formLayout_2.setWidget(6, QtWidgets.QFormLayout.FieldRole, self.CH7_CML_AmpSel_Box)
+        self.CH7_CML_AmplSel_Box.setFont(font)
+        self.CH7_CML_AmplSel_Box.setMaximum(7)
+        self.CH7_CML_AmplSel_Box.setProperty("value", 7)
+        self.CH7_CML_AmplSel_Box.setObjectName("CH7_CML_AmplSel_Box")
+        self.formLayout_2.setWidget(6, QtWidgets.QFormLayout.FieldRole, self.CH7_CML_AmplSel_Box)
         self.layoutWidget5 = QtWidgets.QWidget(self.centralwidget)
         self.layoutWidget5.setGeometry(QtCore.QRect(393, 41, 142, 254))
         self.layoutWidget5.setObjectName("layoutWidget5")
@@ -863,7 +864,7 @@ class Ui_GBCR2_Test_Gui(object):
         font.setPointSize(14)
         self.CH1_Dis_EQ_LF_Box.setFont(font)
         self.CH1_Dis_EQ_LF_Box.setMaximum(1)
-        self.CH1_Dis_EQ_LF_Box.setProperty("value", 1)
+        self.CH1_Dis_EQ_LF_Box.setProperty("value", 0)
         self.CH1_Dis_EQ_LF_Box.setObjectName("CH1_Dis_EQ_LF_Box")
         self.formLayout_3.setWidget(0, QtWidgets.QFormLayout.FieldRole, self.CH1_Dis_EQ_LF_Box)
         self.CH2_Dis_EQ_LF = QtWidgets.QLabel(self.layoutWidget5)
@@ -881,7 +882,7 @@ class Ui_GBCR2_Test_Gui(object):
         font.setPointSize(14)
         self.CH2_Dis_EQ_LF_Box.setFont(font)
         self.CH2_Dis_EQ_LF_Box.setMaximum(1)
-        self.CH2_Dis_EQ_LF_Box.setProperty("value", 1)
+        self.CH2_Dis_EQ_LF_Box.setProperty("value", 0)
         self.CH2_Dis_EQ_LF_Box.setObjectName("CH2_Dis_EQ_LF_Box")
         self.formLayout_3.setWidget(1, QtWidgets.QFormLayout.FieldRole, self.CH2_Dis_EQ_LF_Box)
         self.CH3_Dis_EQ_LF = QtWidgets.QLabel(self.layoutWidget5)
@@ -899,7 +900,7 @@ class Ui_GBCR2_Test_Gui(object):
         font.setPointSize(14)
         self.CH3_Dis_EQ_LF_Box.setFont(font)
         self.CH3_Dis_EQ_LF_Box.setMaximum(1)
-        self.CH3_Dis_EQ_LF_Box.setProperty("value", 1)
+        self.CH3_Dis_EQ_LF_Box.setProperty("value", 0)
         self.CH3_Dis_EQ_LF_Box.setObjectName("CH3_Dis_EQ_LF_Box")
         self.formLayout_3.setWidget(2, QtWidgets.QFormLayout.FieldRole, self.CH3_Dis_EQ_LF_Box)
         self.CH4_Dis_EQ_LF = QtWidgets.QLabel(self.layoutWidget5)
@@ -917,7 +918,7 @@ class Ui_GBCR2_Test_Gui(object):
         font.setPointSize(14)
         self.CH4_Dis_EQ_LF_Box.setFont(font)
         self.CH4_Dis_EQ_LF_Box.setMaximum(1)
-        self.CH4_Dis_EQ_LF_Box.setProperty("value", 1)
+        self.CH4_Dis_EQ_LF_Box.setProperty("value", 0)
         self.CH4_Dis_EQ_LF_Box.setObjectName("CH4_Dis_EQ_LF_Box")
         self.formLayout_3.setWidget(3, QtWidgets.QFormLayout.FieldRole, self.CH4_Dis_EQ_LF_Box)
         self.CH5_Dis_EQ_LF = QtWidgets.QLabel(self.layoutWidget5)
@@ -935,7 +936,7 @@ class Ui_GBCR2_Test_Gui(object):
         font.setPointSize(14)
         self.CH5_Dis_EQ_LF_Box.setFont(font)
         self.CH5_Dis_EQ_LF_Box.setMaximum(1)
-        self.CH5_Dis_EQ_LF_Box.setProperty("value", 1)
+        self.CH5_Dis_EQ_LF_Box.setProperty("value", 0)
         self.CH5_Dis_EQ_LF_Box.setObjectName("CH5_Dis_EQ_LF_Box")
         self.formLayout_3.setWidget(4, QtWidgets.QFormLayout.FieldRole, self.CH5_Dis_EQ_LF_Box)
         self.CH6_Dis_EQ_LF = QtWidgets.QLabel(self.layoutWidget5)
@@ -953,7 +954,7 @@ class Ui_GBCR2_Test_Gui(object):
         font.setPointSize(14)
         self.CH6_Dis_EQ_LF_Box.setFont(font)
         self.CH6_Dis_EQ_LF_Box.setMaximum(1)
-        self.CH6_Dis_EQ_LF_Box.setProperty("value", 1)
+        self.CH6_Dis_EQ_LF_Box.setProperty("value", 0)
         self.CH6_Dis_EQ_LF_Box.setObjectName("CH6_Dis_EQ_LF_Box")
         self.formLayout_3.setWidget(5, QtWidgets.QFormLayout.FieldRole, self.CH6_Dis_EQ_LF_Box)
         self.CH7_Dis_EQ_LF = QtWidgets.QLabel(self.layoutWidget5)
@@ -971,7 +972,7 @@ class Ui_GBCR2_Test_Gui(object):
         font.setPointSize(14)
         self.CH7_Dis_EQ_LF_Box.setFont(font)
         self.CH7_Dis_EQ_LF_Box.setMaximum(1)
-        self.CH7_Dis_EQ_LF_Box.setProperty("value", 1)
+        self.CH7_Dis_EQ_LF_Box.setProperty("value", 0)
         self.CH7_Dis_EQ_LF_Box.setObjectName("CH7_Dis_EQ_LF_Box")
         self.formLayout_3.setWidget(6, QtWidgets.QFormLayout.FieldRole, self.CH7_Dis_EQ_LF_Box)
         self.layoutWidget6 = QtWidgets.QWidget(self.centralwidget)
@@ -2008,61 +2009,61 @@ class Ui_GBCR2_Test_Gui(object):
 
         self.retranslateUi(GBCR2_Test_Gui)
         self.CH1_Dis_Rx_Box.valueChanged['QString'].connect(self.CH1_Dis_Rx_Box_valueChanged)
-        self.CH1_CML_AmpSel_Box.valueChanged['int'].connect(GBCR2_Test_Gui.update)
-        self.CH1_Dis_EQ_LF_Box.valueChanged['int'].connect(GBCR2_Test_Gui.update)
-        self.CH1_EQ_ATT_Box.valueChanged['int'].connect(GBCR2_Test_Gui.update)
-        self.CH1_CTLE_HFSR_Box.valueChanged['int'].connect(GBCR2_Test_Gui.update)
-        self.CH1_CTLE_MFSR_Box.valueChanged['int'].connect(GBCR2_Test_Gui.update)
-        self.CH1_Dis_DFF_Box.valueChanged['int'].connect(GBCR2_Test_Gui.update)
-        self.CH1_Dis_LPF_Box.valueChanged['int'].connect(GBCR2_Test_Gui.update)
-        self.CH2_Dis_Rx_Box.valueChanged['int'].connect(GBCR2_Test_Gui.update)
-        self.CH2_CML_AmpSel_Box.valueChanged['int'].connect(GBCR2_Test_Gui.update)
-        self.CH2_Dis_EQ_LF_Box.valueChanged['int'].connect(GBCR2_Test_Gui.update)
-        self.CH2_EQ_ATT_Box.valueChanged['int'].connect(GBCR2_Test_Gui.update)
-        self.CH2_CTLE_HFSR_Box.valueChanged['int'].connect(GBCR2_Test_Gui.update)
-        self.CH2_CTLE_MFSR_Box.valueChanged['int'].connect(GBCR2_Test_Gui.update)
-        self.CH2_Dis_DFF_Box.valueChanged['int'].connect(GBCR2_Test_Gui.update)
-        self.CH2_Dis_LPF_Box.valueChanged['int'].connect(GBCR2_Test_Gui.update)
-        self.CH3_Dis_Rx_Box.valueChanged['int'].connect(GBCR2_Test_Gui.update)
-        self.CH3_CML_AmpSel_Box.valueChanged['int'].connect(GBCR2_Test_Gui.update)
-        self.CH3_Dis_EQ_LF_Box.valueChanged['int'].connect(GBCR2_Test_Gui.update)
-        self.CH3_EQ_ATT_Box.valueChanged['int'].connect(GBCR2_Test_Gui.update)
-        self.CH3_CTLE_HFSR_Box.valueChanged['int'].connect(GBCR2_Test_Gui.update)
-        self.CH3_CTLE_MFSR_Box.valueChanged['int'].connect(GBCR2_Test_Gui.update)
-        self.CH3_Dis_DFF_Box.valueChanged['int'].connect(GBCR2_Test_Gui.update)
-        self.CH3_Dis_LPF_Box.valueChanged['int'].connect(GBCR2_Test_Gui.update)
-        self.CH4_Dis_Rx_Box.valueChanged['int'].connect(GBCR2_Test_Gui.update)
-        self.CH4_CML_AmpSel_Box.valueChanged['int'].connect(GBCR2_Test_Gui.update)
-        self.CH4_Dis_EQ_LF_Box.valueChanged['int'].connect(GBCR2_Test_Gui.update)
-        self.CH4_EQ_ATT_Box.valueChanged['int'].connect(GBCR2_Test_Gui.update)
-        self.CH4_CTLE_HFSR_Box.valueChanged['int'].connect(GBCR2_Test_Gui.update)
-        self.CH4_CTLE_MFSR_Box.valueChanged['int'].connect(GBCR2_Test_Gui.update)
-        self.CH4_Dis_DFF_Box.valueChanged['int'].connect(GBCR2_Test_Gui.update)
-        self.CH4_Dis_LPF_Box.valueChanged['int'].connect(GBCR2_Test_Gui.update)
-        self.CH5_Dis_Rx_Box.valueChanged['int'].connect(GBCR2_Test_Gui.update)
-        self.CH5_CML_AmpSel_Box.valueChanged['int'].connect(GBCR2_Test_Gui.update)
-        self.CH5_Dis_EQ_LF_Box.valueChanged['int'].connect(GBCR2_Test_Gui.update)
-        self.CH5_EQ_ATT_Box.valueChanged['int'].connect(GBCR2_Test_Gui.update)
-        self.CH5_CTLE_HFSR_Box.valueChanged['int'].connect(GBCR2_Test_Gui.update)
-        self.CH5_CTLE_MFSR_Box.valueChanged['int'].connect(GBCR2_Test_Gui.update)
-        self.CH5_Dis_DFF_Box.valueChanged['int'].connect(GBCR2_Test_Gui.update)
-        self.CH5_Dis_LPF_Box.valueChanged['int'].connect(GBCR2_Test_Gui.update)
-        self.CH6_Dis_Rx_Box.valueChanged['int'].connect(GBCR2_Test_Gui.update)
-        self.CH6_CML_AmpSel_Box.valueChanged['int'].connect(GBCR2_Test_Gui.update)
-        self.CH6_Dis_EQ_LF_Box.valueChanged['int'].connect(GBCR2_Test_Gui.update)
-        self.CH6_EQ_ATT_Box.valueChanged['int'].connect(GBCR2_Test_Gui.update)
-        self.CH6_CTLE_HFSR_Box.valueChanged['int'].connect(GBCR2_Test_Gui.update)
-        self.CH6_CTLE_MFSR_Box.valueChanged['int'].connect(GBCR2_Test_Gui.update)
-        self.CH6_Dis_DFF_Box.valueChanged['int'].connect(GBCR2_Test_Gui.update)
-        self.CH6_Dis_LPF_Box.valueChanged['int'].connect(GBCR2_Test_Gui.update)
-        self.CH7_Dis_Rx_Box.valueChanged['int'].connect(GBCR2_Test_Gui.update)
-        self.CH7_CML_AmpSel_Box.valueChanged['int'].connect(GBCR2_Test_Gui.update)
-        self.CH7_Dis_EQ_LF_Box.valueChanged['int'].connect(GBCR2_Test_Gui.update)
-        self.CH7_EQ_ATT_Box.valueChanged['int'].connect(GBCR2_Test_Gui.update)
-        self.CH7_CTLE_HFSR_Box.valueChanged['int'].connect(GBCR2_Test_Gui.update)
-        self.CH7_CTLE_MFSR_Box.valueChanged['int'].connect(GBCR2_Test_Gui.update)
-        self.CH7_Dis_DFF_Box.valueChanged['int'].connect(GBCR2_Test_Gui.update)
-        self.CH7_Dis_LPF_Box.valueChanged['int'].connect(GBCR2_Test_Gui.update)
+        self.CH1_CML_AmplSel_Box.valueChanged['int'].connect(self.CH1_CML_AmplSel_Box_valueChanged)
+        self.CH1_Dis_EQ_LF_Box.valueChanged['int'].connect(self.CH1_Dis_EQ_LF_Box_valueChanged)
+        self.CH1_EQ_ATT_Box.valueChanged['int'].connect(self.CH1_EQ_ATT_Box_valueChanged)
+        self.CH1_CTLE_HFSR_Box.valueChanged['int'].connect(self.CH1_CTLE_HFSR_Box_valueChanged)
+        self.CH1_CTLE_MFSR_Box.valueChanged['int'].connect(self.CH1_CTLE_MFSR_Box_valueChanged)
+        self.CH1_Dis_DFF_Box.valueChanged['int'].connect(self.CH1_Dis_DFF_Box_valueChanged)
+        self.CH1_Dis_LPF_Box.valueChanged['int'].connect(self.CH1_Dis_LPF_Box_valueChanged)
+        self.CH2_Dis_Rx_Box.valueChanged['QString'].connect(self.CH2_Dis_Rx_Box_valueChanged)
+        self.CH2_CML_AmplSel_Box.valueChanged['int'].connect(self.CH2_CML_AmplSel_Box_valueChanged)
+        self.CH2_Dis_EQ_LF_Box.valueChanged['int'].connect(self.CH2_Dis_EQ_LF_Box_valueChanged)
+        self.CH2_EQ_ATT_Box.valueChanged['int'].connect(self.CH2_EQ_ATT_Box_valueChanged)
+        self.CH2_CTLE_HFSR_Box.valueChanged['int'].connect(self.CH2_CTLE_HFSR_Box_valueChanged)
+        self.CH2_CTLE_MFSR_Box.valueChanged['int'].connect(self.CH2_CTLE_MFSR_Box_valueChanged)
+        self.CH2_Dis_DFF_Box.valueChanged['int'].connect(self.CH2_Dis_DFF_Box_valueChanged)
+        self.CH2_Dis_LPF_Box.valueChanged['int'].connect(self.CH2_Dis_LPF_Box_valueChanged)
+        self.CH3_Dis_Rx_Box.valueChanged['QString'].connect(self.CH3_Dis_Rx_Box_valueChanged)
+        self.CH3_CML_AmplSel_Box.valueChanged['int'].connect(self.CH3_CML_AmplSel_Box_valueChanged)
+        self.CH3_Dis_EQ_LF_Box.valueChanged['int'].connect(self.CH3_Dis_EQ_LF_Box_valueChanged)
+        self.CH3_EQ_ATT_Box.valueChanged['int'].connect(self.CH3_EQ_ATT_Box_valueChanged)
+        self.CH3_CTLE_HFSR_Box.valueChanged['int'].connect(self.CH3_CTLE_HFSR_Box_valueChanged)
+        self.CH3_CTLE_MFSR_Box.valueChanged['int'].connect(self.CH3_CTLE_MFSR_Box_valueChanged)
+        self.CH3_Dis_DFF_Box.valueChanged['int'].connect(self.CH3_Dis_DFF_Box_valueChanged)
+        self.CH3_Dis_LPF_Box.valueChanged['int'].connect(self.CH3_Dis_LPF_Box_valueChanged)
+        self.CH4_Dis_Rx_Box.valueChanged['QString'].connect(self.CH4_Dis_Rx_Box_valueChanged)
+        self.CH4_CML_AmplSel_Box.valueChanged['int'].connect(self.CH4_CML_AmplSel_Box_valueChanged)
+        self.CH4_Dis_EQ_LF_Box.valueChanged['int'].connect(self.CH4_Dis_EQ_LF_Box_valueChanged)
+        self.CH4_EQ_ATT_Box.valueChanged['int'].connect(self.CH4_EQ_ATT_Box_valueChanged)
+        self.CH4_CTLE_HFSR_Box.valueChanged['int'].connect(self.CH4_CTLE_HFSR_Box_valueChanged)
+        self.CH4_CTLE_MFSR_Box.valueChanged['int'].connect(self.CH4_CTLE_MFSR_Box_valueChanged)
+        self.CH4_Dis_DFF_Box.valueChanged['int'].connect(self.CH4_Dis_DFF_Box_valueChanged)
+        self.CH4_Dis_LPF_Box.valueChanged['int'].connect(self.CH4_Dis_LPF_Box_valueChanged)
+        self.CH5_Dis_Rx_Box.valueChanged['QString'].connect(self.CH5_Dis_Rx_Box_valueChanged)
+        self.CH5_CML_AmplSel_Box.valueChanged['int'].connect(self.CH5_CML_AmplSel_Box_valueChanged)
+        self.CH5_Dis_EQ_LF_Box.valueChanged['int'].connect(self.CH5_Dis_EQ_LF_Box_valueChanged)
+        self.CH5_EQ_ATT_Box.valueChanged['int'].connect(self.CH5_EQ_ATT_Box_valueChanged)
+        self.CH5_CTLE_HFSR_Box.valueChanged['int'].connect(self.CH5_CTLE_HFSR_Box_valueChanged)
+        self.CH5_CTLE_MFSR_Box.valueChanged['int'].connect(self.CH5_CTLE_MFSR_Box_valueChanged)
+        self.CH5_Dis_DFF_Box.valueChanged['int'].connect(self.CH5_Dis_DFF_Box_valueChanged)
+        self.CH5_Dis_LPF_Box.valueChanged['int'].connect(self.CH5_Dis_LPF_Box_valueChanged)
+        self.CH6_Dis_Rx_Box.valueChanged['QString'].connect(self.CH6_Dis_Rx_Box_valueChanged)
+        self.CH6_CML_AmplSel_Box.valueChanged['int'].connect(self.CH6_CML_AmplSel_Box_valueChanged)
+        self.CH6_Dis_EQ_LF_Box.valueChanged['int'].connect(self.CH6_Dis_EQ_LF_Box_valueChanged)
+        self.CH6_EQ_ATT_Box.valueChanged['int'].connect(self.CH6_EQ_ATT_Box_valueChanged)
+        self.CH6_CTLE_HFSR_Box.valueChanged['int'].connect(self.CH6_CTLE_HFSR_Box_valueChanged)
+        self.CH6_CTLE_MFSR_Box.valueChanged['int'].connect(self.CH6_CTLE_MFSR_Box_valueChanged)
+        self.CH6_Dis_DFF_Box.valueChanged['int'].connect(self.CH6_Dis_DFF_Box_valueChanged)
+        self.CH6_Dis_LPF_Box.valueChanged['int'].connect(self.CH6_Dis_LPF_Box_valueChanged)
+        self.CH7_Dis_Rx_Box.valueChanged['QString'].connect(self.CH7_Dis_Rx_Box_valueChanged)
+        self.CH7_CML_AmplSel_Box.valueChanged['int'].connect(self.CH7_CML_AmplSel_Box_valueChanged)
+        self.CH7_Dis_EQ_LF_Box.valueChanged['int'].connect(self.CH7_Dis_EQ_LF_Box_valueChanged)
+        self.CH7_EQ_ATT_Box.valueChanged['int'].connect(self.CH7_EQ_ATT_Box_valueChanged)
+        self.CH7_CTLE_HFSR_Box.valueChanged['int'].connect(self.CH7_CTLE_HFSR_Box_valueChanged)
+        self.CH7_CTLE_MFSR_Box.valueChanged['int'].connect(self.CH7_CTLE_MFSR_Box_valueChanged)
+        self.CH7_Dis_DFF_Box.valueChanged['int'].connect(self.CH7_Dis_DFF_Box_valueChanged)
+        self.CH7_Dis_LPF_Box.valueChanged['int'].connect(self.CH7_Dis_LPF_Box_valueChanged)
         self.COM_Port_Box.activated['QString'].connect(self.COM_Port_Box_activated)
         self.I2C_Addr_Box.activated['QString'].connect(self.I2C_Addr_Box_activated)
         self.CH1_DLL_ATT_Box.valueChanged['int'].connect(GBCR2_Test_Gui.update)
@@ -2217,6 +2218,7 @@ class Ui_GBCR2_Test_Gui(object):
         self.CH2_DLL_ATT.setText(_translate("GBCR2_Test_Gui", "DLL_ATT"))
         self.COM_Port.setText(_translate("GBCR2_Test_Gui", "COM Port"))
 
+
     def I2C_Addr_Box_activated(self):                                 # select I2C slave address
         winsound.Beep(freqency, duration)
         if self.I2C_Addr_Box.currentText() == "0x23":
@@ -2267,10 +2269,12 @@ class Ui_GBCR2_Test_Gui(object):
 
     def pushButton_clicked(self):
         winsound.Beep(2000, 500)
+        print(hex(self.I2C_Addr))
+        print(self.COM_Port)
         iss = UsbIss()
         iss.open(self.COM_Port)
         iss.setup_i2c()
-        print(self.I2C_Addr)
+
         Reg_Write_val = GBCR2_Reg1.get_config_vector()
         print("GBCR2 I2C Write in data:")
         print(Reg_Write_val)
@@ -2284,6 +2288,225 @@ class Ui_GBCR2_Test_Gui(object):
         winsound.Beep(freqency, duration)
         GBCR2_Reg1.set_CH1_Disable(self.CH1_Dis_Rx_Box.value())
 
+    def CH1_Dis_DFF_Box_valueChanged(self):
+        winsound.Beep(freqency, duration)
+        GBCR2_Reg1.set_CH1_Dis_DFF(self.CH1_Dis_DFF_Box.value())
+
+    def CH1_Dis_LPF_Box_valueChanged(self):
+        winsound.Beep(freqency, duration)
+        GBCR2_Reg1.set_CH1_Dis_LPF(self.CH1_Dis_LPF_Box.value())
+
+    def CH1_CTLE_HFSR_Box_valueChanged(self):
+        winsound.Beep(freqency, duration)
+        GBCR2_Reg1.set_CH1_CTLE_HFSR(self.CH1_CTLE_HFSR_Box.value())
+
+    def CH1_CTLE_MFSR_Box_valueChanged(self):
+        winsound.Beep(freqency, duration)
+        GBCR2_Reg1.set_CH1_CTLE_MFSR(self.CH1_CTLE_MFSR_Box.value())
+
+    def CH1_Dis_EQ_LF_Box_valueChanged(self):
+        winsound.Beep(freqency, duration)
+        GBCR2_Reg1.set_CH1_Dis_EQ_LF(self.CH1_Dis_EQ_LF_Box.value())
+
+    def CH1_EQ_ATT_Box_valueChanged(self):
+        winsound.Beep(freqency, duration)
+        GBCR2_Reg1.set_CH1_EQ_ATT(self.CH1_EQ_ATT_Box.value())
+
+    def CH1_CML_AmplSel_Box_valueChanged(self):
+        winsound.Beep(freqency, duration)
+        GBCR2_Reg1.set_CH2_CML_AmplSel(self.CH2_CML_AmplSel_Box.value())
+
+    def CH2_Dis_Rx_Box_valueChanged(self):
+        winsound.Beep(freqency, duration)
+        GBCR2_Reg1.set_CH2_Disable(self.CH2_Dis_Rx_Box.value())
+
+    def CH2_Dis_DFF_Box_valueChanged(self):
+        winsound.Beep(freqency, duration)
+        GBCR2_Reg1.set_CH2_Dis_DFF(self.CH2_Dis_DFF_Box.value())
+
+    def CH2_Dis_LPF_Box_valueChanged(self):
+        winsound.Beep(freqency, duration)
+        GBCR2_Reg1.set_CH2_Dis_LPF(self.CH2_Dis_LPF_Box.value())
+
+    def CH2_CTLE_HFSR_Box_valueChanged(self):
+        winsound.Beep(freqency, duration)
+        GBCR2_Reg1.set_CH2_CTLE_HFSR(self.CH2_CTLE_HFSR_Box.value())
+
+    def CH2_CTLE_MFSR_Box_valueChanged(self):
+        winsound.Beep(freqency, duration)
+        GBCR2_Reg1.set_CH2_CTLE_MFSR(self.CH2_CTLE_MFSR_Box.value())
+
+    def CH2_Dis_EQ_LF_Box_valueChanged(self):
+        winsound.Beep(freqency, duration)
+        GBCR2_Reg1.set_CH2_Dis_EQ_LF(self.CH2_Dis_EQ_LF_Box.value())
+
+    def CH2_EQ_ATT_Box_valueChanged(self):
+        winsound.Beep(freqency, duration)
+        GBCR2_Reg1.set_CH2_EQ_ATT(self.CH2_EQ_ATT_Box.value())
+
+    def CH2_CML_AmplSel_Box_valueChanged(self):
+        winsound.Beep(freqency, duration)
+        GBCR2_Reg1.set_CH2_CML_AmplSel(self.CH2_CML_AmplSel_Box.value())
+
+    def CH3_Dis_Rx_Box_valueChanged(self):
+        winsound.Beep(freqency, duration)
+        GBCR2_Reg1.set_CH3_Disable(self.CH3_Dis_Rx_Box.value())
+
+    def CH3_Dis_DFF_Box_valueChanged(self):
+        winsound.Beep(freqency, duration)
+        GBCR2_Reg1.set_CH3_Dis_DFF(self.CH3_Dis_DFF_Box.value())
+
+    def CH3_Dis_LPF_Box_valueChanged(self):
+        winsound.Beep(freqency, duration)
+        GBCR2_Reg1.set_CH3_Dis_LPF(self.CH3_Dis_LPF_Box.value())
+
+    def CH3_CTLE_HFSR_Box_valueChanged(self):
+        winsound.Beep(freqency, duration)
+        GBCR2_Reg1.set_CH3_CTLE_HFSR(self.CH3_CTLE_HFSR_Box.value())
+
+    def CH3_CTLE_MFSR_Box_valueChanged(self):
+        winsound.Beep(freqency, duration)
+        GBCR2_Reg1.set_CH3_CTLE_MFSR(self.CH3_CTLE_MFSR_Box.value())
+
+    def CH3_Dis_EQ_LF_Box_valueChanged(self):
+        winsound.Beep(freqency, duration)
+        GBCR2_Reg1.set_CH3_Dis_EQ_LF(self.CH3_Dis_EQ_LF_Box.value())
+
+    def CH3_EQ_ATT_Box_valueChanged(self):
+        winsound.Beep(freqency, duration)
+        GBCR2_Reg1.set_CH3_EQ_ATT(self.CH3_EQ_ATT_Box.value())
+
+    def CH3_CML_AmplSel_Box_valueChanged(self):
+        winsound.Beep(freqency, duration)
+        GBCR2_Reg1.set_CH3_CML_AmplSel(self.CH3_CML_AmplSel_Box.value())
+
+    def CH4_Dis_Rx_Box_valueChanged(self):
+        winsound.Beep(freqency, duration)
+        GBCR2_Reg1.set_CH4_Disable(self.CH4_Dis_Rx_Box.value())
+
+    def CH4_Dis_DFF_Box_valueChanged(self):
+        winsound.Beep(freqency, duration)
+        GBCR2_Reg1.set_CH4_Dis_DFF(self.CH4_Dis_DFF_Box.value())
+
+    def CH4_Dis_LPF_Box_valueChanged(self):
+        winsound.Beep(freqency, duration)
+        GBCR2_Reg1.set_CH4_Dis_LPF(self.CH4_Dis_LPF_Box.value())
+
+    def CH4_CTLE_HFSR_Box_valueChanged(self):
+        winsound.Beep(freqency, duration)
+        GBCR2_Reg1.set_CH4_CTLE_HFSR(self.CH4_CTLE_HFSR_Box.value())
+
+    def CH4_CTLE_MFSR_Box_valueChanged(self):
+        winsound.Beep(freqency, duration)
+        GBCR2_Reg1.set_CH4_CTLE_MFSR(self.CH4_CTLE_MFSR_Box.value())
+
+    def CH4_Dis_EQ_LF_Box_valueChanged(self):
+        winsound.Beep(freqency, duration)
+        GBCR2_Reg1.set_CH4_Dis_EQ_LF(self.CH4_Dis_EQ_LF_Box.value())
+
+    def CH4_EQ_ATT_Box_valueChanged(self):
+        winsound.Beep(freqency, duration)
+        GBCR2_Reg1.set_CH4_EQ_ATT(self.CH4_EQ_ATT_Box.value())
+
+    def CH4_CML_AmplSel_Box_valueChanged(self):
+        winsound.Beep(freqency, duration)
+        GBCR2_Reg1.set_CH4_CML_AmplSel(self.CH4_CML_AmplSel_Box.value())
+
+    def CH5_Dis_Rx_Box_valueChanged(self):
+        winsound.Beep(freqency, duration)
+        GBCR2_Reg1.set_CH5_Disable(self.CH5_Dis_Rx_Box.value())
+
+    def CH5_Dis_DFF_Box_valueChanged(self):
+        winsound.Beep(freqency, duration)
+        GBCR2_Reg1.set_CH5_Dis_DFF(self.CH5_Dis_DFF_Box.value())
+
+    def CH5_Dis_LPF_Box_valueChanged(self):
+        winsound.Beep(freqency, duration)
+        GBCR2_Reg1.set_CH5_Dis_LPF(self.CH5_Dis_LPF_Box.value())
+
+    def CH5_CTLE_HFSR_Box_valueChanged(self):
+        winsound.Beep(freqency, duration)
+        GBCR2_Reg1.set_CH5_CTLE_HFSR(self.CH5_CTLE_HFSR_Box.value())
+
+    def CH5_CTLE_MFSR_Box_valueChanged(self):
+        winsound.Beep(freqency, duration)
+        GBCR2_Reg1.set_CH5_CTLE_MFSR(self.CH5_CTLE_MFSR_Box.value())
+
+    def CH5_Dis_EQ_LF_Box_valueChanged(self):
+        winsound.Beep(freqency, duration)
+        GBCR2_Reg1.set_CH5_Dis_EQ_LF(self.CH5_Dis_EQ_LF_Box.value())
+
+    def CH5_EQ_ATT_Box_valueChanged(self):
+        winsound.Beep(freqency, duration)
+        GBCR2_Reg1.set_CH5_EQ_ATT(self.CH5_EQ_ATT_Box.value())
+
+    def CH5_CML_AmplSel_Box_valueChanged(self):
+        winsound.Beep(freqency, duration)
+        GBCR2_Reg1.set_CH5_CML_AmplSel(self.CH5_CML_AmplSel_Box.value())
+
+    def CH6_Dis_Rx_Box_valueChanged(self):
+        winsound.Beep(freqency, duration)
+        GBCR2_Reg1.set_CH6_Disable(self.CH6_Dis_Rx_Box.value())
+
+    def CH6_Dis_DFF_Box_valueChanged(self):
+        winsound.Beep(freqency, duration)
+        GBCR2_Reg1.set_CH6_Dis_DFF(self.CH6_Dis_DFF_Box.value())
+
+    def CH6_Dis_LPF_Box_valueChanged(self):
+        winsound.Beep(freqency, duration)
+        GBCR2_Reg1.set_CH6_Dis_LPF(self.CH6_Dis_LPF_Box.value())
+
+    def CH6_CTLE_HFSR_Box_valueChanged(self):
+        winsound.Beep(freqency, duration)
+        GBCR2_Reg1.set_CH6_CTLE_HFSR(self.CH6_CTLE_HFSR_Box.value())
+
+    def CH6_CTLE_MFSR_Box_valueChanged(self):
+        winsound.Beep(freqency, duration)
+        GBCR2_Reg1.set_CH6_CTLE_MFSR(self.CH6_CTLE_MFSR_Box.value())
+
+    def CH6_Dis_EQ_LF_Box_valueChanged(self):
+        winsound.Beep(freqency, duration)
+        GBCR2_Reg1.set_CH6_Dis_EQ_LF(self.CH6_Dis_EQ_LF_Box.value())
+
+    def CH6_EQ_ATT_Box_valueChanged(self):
+        winsound.Beep(freqency, duration)
+        GBCR2_Reg1.set_CH6_EQ_ATT(self.CH6_EQ_ATT_Box.value())
+
+    def CH6_CML_AmplSel_Box_valueChanged(self):
+        winsound.Beep(freqency, duration)
+        GBCR2_Reg1.set_CH6_CML_AmplSel(self.CH6_CML_AmplSel_Box.value())
+
+    def CH7_Dis_Rx_Box_valueChanged(self):
+        winsound.Beep(freqency, duration)
+        GBCR2_Reg1.set_CH7_Disable(self.CH7_Dis_Rx_Box.value())
+
+    def CH7_Dis_DFF_Box_valueChanged(self):
+        winsound.Beep(freqency, duration)
+        GBCR2_Reg1.set_CH7_Dis_DFF(self.CH7_Dis_DFF_Box.value())
+
+    def CH7_Dis_LPF_Box_valueChanged(self):
+        winsound.Beep(freqency, duration)
+        GBCR2_Reg1.set_CH7_Dis_LPF(self.CH7_Dis_LPF_Box.value())
+
+    def CH7_CTLE_HFSR_Box_valueChanged(self):
+        winsound.Beep(freqency, duration)
+        GBCR2_Reg1.set_CH7_CTLE_HFSR(self.CH7_CTLE_HFSR_Box.value())
+
+    def CH7_CTLE_MFSR_Box_valueChanged(self):
+        winsound.Beep(freqency, duration)
+        GBCR2_Reg1.set_CH7_CTLE_MFSR(self.CH7_CTLE_MFSR_Box.value())
+
+    def CH7_Dis_EQ_LF_Box_valueChanged(self):
+        winsound.Beep(freqency, duration)
+        GBCR2_Reg1.set_CH7_Dis_EQ_LF(self.CH7_Dis_EQ_LF_Box.value())
+
+    def CH7_EQ_ATT_Box_valueChanged(self):
+        winsound.Beep(freqency, duration)
+        GBCR2_Reg1.set_CH7_EQ_ATT(self.CH7_EQ_ATT_Box.value())
+
+    def CH7_CML_AmplSel_Box_valueChanged(self):
+        winsound.Beep(freqency, duration)
+        GBCR2_Reg1.set_CH7_CML_AmplSel(self.CH7_CML_AmplSel_Box.value())
 if __name__ == "__main__":
     import sys
 
