@@ -95,7 +95,7 @@ def I2C_Write_Read(GBCR2_Reg1, iss):
     else:
         # print("Read back data didn't matche with Write into data")
         I2C_Status = "Fail"
-    return I2C_Status
+    return [I2C_Status, reg_val, iic_read_reg]
 
 #=======================================================================================#
 def main():
@@ -127,20 +127,9 @@ def main():
 
     GBCR2_Reg1 = GBCR2_Reg()
 
-    ## One chip has two recording files: Rx and Tx
-    # 0. execute python script.
-    # 1. Current date: second
-    # 2. Tester name
-    # 3. Power Current (set 567 = 3'b111) Power Voltage 1.2V : Power Current IDD
-    # 4. I2C status, Power Voltage = 1.2VIDD (10 times)
-    # 5. Power voltage 1.08V, 1.2V, 1.32V
-            # a: 1.2V I2C status, store IDD, Rx1-7, Tx1-2
-            # b: 1.08V
-            # c: 1.32V
-    # 6. Test pass or fail (5.a IDD Channel 1, 5.I2C status(a&b&c), )
-    # 7. Turn off Power
     with open("./GBCR2_Test_Log/GBCR2_QC_%s_Chip_ID=%s.txt"%(Test_Mode, Chip_ID), 'a+') as infile:
         time_stamp = time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(time.time()))
+        infile.write("\n")
         infile.write("%s\n"%time_stamp)
         infile.write("%s\n"%Tester_Name)
 
@@ -152,16 +141,32 @@ def main():
         I2C_Status = "Fail"
         while(loop_num < 10 and I2C_Status == "Fail"):
             # print(loop_num)
-            I2C_Status = I2C_Write_Read(GBCR2_Reg1, iss)
+            I2C_Status1 = I2C_Write_Read(GBCR2_Reg1, iss)
+            I2C_Status = I2C_Status1[0]
+            if I2C_Status == "Fail":
+                infile.write("I2C Test Failed  %d\n"%loop_num)
+                infile.write("Written values:\n")
+                infile.writelines("%d "% val for val in I2C_Status1[1])
+                infile.write("\n")
+                infile.write("Read values:\n")
+                infile.writelines("%d "% val for val in I2C_Status1[2])
+                infile.write("\n")
+                ## write iic write into data and read back data to file
             time.sleep(0.1)
             loop_num += 1
-        if loop_num <= 10:
-            infile.write("I2C Test Pass\n")
-        else:
-            infile.write("I2C Test Failed\n")
-
-        # print(loop_num)
-
+            if loop_num <= 10:
+                infile.write("I2C Test Pass  %d\n"%loop_num)
+                # infile.writelines("%d "% val for val in I2C_Status1[1])
+                # infile.write("\n")
+                # infile.writelines("%d "% val for val in I2C_Status1[2])
+                # infile.write("\n")
+            else:
+                infile.write("I2C Test Failed  %d\n"%loop_num)
+                infile.writelines("%d "% val for val in I2C_Status1[1])
+                infile.write("\n")
+                infile.writelines("%d "% val for val in I2C_Status1[2])
+                infile.write("\n")
+                ## write iic write into data and read back data to file
         Power_Volt = [1.277, 1.277, 1.411]
         Power_Volt_Board = [1.2, 1.08, 1.32]
         Channel_One_Current = []
@@ -172,7 +177,7 @@ def main():
             Channel_One_Current += [Power_Control(Power_Inst, Power_Volt[Volt])]
             print("Power Current: %.3f"%Channel_One_Current[Volt])
             time.sleep(1)
-            I2C_Status += [I2C_Write_Read(GBCR2_Reg1, iss)]
+            I2C_Status += [I2C_Write_Read(GBCR2_Reg1, iss)[0]]
             print("I2C Status: %s"%I2C_Status[Volt])
             infile.write("%.2fV Voltage Test:==============================================\n"%Power_Volt_Board[Volt])
             infile.write("Power Current: %.3f\n"%Channel_One_Current[Volt])
