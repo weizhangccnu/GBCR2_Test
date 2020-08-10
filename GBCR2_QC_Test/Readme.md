@@ -7,5 +7,5 @@
   - Test_Channel: Rx or Tx
   - Tester_Name: your name
   - Chip_ID: from 001 to 175
-  - Example: `**python ./GBCR2_QC_Test_Control.py Rx Wei 001**` to test NO.001 chip all Rx channels by Wei  
+  - Example: **`python ./GBCR2_QC_Test_Control.py Rx Wei 001`** to test NO.001 chip all Rx channels by Wei  
 ### 3. Eye-diagram is save to C:/GBCR2_QC_Test directoty on OSC (DSA70804B)
