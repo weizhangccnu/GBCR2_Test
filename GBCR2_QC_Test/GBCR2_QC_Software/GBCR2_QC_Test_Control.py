@@ -8,7 +8,7 @@ from labjack import ljm
 from usb_iss import UsbIss, defs
 '''
 @author: Wei Zhang
-@date: March 2rd, 2020
+@date: August 8th, 2020
 This python script is used to control the GBCR2 I2C slave.
 '''
 #=======================================================================================#
@@ -25,23 +25,32 @@ def Power_Control(Inst, Channel_One_Volt):
 #=======================================================================================#
 ## Capture Screen Image
 def Capture_Screen_Image(inst, filename):
-    inst.write("*RST")                                      # reset the OSC
-    time.sleep(8)
+    inst.write("*CLS")                                      # Clear OSC Screen
+    time.sleep(0.1)
+
+    inst.write("DISplay:PERSistence:RESET")                 # Clear Persistence data
+    time.sleep(0.01)
     inst.write("ACQuire:SAMPlingmode ET")                   # Acquire samplinng mode : Equivalent Time
     time.sleep(0.01)
     inst.write("TRIGGER:A:EDGE:SOURCE CH1")                 # set tirgger source and edge
     inst.write("HORIZONTAL:DELAY:MODE ON")                  # set Delay MODE
-    inst.write("HORIZONTAL:DELAY:TIMe 1.88E-8")             # set Delay MODE
 
-    inst.write("HORizontal:MODE:SCAle 2E-9")                # set horizontal scale
+    inst.write("HORIZONTAL:DELAY:TIMe 2.734E-9")            # set Delay MODE
+
+    inst.write("HORizontal:MODE:SCAle 200E-12")             # set horizontal scale
     inst.write("DISplay:PERSistence INFPersist")
     inst.write("CH1:SCAle 5.0E-2")
     # print(inst.query("CH1:SCAle?"))
 
+
+    # inst.write("MASK:AUTOSet:HSCAle OFF")                  # Turn off Vertical scal
+    # inst.write("MASK:AUTOSet:VSCAle OFF")                  # Turn off Vertical scal
+    # inst.write("MASK:DISplay ON")                          # Turn off Vertical scal
+
     inst.write("HIStogram:MODe HORizontal")
     inst.write("HIStogram:SOUrce CH1")
     inst.write("HIStogram:DISplay LINEAr")
-    inst.write("HIStogram:BOXPcnt 30, 49.75, 70, 50.25")
+    inst.write("HIStogram:BOXPcnt 10, 49.75, 50, 50.25")
 
     inst.write("MEASUrement:MEAS1:SOUrce1 HIStogram")
     inst.write("MEASUREMENT:MEAS1:TYPE STDdev")
@@ -63,7 +72,7 @@ def Capture_Screen_Image(inst, filename):
     inst.write("MEASUrement:MEAS2:STATE ON")                # display rising edge measurement results
     inst.write("MEASUrement:MEAS3:STATE ON")                # display frequency measurement results
     inst.write("MEASUrement:MEAS4:STATE ON")                # display rising edge measurement results
-    time.sleep(20)
+    time.sleep(10)
 
     RMS_Jitter = inst.query("MEASUREMENT:MEAS1:VALue?")
     Amplitude = inst.query("MEASUREMENT:MEAS2:VALue?")
@@ -85,16 +94,20 @@ def I2C_Write_Read(GBCR2_Reg1, iss):
     reg_val = []
     reg_val = GBCR2_Reg1.get_config_vector()
     # print(reg_val)
-    iss.i2c.write(slave_addr, 0, reg_val)
+    try:
+        iss.i2c.write(slave_addr, 0, reg_val)
+    except:
+        print("I2C NACK!!")
+
     time.sleep(0.1)
     iic_read_reg = iss.i2c.read(slave_addr, 0, len(reg_val))
     # print(iic_read_reg)
     if reg_val == iic_read_reg:
         # print("Read back data matches with Write into data")
-        I2C_Status = "Pass"
+        I2C_Status = "Passed"
     else:
         # print("Read back data didn't matche with Write into data")
-        I2C_Status = "Fail"
+        I2C_Status = "Failed"
     return [I2C_Status, reg_val, iic_read_reg]
 
 #=======================================================================================#
@@ -113,37 +126,40 @@ def main():
 
     OSC_Inst = rm.open_resource('GPIB0::1::INSTR')                              # connect to SOC
     print(OSC_Inst.query("*IDN?"))
-
+    OSC_Inst.write("*RST")                                                      # reset the OSC
     ## set usb-iss iic master device
     slave_addr = 0x23
     iss = UsbIss()
     iss.open("COM8")
-    iss.setup_i2c()
+    iss.setup_i2c(clock_khz=100)
 
     ## Labjack instrument
     d = U3()
     # print(d.configU3())
     # print(d.configIO())
+    d.setFIOState(5, state = 1)
+    d.setFIOState(6, state = 1)
+    d.setFIOState(7, state = 1)
 
     GBCR2_Reg1 = GBCR2_Reg()
 
     with open("./GBCR2_Test_Log/GBCR2_QC_%s_Chip_ID=%s.txt"%(Test_Mode, Chip_ID), 'a+') as infile:
         time_stamp = time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(time.time()))
-        infile.write("\n")
+
         infile.write("%s\n"%time_stamp)
         infile.write("%s\n"%Tester_Name)
 
         Channel_One_Current = Power_Control(Power_Inst, 1.277)                                    # Set Power Voltage is about 1.2 V
         infile.write("VDD=%.3fV IDD=%.3fA\n"%(1.2, Channel_One_Current))
-
+        time.sleep(1)
         ## I2C write and read 10 times. if yes,
         loop_num = 0
-        I2C_Status = "Fail"
-        while(loop_num < 10 and I2C_Status == "Fail"):
+        I2C_Status = "Failed"
+        while(loop_num < 10 and I2C_Status == "Failed"):
             # print(loop_num)
             I2C_Status1 = I2C_Write_Read(GBCR2_Reg1, iss)
             I2C_Status = I2C_Status1[0]
-            if I2C_Status == "Fail":
+            if I2C_Status == "Failed":
                 infile.write("I2C Test Failed  %d\n"%loop_num)
                 infile.write("Written values:\n")
                 infile.writelines("%d "% val for val in I2C_Status1[1])
@@ -154,76 +170,78 @@ def main():
                 ## write iic write into data and read back data to file
             time.sleep(0.1)
             loop_num += 1
-            if loop_num <= 10:
-                infile.write("I2C Test Pass  %d\n"%loop_num)
-                # infile.writelines("%d "% val for val in I2C_Status1[1])
-                # infile.write("\n")
-                # infile.writelines("%d "% val for val in I2C_Status1[2])
-                # infile.write("\n")
-            else:
-                infile.write("I2C Test Failed  %d\n"%loop_num)
-                infile.writelines("%d "% val for val in I2C_Status1[1])
-                infile.write("\n")
-                infile.writelines("%d "% val for val in I2C_Status1[2])
-                infile.write("\n")
-                ## write iic write into data and read back data to file
-        Power_Volt = [1.277, 1.277, 1.411]
-        Power_Volt_Board = [1.2, 1.08, 1.32]
-        Channel_One_Current = []
-        I2C_Status = []
-        print(time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(time.time())))
-        for Volt in range(len(Power_Volt)):
-            print("%.2fV Voltage Test......"%Power_Volt_Board[Volt])
-            Channel_One_Current += [Power_Control(Power_Inst, Power_Volt[Volt])]
-            print("Power Current: %.3f"%Channel_One_Current[Volt])
-            time.sleep(1)
-            I2C_Status += [I2C_Write_Read(GBCR2_Reg1, iss)[0]]
-            print("I2C Status: %s"%I2C_Status[Volt])
-            infile.write("%.2fV Voltage Test:==============================================\n"%Power_Volt_Board[Volt])
-            infile.write("Power Current: %.3f\n"%Channel_One_Current[Volt])
-            infile.write("I2C Status: %s\n"%I2C_Status[Volt])
-            measured_items = []
-            if Test_Mode == "Rx":
-                for Chan in range(2):
-                    print("Rx Channel %d is being tested!"%(Chan+1))
-                    d.setFIOState(5, state = Chan & 0x1)
-                    d.setFIOState(6, state = (Chan & 0x2) >> 1)
-                    d.setFIOState(7, state = (Chan & 0x4) >> 2)
-                    time.sleep(0.001)
-                    Measure_Value = Capture_Screen_Image(OSC_Inst, "Chip_ID=%s_RX_CH%d_Img"%(Chip_ID, Chan+1))
-                    print(Measure_Value)
-                    infile.write("Rx Channel %d:######################\n"%(Chan+1))
-                    infile.write("RMS Jitter: %.3f ps\n"%float(Measure_Value[0].split("E")[0]))
-                    infile.write("Amplitude: %.3f mV\n"%float(Measure_Value[1].split("E")[0]))
-                    infile.write("Rise Time: %.3f ps\n"%float(Measure_Value[2].split("E")[0]))
-                    infile.write("Fall Time: %.3f ps\n"%float(Measure_Value[3].split("E")[0]))
-            else:
-                for Chan in range(2):
-                    print("Tx Channel %d is being tested!"%(Chan+1))
-                    d.setFIOState(5, state = Chan & 0x1)
-                    d.setFIOState(6, state = (Chan & 0x2) >> 1)
-                    d.setFIOState(7, state = (Chan & 0x4) >> 2)
-                    time.sleep(0.001)
-                    Measure_Value = Capture_Screen_Image(OSC_Inst, "Chip_ID=%s_TX_CH%d_Img"%(Chip_ID, Chan+1))
-                    print(Measure_Value)
-                    infile.write("Tx Channel %d:######################\n"%(Chan+1))
-                    infile.write("RMS Jitter: %.3f ps\n"%float(Measure_Value[0]))
-                    infile.write("Amplitude: %.3f mV\n"%float(Measure_Value[1]))
-                    infile.write("Rise Time: %.3f ps\n"%float(Measure_Value[2]))
-                    infile.write("Fall Time: %.3f ps\n"%float(Measure_Value[3]))
-        print(Channel_One_Current)
-        print(max(Channel_One_Current))
-        print(min(Channel_One_Current))
-        print(I2C_Status)
-
-        if max(Channel_One_Current) < 180 and min(Channel_One_Current) > 45 and ("Fail" in I2C_Status) == False:
-            print("Chip Test Pass")
-            infile.write("Chip Test Pass\n\n")
+        if loop_num <= 10:
+            infile.write("I2C Test Passed  %d\n"%loop_num)
         else:
-            print("Chip Test didn't Pass")
-            infile.write("Chip Test didn't Pass\n\n")
+            infile.write("I2C Test Failed  %d\n"%loop_num)
+            infile.writelines("%d "% val for val in I2C_Status1[1])
+            infile.write("\n")
+            infile.writelines("%d "% val for val in I2C_Status1[2])
+            infile.write("\n")
+            ## write iic write into data and read back data to file
+        if I2C_Status == "Passed":
+            Power_Volt = [1.277, 1.145, 1.411]
+            Power_Volt_Board = [1.2, 1.08, 1.32]
+            Power_Volt_Name = ["VDD=1V20", "VDD=1V08", "VDD=1V32"]
+            Channel_One_Current = []
+            I2C_Status = []
+            print(time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(time.time())))
+            for Volt in range(len(Power_Volt)):
+                print("%.2fV Voltage Test......"%Power_Volt_Board[Volt])
+                Channel_One_Current += [Power_Control(Power_Inst, Power_Volt[Volt])]
+                print("Power Current: %.3f"%Channel_One_Current[Volt])
+                time.sleep(1)
+                I2C_Status += [I2C_Write_Read(GBCR2_Reg1, iss)[0]]
+                print("I2C Status: %s"%I2C_Status[Volt])
+                infile.write("%.2fV Voltage Test:==============================================\n"%Power_Volt_Board[Volt])
+                infile.write("Power Current: %.3f\n"%Channel_One_Current[Volt])
+                infile.write("I2C Status: %s\n"%I2C_Status[Volt])
+                measured_items = []
+                if Test_Mode == "Rx":
+                    for Chan in range(2):
+                        print("Rx Channel %d is being tested!"%(Chan+1))
+                        d.setFIOState(5, state = Chan & 0x1)
+                        d.setFIOState(6, state = (Chan & 0x2) >> 1)
+                        d.setFIOState(7, state = (Chan & 0x4) >> 2)
+                        time.sleep(0.1)
+                        Measure_Value = Capture_Screen_Image(OSC_Inst, "Chip_ID=%s_RX_CH%d_%s_Eye-diagram_Img"%(Chip_ID, Chan+1, Power_Volt_Name[Volt]))
+                        print(Measure_Value)
+                        print("\n")
+                        infile.write("Rx Channel %d:######################\n"%(Chan+1))
+                        infile.write("RMS Jitter: %.3f ps\n"%float(Measure_Value[0].split("E")[0]))
+                        infile.write("Amplitude: %.3f mV\n"%float(Measure_Value[1].split("E")[0]))
+                        infile.write("Rise Time: %.3f ps\n"%float(Measure_Value[2].split("E")[0]))
+                        infile.write("Fall Time: %.3f ps\n"%float(Measure_Value[3].split("E")[0]))
+                else:
+                    for Chan in range(2):
+                        print("Tx Channel %d is being tested!"%(Chan+1))
+                        d.setFIOState(5, state = Chan & 0x1)
+                        d.setFIOState(6, state = (Chan & 0x2) >> 1)
+                        d.setFIOState(7, state = (Chan & 0x4) >> 2)
+                        time.sleep(0.1)
+                        Measure_Value = Capture_Screen_Image(OSC_Inst, "Chip_ID=%s_TX_CH%d_%s_Eye-diagram_Img"%(Chip_ID, Chan+1, Power_Volt_Name[Volt]))
+                        print(Measure_Value)
+                        print("\n")
+                        infile.write("Tx Channel %d:######################\n"%(Chan+1))
+                        infile.write("RMS Jitter: %.3f ps\n"%float(Measure_Value[0]))
+                        infile.write("Amplitude: %.3f mV\n"%float(Measure_Value[1]))
+                        infile.write("Rise Time: %.3f ps\n"%float(Measure_Value[2]))
+                        infile.write("Fall Time: %.3f ps\n"%float(Measure_Value[3]))
+            # print(Channel_One_Current)
+            # print(max(Channel_One_Current))
+            # print(min(Channel_One_Current))
+            # print(I2C_Status)
 
-    ## Turn off Power
+            if max(Channel_One_Current) < 180 and min(Channel_One_Current) > 45 and ("Fail" in I2C_Status) == False:
+                print("Chip Test Pass")
+                infile.write("Chip Test Pass\n\n")
+            else:
+                print("Chip Test didn't Pass")
+                infile.write("Chip Test didn't Pass\n\n")
+        infile.write("\n")
+    #
+    # ## Turn off Power
+    time.sleep(2)
     Power_Inst.write("OUTPut:STATe OFF,(@1)")
     print(time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(time.time())))
 
