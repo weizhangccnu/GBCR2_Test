@@ -9,7 +9,7 @@
   - Chip_ID: from 001 to 175
   - Example: **`python ./GBCR2_QC_Test_Control.py Rx Wei 001`** to test NO.001 chip all Rx channels by Wei  
 ### 3. Log will be created after each test.
-  - GBCR2_QC_**TestMode**_**Chip_ID**.txt
+  - GBCR2_QC_**TestMode**_**Chip_ID**.txt for exampel: `GBCR2_QC_Rx_001.txt`
     * TestMode: Rx or Tx
     * Chip_ID: 001 to 175
 ### 4. Eye-diagram will be saved to C:/GBCR2_QC_Test directoty on OSC (Tektronix DSA70804B)
