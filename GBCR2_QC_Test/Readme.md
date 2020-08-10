@@ -1,6 +1,6 @@
 ## GBCR2 Quality Control
   - GBCR2 is a gigabit transceiver prototype ASIC for the ATLAS phase-II upgrade of the ITK pixel detector front-end electrical links. It has seven uplink channels that recieve 1.28 Gbps signals and two downlink channels that send 160 Mbps  signals.
-  - Test Instrument:
+  - Test Instruments:
     - Pattern Generator: **Tektronix DGT5274**
     - Oscilloscope: **Tektronix DSA70804B (Bandwidth=8 GHz and Sample rate=25 Gsps)**
     - I2C Controller: **USB-iss module**
