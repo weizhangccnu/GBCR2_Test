@@ -17,9 +17,7 @@ This python script is used to control the GBCR2 I2C slave.
 # @param[in]: Power Voltage input
 # return: Channel_One_Current
 def Power_Control(Inst, Channel_One_Volt):
-
-    Inst.write("OUTPut:STATe ON,(@1)")                                    # Turn On Power Channel One
-    Inst.write("SOURce:VOLTage %.2f,(@1)"%(Channel_One_Volt))             # Channel One Power Voltage
+    inst.write("SOURce:VOLTage %.2f,(@1)"%(Channel_One_Volt))             # Channel One Power Voltage
     Channel_One_Current = round(float(Inst.query("MEAS:CURR? CH1"))*1000.0, 3)
     return Channel_One_Current
 #=======================================================================================#
@@ -123,34 +121,35 @@ def main():
     print(rm.list_resources())
     Power_Inst = rm.open_resource('USB0::0x2A8D::0x1002::MY59001324::INSTR')    # connect to SOC
     print(Power_Inst.query("*IDN?"))
+    Inst.write("OUTPut:STATe ON,(@1)")                                          # Turn On Power Channel One
 
     OSC_Inst = rm.open_resource('GPIB0::1::INSTR')                              # connect to SOC
     print(OSC_Inst.query("*IDN?"))
     OSC_Inst.write("*RST")                                                      # reset the OSC
+
     ## set usb-iss iic master device
-    slave_addr = 0x23
-    iss = UsbIss()
-    iss.open("COM8")
-    iss.setup_i2c(clock_khz=100)
+    slave_addr = 0x23                                                           # iic target address
+    iss = UsbIss()                                                              # usb-iss handle
+    iss.open("COM8")                                                            # usb com EXPort
+    iss.setup_i2c(clock_khz=100)                                                # i2c SCL clock frequency = 100 KHz, if set to 400 KHz, at 1.08 V NACK
 
     ## Labjack instrument
     d = U3()
     # print(d.configU3())
     # print(d.configIO())
-    d.setFIOState(5, state = 1)
-    d.setFIOState(6, state = 1)
-    d.setFIOState(7, state = 1)
+    d.setFIOState(5, state = 1)                                                 # default value 1
+    d.setFIOState(6, state = 1)                                                 # default value 1
+    d.setFIOState(7, state = 1)                                                 # default value 1
 
     GBCR2_Reg1 = GBCR2_Reg()
 
     with open("./GBCR2_Test_Log/GBCR2_QC_%s_Chip_ID=%s.txt"%(Test_Mode, Chip_ID), 'a+') as infile:
         time_stamp = time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(time.time()))
+        infile.write("%s\n"%time_stamp)                                         # write timestamp to file
+        infile.write("%s\n"%Tester_Name)                                        # Tester name
 
-        infile.write("%s\n"%time_stamp)
-        infile.write("%s\n"%Tester_Name)
-
-        Channel_One_Current = Power_Control(Power_Inst, 1.277)                                    # Set Power Voltage is about 1.2 V
-        infile.write("VDD=%.3fV IDD=%.3fA\n"%(1.2, Channel_One_Current))
+        Channel_One_Current = Power_Control(Power_Inst, 1.277)                  # Set Power Voltage is about 1.2 V
+        infile.write("VDD=%.3fV IDD=%.3fA\n"%(1.2, Channel_One_Current))        # read power current
         time.sleep(1)
         ## I2C write and read 10 times. if yes,
         loop_num = 0
@@ -186,7 +185,7 @@ def main():
             Channel_One_Current = []
             I2C_Status = []
             print(time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(time.time())))
-            for Volt in range(len(Power_Volt)):
+            for Volt in range(len(Power_Volt)):                                                         # chaneg power voltage
                 print("%.2fV Voltage Test......"%Power_Volt_Board[Volt])
                 Channel_One_Current += [Power_Control(Power_Inst, Power_Volt[Volt])]
                 print("Power Current: %.3f"%Channel_One_Current[Volt])
@@ -197,7 +196,7 @@ def main():
                 infile.write("Power Current: %.3f\n"%Channel_One_Current[Volt])
                 infile.write("I2C Status: %s\n"%I2C_Status[Volt])
                 measured_items = []
-                if Test_Mode == "Rx":
+                if Test_Mode == "Rx":                                                                   # test Rx channel
                     for Chan in range(2):
                         print("Rx Channel %d is being tested!"%(Chan+1))
                         d.setFIOState(5, state = Chan & 0x1)
@@ -212,7 +211,7 @@ def main():
                         infile.write("Amplitude: %.3f mV\n"%float(Measure_Value[1].split("E")[0]))
                         infile.write("Rise Time: %.3f ps\n"%float(Measure_Value[2].split("E")[0]))
                         infile.write("Fall Time: %.3f ps\n"%float(Measure_Value[3].split("E")[0]))
-                else:
+                else:                                                                                   # test Tx channel
                     for Chan in range(2):
                         print("Tx Channel %d is being tested!"%(Chan+1))
                         d.setFIOState(5, state = Chan & 0x1)
