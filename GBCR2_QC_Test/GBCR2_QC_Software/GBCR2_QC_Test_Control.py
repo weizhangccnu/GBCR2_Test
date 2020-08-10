@@ -17,7 +17,7 @@ This python script is used to control the GBCR2 I2C slave.
 # @param[in]: Power Voltage input
 # return: Channel_One_Current
 def Power_Control(Inst, Channel_One_Volt):
-    inst.write("SOURce:VOLTage %.2f,(@1)"%(Channel_One_Volt))             # Channel One Power Voltage
+    Inst.write("SOURce:VOLTage %.2f,(@1)"%(Channel_One_Volt))             # Channel One Power Voltage
     Channel_One_Current = round(float(Inst.query("MEAS:CURR? CH1"))*1000.0, 3)
     return Channel_One_Current
 #=======================================================================================#
@@ -87,29 +87,40 @@ def Capture_Screen_Image(inst, filename):
 
 #=======================================================================================#
 ## I2C write and Read
-def I2C_Write_Read(GBCR2_Reg1, iss):
+def I2C_Write_Read(GBCR2_Reg1, iss, filename):
     slave_addr = 0x23
     reg_val = []
     reg_val = GBCR2_Reg1.get_config_vector()
     # print(reg_val)
+    Error_type = "I2C ACK!!"
+    I2C_Status = "Failed"
     try:
         iss.i2c.write(slave_addr, 0, reg_val)
     except:
-        print("I2C NACK!!")
+        Error_type = "I2C NACK!!"
+        filename.write("I2C NACK!!\n")
 
     time.sleep(0.1)
     iic_read_reg = iss.i2c.read(slave_addr, 0, len(reg_val))
     # print(iic_read_reg)
-    if reg_val == iic_read_reg:
-        # print("Read back data matches with Write into data")
-        I2C_Status = "Passed"
-    else:
-        # print("Read back data didn't matche with Write into data")
-        I2C_Status = "Failed"
+    if Error_type != "I2C NACK!!":
+        if reg_val == iic_read_reg:
+            # print("Read back data matches with Write into data")
+            I2C_Status = "Passed"
+        else:
+            # print("Read back data didn't matche with Write into data")
+            I2C_Status = "Failed"
     return [I2C_Status, reg_val, iic_read_reg]
 
 #=======================================================================================#
 def main():
+    IDD_Max = 180                           # Power Current max value
+    IDD_Max = 45                            # Power Current min value
+    I2C_Read_Times = 10
+    Jitter_Max = 50                         # Jitter max values
+    Rx_Amplitude_Min = 100                  # Amplitude min value
+    Tx_Amplitude_Min = 200                  # Amplitude min value
+
 
     ## Input Parameters
     Test_Mode = sys.argv[1]                 # Rx or Tx
@@ -121,7 +132,7 @@ def main():
     print(rm.list_resources())
     Power_Inst = rm.open_resource('USB0::0x2A8D::0x1002::MY59001324::INSTR')    # connect to SOC
     print(Power_Inst.query("*IDN?"))
-    Inst.write("OUTPut:STATe ON,(@1)")                                          # Turn On Power Channel One
+    Power_Inst.write("OUTPut:STATe ON,(@1)")                                          # Turn On Power Channel One
 
     OSC_Inst = rm.open_resource('GPIB0::1::INSTR')                              # connect to SOC
     print(OSC_Inst.query("*IDN?"))
@@ -145,6 +156,7 @@ def main():
 
     with open("./GBCR2_Test_Log/GBCR2_QC_%s_Chip_ID=%s.txt"%(Test_Mode, Chip_ID), 'a+') as infile:
         time_stamp = time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(time.time()))
+        infile.write("\n")                                                      # add a blank row
         infile.write("%s\n"%time_stamp)                                         # write timestamp to file
         infile.write("%s\n"%Tester_Name)                                        # Tester name
 
@@ -154,9 +166,9 @@ def main():
         ## I2C write and read 10 times. if yes,
         loop_num = 0
         I2C_Status = "Failed"
-        while(loop_num < 10 and I2C_Status == "Failed"):
+        while(loop_num < I2C_Read_Times and I2C_Status == "Failed"):
             # print(loop_num)
-            I2C_Status1 = I2C_Write_Read(GBCR2_Reg1, iss)
+            I2C_Status1 = I2C_Write_Read(GBCR2_Reg1, iss, infile)
             I2C_Status = I2C_Status1[0]
             if I2C_Status == "Failed":
                 infile.write("I2C Test Failed  %d\n"%loop_num)
@@ -169,7 +181,7 @@ def main():
                 ## write iic write into data and read back data to file
             time.sleep(0.1)
             loop_num += 1
-        if loop_num <= 10:
+        if loop_num < I2C_Read_Times:
             infile.write("I2C Test Passed  %d\n"%loop_num)
         else:
             infile.write("I2C Test Failed  %d\n"%loop_num)
@@ -184,20 +196,24 @@ def main():
             Power_Volt_Name = ["VDD=1V20", "VDD=1V08", "VDD=1V32"]
             Channel_One_Current = []
             I2C_Status = []
+            Rx_Jitter_Performance = []
+            Tx_Jitter_Performance = []
+            Rx_Amplitude_Performance = []
+            Rx_Amplitude_Performance = []
             print(time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(time.time())))
             for Volt in range(len(Power_Volt)):                                                         # chaneg power voltage
                 print("%.2fV Voltage Test......"%Power_Volt_Board[Volt])
                 Channel_One_Current += [Power_Control(Power_Inst, Power_Volt[Volt])]
                 print("Power Current: %.3f"%Channel_One_Current[Volt])
                 time.sleep(1)
-                I2C_Status += [I2C_Write_Read(GBCR2_Reg1, iss)[0]]
+                I2C_Status += [I2C_Write_Read(GBCR2_Reg1, iss, infile)[0]]
                 print("I2C Status: %s"%I2C_Status[Volt])
                 infile.write("%.2fV Voltage Test:==============================================\n"%Power_Volt_Board[Volt])
                 infile.write("Power Current: %.3f\n"%Channel_One_Current[Volt])
                 infile.write("I2C Status: %s\n"%I2C_Status[Volt])
-                measured_items = []
+
                 if Test_Mode == "Rx":                                                                   # test Rx channel
-                    for Chan in range(2):
+                    for Chan in range(7):
                         print("Rx Channel %d is being tested!"%(Chan+1))
                         d.setFIOState(5, state = Chan & 0x1)
                         d.setFIOState(6, state = (Chan & 0x2) >> 1)
@@ -211,6 +227,8 @@ def main():
                         infile.write("Amplitude: %.3f mV\n"%float(Measure_Value[1].split("E")[0]))
                         infile.write("Rise Time: %.3f ps\n"%float(Measure_Value[2].split("E")[0]))
                         infile.write("Fall Time: %.3f ps\n"%float(Measure_Value[3].split("E")[0]))
+                        Rx_Jitter_Performance += [float(Measure_Value[0].split("E")[0])]
+                        Rx_Amplitude_Performance += [float(Measure_Value[1].split("E")[0])]
                 else:                                                                                   # test Tx channel
                     for Chan in range(2):
                         print("Tx Channel %d is being tested!"%(Chan+1))
@@ -226,19 +244,30 @@ def main():
                         infile.write("Amplitude: %.3f mV\n"%float(Measure_Value[1]))
                         infile.write("Rise Time: %.3f ps\n"%float(Measure_Value[2]))
                         infile.write("Fall Time: %.3f ps\n"%float(Measure_Value[3]))
+                        Tx_Jitter_Performance += [float(Measure_Value[0].split("E")[0])]
+                        Tx_Amplitude_Performance += [float(Measure_Value[1].split("E")[0])]
             # print(Channel_One_Current)
             # print(max(Channel_One_Current))
             # print(min(Channel_One_Current))
             # print(I2C_Status)
-
-            if max(Channel_One_Current) < 180 and min(Channel_One_Current) > 45 and ("Fail" in I2C_Status) == False:
-                print("Chip Test Pass")
-                infile.write("Chip Test Pass\n\n")
+            print(Rx_Jitter_Performance)
+            print(Rx_Amplitude_Performance)
+            if Test_Mode == "Rx":
+                if max(Channel_One_Current) < IDD_Max and min(Channel_One_Current) > IDD_Min and ("Fail" in I2C_Status) == False and max(Rx_Jitter_Performance) < Jitter_Max and min(Rx_Amplitude_Performance) > Rx_Amplitude_Min:
+                    print("Chip Test Pass")
+                    infile.write("Chip Test Pass\n\n")
+                else:
+                    print("Chip Test didn't Pass")
+                    infile.write("Chip Test didn't Pass\n\n")
             else:
-                print("Chip Test didn't Pass")
-                infile.write("Chip Test didn't Pass\n\n")
+                if max(Channel_One_Current) < IDD_Max and min(Channel_One_Current) > IDD_Min and ("Fail" in I2C_Status) == False and max(Tx_Jitter_Performance) < Jitter_Max and min(Tx_Amplitude_Performance) > Tx_Amplitude_Min:
+                    print("Chip Test Pass")
+                    infile.write("Chip Test Passed\n\n")
+                else:
+                    print("Chip Test didn't Pass")
+                    infile.write("Chip Test didn't Pass\n\n")
         infile.write("\n")
-    #
+
     # ## Turn off Power
     time.sleep(2)
     Power_Inst.write("OUTPut:STATe OFF,(@1)")
