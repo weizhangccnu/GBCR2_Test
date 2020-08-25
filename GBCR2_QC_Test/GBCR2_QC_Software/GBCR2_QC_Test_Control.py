@@ -118,8 +118,8 @@ def I2C_Write_Read(GBCR2_Reg1, iss, filename):
 
     time.sleep(0.1)
     iic_read_reg = iss.i2c.read(slave_addr, 0, len(reg_val))
-    print(reg_val)
-    print(iic_read_reg)
+    # print(reg_val)
+    # print(iic_read_reg)
     if Error_type != "I2C NACK!!":
         if reg_val == iic_read_reg:
             # print("Read back data matches with Write into data")
@@ -257,10 +257,10 @@ def main():
                                 print(Measure_Value)
                                 # print("\n")
                                 infile.write("Rx Channel %d:######################\n"%(Chan+1))
-                                infile.write("RMS Jitter: %.3f ps\n"%float(Measure_Value[0].split("E")[0]))
-                                infile.write("Amplitude: %.3f mV\n"%float(Measure_Value[1].split("E")[0]))
-                                infile.write("Rise Time: %.3f ps\n"%float(Measure_Value[2].split("E")[0]))
-                                infile.write("Fall Time: %.3f ps\n"%float(Measure_Value[3].split("E")[0]))
+                                infile.write("RMS Jitter: %.3f ps\n"%float(eval(Measure_Value[0])*1e12))
+                                infile.write("Amplitude: %.3f mV\n"%float(eval(Measure_Value[1])*1e3))
+                                infile.write("Rise Time: %.3f ps\n"%float(eval(Measure_Value[2])*1e12))
+                                infile.write("Fall Time: %.3f ps\n"%float(eval(Measure_Value[3])*1e12))
                                 Rx_Jitter_Performance += [eval(Measure_Value[0])*1e12]
                                 Rx_Amplitude_Performance += [eval(Measure_Value[1])*1e3]
                                 # Rx_Jitter_Performance += [float(Measure_Value[0].split("E")[0])]
@@ -279,16 +279,12 @@ def main():
                                 print(Measure_Value)
                                 # print("\n")
                                 infile.write("Tx Channel %d:######################\n"%(Chan+1))
-                                infile.write("RMS Jitter: %.3f ps\n"%float(Measure_Value[0]))
-                                infile.write("Amplitude: %.3f mV\n"%float(Measure_Value[1]))
-                                infile.write("Rise Time: %.3f ps\n"%float(Measure_Value[2]))
-                                infile.write("Fall Time: %.3f ps\n"%float(Measure_Value[3]))
+                                infile.write("RMS Jitter: %.3f ps\n"%float(eval(Measure_Value[0])*1e12))
+                                infile.write("Amplitude: %.3f mV\n"%float(eval(Measure_Value[1])*1e3))
+                                infile.write("Rise Time: %.3f ps\n"%float(eval(Measure_Value[2])*1e12))
+                                infile.write("Fall Time: %.3f ps\n"%float(eval(Measure_Value[3])*1e12))
                                 Tx_Jitter_Performance += [eval(Measure_Value[0])*1e12]
                                 Tx_Amplitude_Performance += [eval(Measure_Value[1])*1e3]
-                                # print(Tx_Jitter_Performance)
-                                # print(Tx_Amplitude_Performance)
-                                # Tx_Jitter_Performance += [float(Measure_Value[0].split("E")[0])]
-                                # Tx_Amplitude_Performance += [float(Measure_Value[1].split("E")[0])]
                                 Tx_Amplitude = min(Tx_Amplitude_Performance)
                                 Tx_Jitter = max(Tx_Jitter_Performance)
                 # print(Channel_One_Current)
