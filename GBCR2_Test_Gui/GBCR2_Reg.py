@@ -304,9 +304,10 @@ class GBCR2_Reg(object):
         self._regMap['dllClockDelay_CH3'] = val & 0xf
 
     def set_dllClockDelay_CH2(self, val):
-        self._regMap['dllClockDelay_CH3'] = val & 0xf
+        self._regMap['dllClockDelay_CH2'] = val & 0xf
 
     def set_dllClockDelay_CH1(self, val):
+        print(val)
         self._regMap['dllClockDelay_CH1'] = val & 0xf
 
     def set_dllClockDelay_CH0(self, val):
@@ -385,7 +386,7 @@ class GBCR2_Reg(object):
         reg_value += [self._regMap['CH7_CTLE_HFSR'] << 4 | self._regMap['CH7_CTLE_MFSR']]
         reg_value += [self._regMap['CH7_Disable'] << 2 | self._regMap['CH7_Dis_DFF'] << 1 | self._regMap['CH7_Dis_LPF']]
         reg_value += [self._regMap['dllEnable'] << 1 | self._regMap['dllCapReset']]
-        reg_value += [self._regMap['dllForceDown'] << 1 | self._regMap['dllChargePumpCurrent']]
+        reg_value += [self._regMap['dllForceDown'] << 4 | self._regMap['dllChargePumpCurrent']]
         reg_value += [self._regMap['dllClockDelay_CH7'] << 4 | self._regMap['dllClockDelay_CH6']]
         reg_value += [self._regMap['dllClockDelay_CH5'] << 4 | self._regMap['dllClockDelay_CH4']]
         reg_value += [self._regMap['dllClockDelay_CH3'] << 4 | self._regMap['dllClockDelay_CH2']]
