@@ -2316,7 +2316,7 @@ class Ui_GBCR2_Test_Gui(object):
 
     def CH1_CML_AmplSel_Box_valueChanged(self):
         winsound.Beep(freqency, duration)
-        GBCR2_Reg1.set_CH2_CML_AmplSel(self.CH2_CML_AmplSel_Box.value())
+        GBCR2_Reg1.set_CH1_CML_AmplSel(self.CH1_CML_AmplSel_Box.value())
 
     def CH2_Dis_Rx_Box_valueChanged(self):
         winsound.Beep(freqency, duration)
