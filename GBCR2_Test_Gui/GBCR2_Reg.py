@@ -109,6 +109,7 @@ class GBCR2_Reg(object):
         self._regMap = copy.deepcopy(self._defaultRegMap)
 
     def set_CH1_CML_AmplSel(self, val):
+        print(val)
         self._regMap['CH1_CML_AmplSel'] = val & 0x7
 
     def set_CH1_EQ_ATT(self, val):
@@ -289,6 +290,7 @@ class GBCR2_Reg(object):
         self._regMap['dllForceDown'] = val & 0x1
 
     def set_dllClockDelay_CH7(self, val):
+        print(val)
         self._regMap['dllClockDelay_CH7'] = val & 0xf
 
     def set_dllClockDelay_CH6(self, val):
