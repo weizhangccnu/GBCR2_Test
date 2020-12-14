@@ -5,7 +5,7 @@
 # Created by: PyQt5 UI code generator 5.13.0
 #
 # WARNING! All changes made in this file will be lost!
-
+import os
 import time
 import winsound
 from GBCR2_Reg import *
@@ -2099,8 +2099,8 @@ class Ui_GBCR2_Test_Gui(object):
     def retranslateUi(self, GBCR2_Test_Gui):
         _translate = QtCore.QCoreApplication.translate
         GBCR2_Test_Gui.setWindowTitle(_translate("GBCR2_Test_Gui", "MainWindow"))
-        self.Rx_Control_Panel.setText(_translate("GBCR2_Test_Gui", "Rx Contorl Panel"))
-        self.TX_Control_Panel.setText(_translate("GBCR2_Test_Gui", "Tx Contorl Panel"))
+        self.Rx_Control_Panel.setText(_translate("GBCR2_Test_Gui", "Rx Control Panel"))
+        self.TX_Control_Panel.setText(_translate("GBCR2_Test_Gui", "Tx Control Panel"))
         self.Phase_Shifter_Control_Panel.setText(_translate("GBCR2_Test_Gui", "Phase Shifter Control Panel"))
         self.I2C_Control_Panel.setText(_translate("GBCR2_Test_Gui", "I2C Control Panel"))
         self.COM_Port_Box.setItemText(0, _translate("GBCR2_Test_Gui", "COM3"))
@@ -2284,6 +2284,22 @@ class Ui_GBCR2_Test_Gui(object):
         Reg_Read_val = iss.i2c.read(self.I2C_Addr, 0, 0x20)
         print("GBCR2 I2C Read Back data:")
         print(Reg_Read_val)
+
+        directory = "./Log"
+        try:
+            os.mkdir(directory)
+            print("Directory %s was created!"%directory)
+        except FileExistsError:
+            print("Directory %s already exists!"%directory)
+        time_stampe = time.strftime('%y-%m-%d_%H-%M-%S',time.localtime(time.time()))
+        time_stampe_day = time.strftime('%y-%m-%d',time.localtime(time.time()))
+        with open("%s/%s.txt"%(directory, time_stampe_day), 'a') as logfile:
+            logfile.writelines("%s\n"%time_stampe)
+            logfile.writelines("GBCR2 I2C Write in data:\n")
+            logfile.writelines("%s\n"%Reg_Write_val)
+            logfile.writelines("GBCR2 I2C Read Back data:\n")
+            logfile.writelines("%s\n\n"%Reg_Read_val)
+
         print("Ok!!")
 
     def CH1_Dis_Rx_Box_valueChanged(self):
