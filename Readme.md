@@ -13,4 +13,4 @@
 pyinstaller -Fw GBCR2_Test_GUI.py         # F: one File     w: without console
 ```
 ## 5. The GBCR2 Test Gui is shown as below picture
-![GBCR2 Test Gui](https://github.com/weizhangccnu/GBCR2_Test/blob/master/Img/GBCR2_Test_Gui.PNG)
+![GBCR2 Test Gui](https://github.com/weizhangccnu/GBCR2_Test/blob/master/Img/GBCR2_Gui_V2_Screenshot.png)
