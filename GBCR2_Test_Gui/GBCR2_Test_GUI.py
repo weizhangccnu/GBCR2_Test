@@ -17,6 +17,14 @@ freqency = 1000
 duration = 200
 #========================================================================================#
 class Ui_GBCR2_Test_Gui(object):
+## inital
+    def __init__(self, I2C_Addr=0x23, COM_Port='COM3'):
+        self.I2C_Addr = I2C_Addr
+        self.COM_Port = COM_Port
+        print(self.I2C_Addr)
+        print(self.COM_Port)
+        
+
     def setupUi(self, GBCR2_Test_Gui):
         GBCR2_Test_Gui.setObjectName("GBCR2_Test_Gui")
         GBCR2_Test_Gui.resize(1334, 706)
@@ -2257,6 +2265,7 @@ class Ui_GBCR2_Test_Gui(object):
         self.File_Name.setText(_translate("GBCR2_Test_Gui", "File Name"))
         self.File_Configuration_Button.setText(_translate("GBCR2_Test_Gui", "File Configuration"))
         self.File_Configuration_Button.setShortcut(_translate("GBCR2_Test_Gui", "Return"))
+
     def I2C_Addr_Box_activated(self):                                 # select I2C slave address
         winsound.Beep(freqency, duration)
         if self.I2C_Addr_Box.currentText() == "0x23":
@@ -2307,7 +2316,7 @@ class Ui_GBCR2_Test_Gui(object):
 
     def pushButton_clicked(self):
         winsound.Beep(2000, 500)
-        print(hex(self.I2C_Addr))
+        print(self.I2C_Addr)
         print(self.COM_Port)
         iss = UsbIss()
         iss.open(self.COM_Port)
@@ -2367,7 +2376,7 @@ class Ui_GBCR2_Test_Gui(object):
             iss.i2c.write(self.I2C_Addr, 0, Reg_val)
 
             Reg_Read_val = []
-            Reg_Read_val = iss.i2c.read(self.I2C_Addr, 0, 0x20)
+            Reg_Read_val = iss.i2c.read(self.I2C_Addr, 0, len(Reg_val))
             print("I2C read back data:", Reg_Read_val)
 
         else:
